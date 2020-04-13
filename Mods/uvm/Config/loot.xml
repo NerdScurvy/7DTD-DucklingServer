@@ -1,0 +1,53 @@
+<UVM_Configs>
+
+<!-- Adds the old heli and blimp storage sizes for use with new ids incase they do use them again in future no conflicts hopefully Plus two additional options-->
+
+<!--Heli Size-->
+<insertAfter xpath="/lootcontainers/lootcontainer[@id='124']">
+<lootcontainer id="581" count="0" size="9,8" sound_open="UseActions/open_shopping_basket" open_time="0" sound_close="UseActions/close_shopping_basket" loot_quality_template="qualBaseTemplate">
+</lootcontainer>
+</insertAfter>
+
+<!--Blimp Size -->
+<insertAfter xpath="/lootcontainers/lootcontainer[@id='581']">
+<lootcontainer id="582" count="0" size="10,9" sound_open="UseActions/open_shopping_basket" open_time="0" sound_close="UseActions/close_shopping_basket" loot_quality_template="qualBaseTemplate">
+</lootcontainer>
+</insertAfter>
+
+<!--New Truck -->
+<insertAfter xpath="/lootcontainers/lootcontainer[@id='582']">
+<lootcontainer id="583" count="0" size="9,6" sound_open="UseActions/open_shopping_basket" open_time="0" sound_close="UseActions/close_shopping_basket" loot_quality_template="qualBaseTemplate">
+</lootcontainer>
+</insertAfter>
+
+<!-- Upgrade MilitaryTruck -->
+<insertAfter xpath="/lootcontainers/lootcontainer[@id='583']">
+<lootcontainer id="584" count="0" size="9,9" sound_open="UseActions/open_shopping_basket" open_time="0" sound_close="UseActions/close_shopping_basket" loot_quality_template="qualBaseTemplate">
+</lootcontainer>
+</insertAfter>
+
+<insertAfter xpath="/lootcontainers/lootgroup[@name='schematicsToolsRare']/item[@name='gunToolNailgunSchematic']">
+<item name="UVM_ImpactwrenchSchematic"/>
+</insertAfter>
+
+<insertAfter xpath="/lootcontainers/lootgroup[@name='rareTools']/item[@name='gunToolNailgun']">
+<item name="UVM_Impactwrench" loot_prob_template="probTemplate1.0" />
+</insertAfter>
+
+<insertAfter xpath="/lootcontainers/lootgroup[@name='tools']/item[@name='gunToolNailgun']">
+<item name="UVM_Impactwrench" loot_prob_template="probTemplate0.5" />
+</insertAfter>
+
+<insertAfter xpath="/lootcontainers/lootgroup[@name='workingStiffs']/item[@name='gunToolNailgun']">
+<item name="UVM_Impactwrench" loot_prob_template="probTemplate1.0" />
+</insertAfter>
+
+<insertBefore xpath="/lootcontainers/lootgroup[@name='schematicsVehiclesRare']/item[@name='vehicleMotorcycleChassisSchematic']">
+<item name="UVM_vehicleAccessoriesSchematic" />
+</insertBefore>
+
+<insertBefore xpath="/lootcontainers/lootgroup[@name='4x4Parts']/item[@name='vehicle4x4TruckChassis']">
+<item name="UVM_vehicleAccessories" />
+</insertBefore>
+
+</UVM_Configs>

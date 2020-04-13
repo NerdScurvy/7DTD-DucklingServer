@@ -1,0 +1,173 @@
+<configs>
+
+	 <!--Reduce wheel bounce sounds -->
+	<set xpath="/Sounds/SoundDataNode[@name='vwheel_bounce']/MaxRepeatRate/@value">10</set>
+	<set xpath="/Sounds/SoundDataNode[@name='vwheel_bounce']/Noise[@ID='0']/@noise">10</set>
+	<append xpath="/Sounds">
+		<SoundDataNode name="muscle_startup"> <AudioSource name="Sounds/AudioSource_Vehicle" />
+			<Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5" />
+			<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?muscle_startup" />
+			<LocalCrouchVolumeScale value="1.0" /> <CrouchNoiseScale value="0.5" /> <NoiseScale value="1" /> <MaxVoices value="10" /> <MaxRepeatRate value="0.01" /> </SoundDataNode>
+
+		<SoundDataNode name="muscle_shutoff"> <AudioSource name="Sounds/AudioSource_Vehicle" />
+			<Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5" />
+			<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?muscle_shutoff" />
+			<LocalCrouchVolumeScale value="1.0" /> <CrouchNoiseScale value="0.5" /> <NoiseScale value="1" /> <MaxVoices value="10" /> <MaxRepeatRate value="0.01" /> </SoundDataNode>
+
+		<SoundDataNode name="muscle_accel1"> <AudioSource name="Sounds/AudioSource_Vehicle" />
+			<Noise ID="3" noise="30" time="3" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60" />
+			<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?muscle_accel1" />
+			<LocalCrouchVolumeScale value="1.0" /> <CrouchNoiseScale value="0.5" /> <NoiseScale value="1" /> <MaxVoices value="2" /> <MaxRepeatRate value="0.01" /> </SoundDataNode>
+
+		<SoundDataNode name="muscle_accel2"> <AudioSource name="Sounds/AudioSource_Vehicle" />
+			<Noise ID="3" noise="30" time="3" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60" />
+			<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?muscle_accel2" />
+			<LocalCrouchVolumeScale value="1.0" /> <CrouchNoiseScale value="0.5" /> <NoiseScale value="1" /> <MaxVoices value="2" /> <MaxRepeatRate value="0.01" /> </SoundDataNode>
+
+		<SoundDataNode name="muscle_accel3"> <AudioSource name="Sounds/AudioSource_Vehicle" />
+			<Noise ID="3" noise="30" time="3" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60" />
+			<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?muscle_accel3" />
+			<LocalCrouchVolumeScale value="1.0" /> <CrouchNoiseScale value="0.5" /> <NoiseScale value="1" /> <MaxVoices value="2" /> <MaxRepeatRate value="0.01" /> </SoundDataNode>
+
+
+		<SoundDataNode name="muscle_decel1"> <AudioSource name="Sounds/AudioSource_Vehicle" />
+			<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?muscle_decel1" />
+			<LocalCrouchVolumeScale value="1.0" /> <CrouchNoiseScale value="0.5" /> <NoiseScale value="1" /> <MaxVoices value="2" /> <MaxRepeatRate value="0.01" /> </SoundDataNode>
+
+		<SoundDataNode name="muscle_decel2"> <AudioSource name="Sounds/AudioSource_Vehicle" />
+			<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?muscle_decel1" />
+			<LocalCrouchVolumeScale value="1.0" /> <CrouchNoiseScale value="0.5" /> <NoiseScale value="1" /> <MaxVoices value="2" /> <MaxRepeatRate value="0.01" /> </SoundDataNode>
+
+		<SoundDataNode name="muscle_idle_lp"> <AudioSource name="Sounds/AudioSource_Vehicle" />
+			<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?muscle_idle_lp" Loop="true" />
+			<LocalCrouchVolumeScale value="1.0" /> <CrouchNoiseScale value="0.5" /> <NoiseScale value="1" /> <MaxVoices value="10" /> <MaxRepeatRate value="0.01" /> </SoundDataNode>
+
+		<SoundDataNode name="muscle_max_speed_lp"> <AudioSource name="Sounds/AudioSource_Vehicle" />
+			<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?muscle_max_speed_lp" Loop="true" />
+			<LocalCrouchVolumeScale value="1.0" /> <CrouchNoiseScale value="0.5" /> <NoiseScale value="1" /> <MaxVoices value="10" /> <MaxRepeatRate value="0.01" /> </SoundDataNode>
+<!-- SEDAN -->			
+		<SoundDataNode name="sedan_startup"> <AudioSource name="Sounds/AudioSource_Vehicle" />
+			<Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5" />
+			<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?sedan_startup" />
+			<LocalCrouchVolumeScale value="1.0" /> <CrouchNoiseScale value="0.5" /> <NoiseScale value="1" /> <MaxVoices value="10" /> <MaxRepeatRate value="0.01" /> </SoundDataNode>
+
+		<SoundDataNode name="sedan_accel1"> <AudioSource name="Sounds/AudioSource_Vehicle" />
+			<Noise ID="3" noise="30" time="3" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60" />
+			<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?sedan_accel1" />
+			<LocalCrouchVolumeScale value="1.0" /> <CrouchNoiseScale value="0.5" /> <NoiseScale value="1" /> <MaxVoices value="2" /> <MaxRepeatRate value="0.01" /> </SoundDataNode>
+
+		<SoundDataNode name="sedan_accel2"> <AudioSource name="Sounds/AudioSource_Vehicle" />
+			<Noise ID="3" noise="30" time="3" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60" />
+			<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?sedan_accel2" />
+			<LocalCrouchVolumeScale value="1.0" /> <CrouchNoiseScale value="0.5" /> <NoiseScale value="1" /> <MaxVoices value="2" /> <MaxRepeatRate value="0.01" /> </SoundDataNode>
+
+		<SoundDataNode name="sedan_accel3"> <AudioSource name="Sounds/AudioSource_Vehicle" />
+			<Noise ID="3" noise="30" time="3" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60" />
+			<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?sedan_accel3" />
+			<LocalCrouchVolumeScale value="1.0" /> <CrouchNoiseScale value="0.5" /> <NoiseScale value="1" /> <MaxVoices value="2" /> <MaxRepeatRate value="0.01" /> </SoundDataNode>
+
+		<SoundDataNode name="sedan_idle_lp"> <AudioSource name="Sounds/AudioSource_Vehicle" />
+			<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?sedan_idle_lp" Loop="true" />
+			<LocalCrouchVolumeScale value="1.0" /> <CrouchNoiseScale value="0.5" /> <NoiseScale value="1" /> <MaxVoices value="10" /> <MaxRepeatRate value="0.01" /> </SoundDataNode>
+
+		<SoundDataNode name="sedan_max_speed_lp"> <AudioSource name="Sounds/AudioSource_Vehicle" />
+			<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?sedan_max_speed_lp" Loop="true" />
+			<LocalCrouchVolumeScale value="1.0" /> <CrouchNoiseScale value="0.5" /> <NoiseScale value="1" /> <MaxVoices value="10" /> <MaxRepeatRate value="0.01" /> </SoundDataNode>
+			
+			<!-- 4x4-->			
+		<SoundDataNode name="4x4_startup"> <AudioSource name="Sounds/AudioSource_Vehicle" />
+			<Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5" />
+			<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?4x4_startup" />
+			<LocalCrouchVolumeScale value="1.0" /> <CrouchNoiseScale value="0.5" /> <NoiseScale value="1" /> <MaxVoices value="10" /> <MaxRepeatRate value="0.01" /> </SoundDataNode>
+
+		<SoundDataNode name="4x4_accel1"> <AudioSource name="Sounds/AudioSource_Vehicle" />
+			<Noise ID="3" noise="30" time="3" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60" />
+			<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?4x4_accel1" />
+			<LocalCrouchVolumeScale value="1.0" /> <CrouchNoiseScale value="0.5" /> <NoiseScale value="1" /> <MaxVoices value="2" /> <MaxRepeatRate value="0.01" /> </SoundDataNode>
+
+		<SoundDataNode name="4x4_accel2"> <AudioSource name="Sounds/AudioSource_Vehicle" />
+			<Noise ID="3" noise="30" time="3" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60" />
+			<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?4x4_accel2" />
+			<LocalCrouchVolumeScale value="1.0" /> <CrouchNoiseScale value="0.5" /> <NoiseScale value="1" /> <MaxVoices value="2" /> <MaxRepeatRate value="0.01" /> </SoundDataNode>
+
+		<SoundDataNode name="4x4_accel3"> <AudioSource name="Sounds/AudioSource_Vehicle" />
+			<Noise ID="3" noise="30" time="3" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60" />
+			<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?4x4_accel3" />
+			<LocalCrouchVolumeScale value="1.0" /> <CrouchNoiseScale value="0.5" /> <NoiseScale value="1" /> <MaxVoices value="2" /> <MaxRepeatRate value="0.01" /> </SoundDataNode>
+
+		<SoundDataNode name="4x4_idle_lp"> <AudioSource name="Sounds/AudioSource_Vehicle" />
+			<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?4x4_idle_lp" Loop="true" />
+			<LocalCrouchVolumeScale value="1.0" /> <CrouchNoiseScale value="0.5" /> <NoiseScale value="1" /> <MaxVoices value="10" /> <MaxRepeatRate value="0.01" /> </SoundDataNode>
+
+		<SoundDataNode name="4x4_max_speed_lp"> <AudioSource name="Sounds/AudioSource_Vehicle" />
+			<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?4x4_max_speed_lp" Loop="true" />
+			<LocalCrouchVolumeScale value="1.0" /> <CrouchNoiseScale value="0.5" /> <NoiseScale value="1" /> <MaxVoices value="10" /> <MaxRepeatRate value="0.01" /> </SoundDataNode>
+			<!-- SUPER-->			
+		<SoundDataNode name="super_startup"> <AudioSource name="Sounds/AudioSource_Vehicle" />
+			<Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5" />
+			<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?super_startup" />
+			<LocalCrouchVolumeScale value="1.0" /> <CrouchNoiseScale value="0.5" /> <NoiseScale value="1" /> <MaxVoices value="10" /> <MaxRepeatRate value="0.01" /> </SoundDataNode>
+
+		<SoundDataNode name="super_accel1"> <AudioSource name="Sounds/AudioSource_Vehicle" />
+			<Noise ID="3" noise="30" time="3" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60" />
+			<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?super_accel1" />
+			<LocalCrouchVolumeScale value="1.0" /> <CrouchNoiseScale value="0.5" /> <NoiseScale value="1" /> <MaxVoices value="2" /> <MaxRepeatRate value="0.01" /> </SoundDataNode>
+
+		<SoundDataNode name="super_accel2"> <AudioSource name="Sounds/AudioSource_Vehicle" />
+			<Noise ID="3" noise="30" time="3" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60" />
+			<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?super_accel2" />
+			<LocalCrouchVolumeScale value="1.0" /> <CrouchNoiseScale value="0.5" /> <NoiseScale value="1" /> <MaxVoices value="2" /> <MaxRepeatRate value="0.01" /> </SoundDataNode>
+
+		<SoundDataNode name="super_accel3"> <AudioSource name="Sounds/AudioSource_Vehicle" />
+			<Noise ID="3" noise="30" time="3" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60" />
+			<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?super_accel3" />
+			<LocalCrouchVolumeScale value="1.0" /> <CrouchNoiseScale value="0.5" /> <NoiseScale value="1" /> <MaxVoices value="2" /> <MaxRepeatRate value="0.01" /> </SoundDataNode>
+
+		<SoundDataNode name="super_idle_lp"> <AudioSource name="Sounds/AudioSource_Vehicle" />
+			<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?super_idle_lp" Loop="true" />
+			<LocalCrouchVolumeScale value="1.0" /> <CrouchNoiseScale value="0.5" /> <NoiseScale value="1" /> <MaxVoices value="10" /> <MaxRepeatRate value="0.01" /> </SoundDataNode>
+
+		<SoundDataNode name="super_max_speed_lp"> <AudioSource name="Sounds/AudioSource_Vehicle" />
+			<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?super_max_speed_lp" Loop="true" />
+			<LocalCrouchVolumeScale value="1.0" /> <CrouchNoiseScale value="0.5" /> <NoiseScale value="1" /> <MaxVoices value="10" /> <MaxRepeatRate value="0.01" /> </SoundDataNode>
+			<!-- TRUCK-->			
+		<SoundDataNode name="truck_startup"> <AudioSource name="Sounds/AudioSource_Vehicle" />
+			<Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5" />
+			<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?truck_startup" />
+			<LocalCrouchVolumeScale value="1.0" /> <CrouchNoiseScale value="0.5" /> <NoiseScale value="1" /> <MaxVoices value="10" /> <MaxRepeatRate value="0.01" /> </SoundDataNode>
+
+		<SoundDataNode name="truck_accel1"> <AudioSource name="Sounds/AudioSource_Vehicle" />
+			<Noise ID="3" noise="30" time="3" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60" />
+			<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?truck_accel1" />
+			<LocalCrouchVolumeScale value="1.0" /> <CrouchNoiseScale value="0.5" /> <NoiseScale value="1" /> <MaxVoices value="2" /> <MaxRepeatRate value="0.01" /> </SoundDataNode>
+
+		<SoundDataNode name="truck_accel2"> <AudioSource name="Sounds/AudioSource_Vehicle" />
+			<Noise ID="3" noise="30" time="3" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60" />
+			<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?truck_accel2" />
+			<LocalCrouchVolumeScale value="1.0" /> <CrouchNoiseScale value="0.5" /> <NoiseScale value="1" /> <MaxVoices value="2" /> <MaxRepeatRate value="0.01" /> </SoundDataNode>
+
+		<SoundDataNode name="truck_accel3"> <AudioSource name="Sounds/AudioSource_Vehicle" />
+			<Noise ID="3" noise="30" time="3" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60" />
+			<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?truck_accel3" />
+			<LocalCrouchVolumeScale value="1.0" /> <CrouchNoiseScale value="0.5" /> <NoiseScale value="1" /> <MaxVoices value="2" /> <MaxRepeatRate value="0.01" /> </SoundDataNode>
+
+		<SoundDataNode name="truck_idle_lp"> <AudioSource name="Sounds/AudioSource_Vehicle" />
+			<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?truck_idle_lp" Loop="true" />
+			<LocalCrouchVolumeScale value="1.0" /> <CrouchNoiseScale value="0.5" /> <NoiseScale value="1" /> <MaxVoices value="10" /> <MaxRepeatRate value="0.01" /> </SoundDataNode>
+
+		<SoundDataNode name="truck_max_speed_lp"> <AudioSource name="Sounds/AudioSource_Vehicle" />
+			<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?truck_max_speed_lp" Loop="true" />
+			<LocalCrouchVolumeScale value="1.0" /> <CrouchNoiseScale value="0.5" /> <NoiseScale value="1" /> <MaxVoices value="10" /> <MaxRepeatRate value="0.01" /> </SoundDataNode>
+			
+			<!-- BUGGY-->			
+		<SoundDataNode name="buggy_startup"> <AudioSource name="Sounds/AudioSource_Vehicle" />
+			<Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5" />
+			<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?buggy_startup" />
+			<LocalCrouchVolumeScale value="1.0" /> <CrouchNoiseScale value="0.5" /> <NoiseScale value="1" /> <MaxVoices value="10" /> <MaxRepeatRate value="0.01" /> </SoundDataNode>
+			
+		<SoundDataNode name="buggy_idle_lp"> <AudioSource name="Sounds/AudioSource_Vehicle" />
+			<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?buggy_idle_lp" Loop="true" />
+			<LocalCrouchVolumeScale value="1.0" /> <CrouchNoiseScale value="0.5" /> <NoiseScale value="1" /> <MaxVoices value="10" /> <MaxRepeatRate value="0.01" /> </SoundDataNode>
+	</append>
+
+</configs>

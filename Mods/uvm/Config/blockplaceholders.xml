@@ -1,0 +1,74 @@
+<UVM_Configs>
+		<remove xpath="/blockplaceholders/placeholder[@name='carsRandomHelper']"/>
+	  <append xpath="/blockplaceholders">
+		<placeholder name="carsRandomHelper">
+			<block name="UVM_Car11BaseShell" prob="1"/>
+			<block name="UVM_Car12BaseShell" prob="1"/>
+			<block name="UVM_Car13BaseShell" prob="1"/>
+			<block name="UVM_Car14BaseShell" prob="1"/>
+			<block name="UVM_Car15BaseShell" prob="1"/>
+			<block name="UVM_Car16BaseShell" prob="1"/>
+			<block name="UVM_Car17BaseShell" prob="1"/>
+			<block name="UVM_Car18BaseShell" prob="1"/>
+			<block name="UVM_Car19BaseShell" prob="1"/>
+			<block name="UVM_Car20BaseShell" prob="1"/>
+			<block name="UVM_Car21BaseShell" prob="1"/>
+			<block name="UVM_Car22BaseShell" prob="1"/>
+			<block name="UVM_Car23BaseShell" prob="1"/>
+			<block name="UVM_Car24BaseShell" prob="1"/>
+			<block name="UVM_Car25BaseShell" prob="1"/>
+			<block name="UVM_Car26BaseShell" prob="1"/>
+			<block name="UVM_Car27BaseShell" prob="1"/>
+			<block name="UVM_Car28BaseShell" prob="1"/>
+			<block name="UVM_Car29BaseShell" prob="1"/>
+			<block name="UVM_Car30BaseShell" prob="1"/>
+			
+			<block name="UVM_Car31BaseShell" prob="0.8"/>
+			<block name="UVM_Car1BaseShell" prob="0.5"/>
+			<block name="UVM_Car2BaseShell" prob="0.5"/>
+			<block name="UVM_Car3BaseShell" prob="0.5"/>
+			<block name="UVM_Car4BaseShell" prob="0.5"/>
+			<block name="UVM_Car5BaseShell" prob="0.5"/>
+			
+			<block name="UVM_Car6BaseShell" prob="0.1"/>
+			<block name="UVM_Car7BaseShell" prob="0.1"/>
+			<block name="UVM_Car8BaseShell" prob="0.1"/>
+			<block name="UVM_Car9BaseShell" prob="0.1"/>
+			<block name="UVM_Car10BaseShell" prob="0.1"/> -->
+		</placeholder>
+		<placeholder name="cntArmyTruckOpen">
+			<block name="UVM_Car32BaseShell" prob="1"/>
+			<block name="UVM_Car33BaseShell" prob="1"/>
+			<block name="UVM_Car34BaseShell" prob="1"/>
+			<block name="UVM_Car35BaseShell" prob="1"/>
+			<block name="UVM_Car36BaseShell" prob="1"/>
+			<block name="UVM_Car37BaseShell" prob="1"/>
+			<block name="UVM_Car38BaseShell" prob="1"/>
+			<block name="UVM_Car39BaseShell" prob="1"/>
+			<block name="UVM_Car40BaseShell" prob="1"/>
+			<block name="UVM_Car41BaseShell" prob="1"/>
+			<block name="UVM_Car42BaseShell" prob="1"/>
+			<block name="UVM_Car43BaseShell" prob="1"/>
+			<block name="UVM_Car44BaseShell" prob="1"/>
+			<block name="UVM_Car45BaseShell" prob="1"/>
+			<block name="UVM_Car46BaseShell" prob="1"/>
+		</placeholder>
+		<placeholder name="cntArmyTruckClosed">
+			<block name="UVM_Car32BaseShell" prob="1"/>
+			<block name="UVM_Car33BaseShell" prob="1"/>
+			<block name="UVM_Car34BaseShell" prob="1"/>
+			<block name="UVM_Car35BaseShell" prob="1"/>
+			<block name="UVM_Car36BaseShell" prob="1"/>
+			<block name="UVM_Car37BaseShell" prob="1"/>
+			<block name="UVM_Car38BaseShell" prob="1"/>
+			<block name="UVM_Car39BaseShell" prob="1"/>
+			<block name="UVM_Car40BaseShell" prob="1"/>
+			<block name="UVM_Car41BaseShell" prob="1"/>
+			<block name="UVM_Car42BaseShell" prob="1"/>
+			<block name="UVM_Car43BaseShell" prob="1"/>
+			<block name="UVM_Car44BaseShell" prob="1"/>
+			<block name="UVM_Car45BaseShell" prob="1"/>
+			<block name="UVM_Car46BaseShell" prob="1"/>
+		</placeholder>
+	  </append>
+</UVM_Configs>

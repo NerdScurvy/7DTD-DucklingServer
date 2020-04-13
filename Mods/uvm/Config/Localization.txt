@@ -1,0 +1,193 @@
+Key,UsedInMainMenu,Source,Context,Changes,English,French,German,Klingon,Spanish,Polish,japanese
+UVM_Impactwrench,,items,Melee,KgNone,Impact Wrench,Clé à chocs,Schlagschrauber,,Llave de impacto,Klucz udarowy,インパクトレンチ
+UVM_ImpactwrenchDesc,,items,,,Used to upgrade any UVM vehicle found in the world into a working vehicle.\n\nYou will need some vehicle accessories in your inventory to upgrade.\n\nAim at the right headlight of any UVM vehicle.,Utilisé pour mettre à jour tout véhicule UVM trouvé dans le monde dans un véhicule de travail. \ N \ nVous aura besoin des accessoires de véhicules dans votre inventaire pour la mise à niveau. \ N \ NAIM au phare droit de tout véhicule UVM.,Alle gebrauchten UVM-Fahrzeug der Welt in ein Arbeitsfahrzeug gefunden zu aktualisieren. \ N \ nDie werden einige Fahrzeugzubehör in Ihrem Inventar aktualisieren müssen. \ N \ Naim am rechten Scheinwerfer eines UVM Fahrzeug.,,Se utiliza para actualizar cualquier vehículo UVM se encuentran en el mundo en un vehículo de trabajo. \ N \ nNo necesitará algunos accesorios de vehículos en su inventario para actualizar. \ N \ Naim en el faro derecho de cualquier vehículo de UVM.,Służy do uaktualnienia każdy pojazd uvm znaleźć w świecie na pojazd roboczy. \ N \ nNie będzie potrzebować akcesoriów samochodowych w ekwipunku do aktualizacji. \ N \ Naim na prawym reflektorem jakiegokolwiek pojazdu uvm.,ワールド内で発見したUMV車をアップグレードするために使用します。\n\n乗り物用アクセサリを鞄内に入れた状態で、インパクトレンチを車の向かって右側のヘッドライトに向け左クリックしてアップグレードすると、乗る事が可能になります。
+UVM_ImpactwrenchSchematic,,items,,,Impact Wrench Schematic,Clé à chocs schématique,Schlagschrauber Schematic,,Llave de impacto esquemática,Klucz udarowy Schematyczne,
+UVM_vehicleAccessories,,items,,,Vehicle Accessories,Accessoires pour véhicules,Fahrzeugzubehör,,Accesorios de vehículos,Akcesoria pojazd,乗り物用アクセサリ
+UVM_vehicleAccessoriesDesc,,items,,,Upgrade item for UVM vehicles found in the world.\n\nUpgrade UVM vehicles by left clicking with an impact wrench in your hand.\n\nAim at the right headlight of any UVM vehicle.,élément de mise à niveau pour les véhicules UVM trouvés dans le monde. \ n \ nmise véhicules UVM en cliquant à gauche avec une clé d'impact dans votre main. \ n \ NAIM au phare droit de tout véhicule UVM.,Upgrade-Artikel für UVM Fahrzeuge gefunden in der Welt. \ N \ nUpgrade UVM Fahrzeuge mit einem Linksklick mit einem Schlagschrauber in der Hand. \ N \ Naim am rechten Scheinwerfer eines UVM Fahrzeugs.,,elemento de actualización para vehículos UVM encuentra en el mundo de vehículos. \ n \ nUpgrade UVM haciendo clic izquierdo con una llave de impacto en la mano. \ n \ Naim en el faro derecho de cualquier vehículo de UVM.,Upgrade dla pojazdów uvm znaleźć w świecie pojazdów. \ N \ nUpgrade uvm klikając lewym przyciskiem myszy za pomocą klucza udarowego w ręku. \ N \ Naim na prawym reflektorem jakiegokolwiek pojazdu uvm.,ワールド内で発見したUMV車をアップグレードするために使用します。\n\n乗り物用アクセサリを鞄内に入れた状態で、インパクトレンチを車の向かって右側のヘッドライトに向け左クリックしてアップグレードすると、乗る事が可能になります。
+UVM_vehicleAccessoriesSchematic,,items,,,Vehicle Accessories Schematic,Accessoires pour véhicules Schéma,Fahrzeugzubehör Schematic,,Vehículo Accesorios esquemática,Pojazd Akcesoria Schematyczne,乗り物用アクセサリ・スキマティック
+,,items,,,,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,
+UVM_Car1BasePlaceable,,items,,,Sports Car (Black),Voiture de sport (Noir),Sport-Auto (schwarz),,Autos Deportivos (Negro),Sports Car (czarny),スポーツカー(黒)
+UVM_Car2BasePlaceable,,items,,,Sports Car (Blue Stripes),Voiture de sport (rayures bleues),Sport-Auto (blaue Streifen),,Autos Deportivos (rayas azules),Sports Car (niebieskie pasy),スポーツカー(青ストライプ)
+UVM_Car3BasePlaceable,,items,,,Sports Car (Red),Voiture de sport (Rouge),Sportwagen (rot),,Autos Deportivos (rojo),Sports Car (czerwony),スポーツカー(赤)
+UVM_Car4BasePlaceable,,items,,,Sports Car (Green),Voiture de sport (vert),Sport-Auto (Grün),,Autos Deportivos (verde),Sports Car (zielony),スポーツカー(緑)
+UVM_Car5BasePlaceable,,items,,,Sports Car (Gray),Voiture de sport (Gris),Sports Car (Gray),,Autos Deportivos (gris),Sports Car (szary),スポーツカー(グレー)
+UVM_Car6BasePlaceable,,items,,,Lamborghini (Yellow),Lamborghini (jaune),Lamborghini (Gelb),,Lamborghini (amarillo),Lamborghini (żółty),スーパーカー(黄色)
+UVM_Car7BasePlaceable,,items,,,Bugatti  (Blue),Bugatti (Bleu),Bugatti (blau),,Bugatti (azul),Bugatti (niebieski),スーパーカー(青)
+UVM_Car8BasePlaceable,,items,,,Super Car (Silver),Super Car (Argent),Super Car (Silber),,Super Car (plata),Super Car (srebrny),スーパーカー(銀)
+UVM_Car9BasePlaceable,,items,,,Porsche (Yellow Stripes),Porsche (rayures jaunes),Porsche (Gelb-Streifen),,Porsche (amarillo rayas),Porsche (żółte pasy),スーパーカー(黄色ストライプ)
+UVM_Car10BasePlaceable,,items,,,Super Car (Red),Super Car (Rouge),Super Car (rot),,Super Car (rojo),Super Car (czerwony),スーパーカー(赤)
+UVM_Car11BasePlaceable,,items,,,Sedan (Brown),Sedan (Brown),Sedan (Brown),,Sedán (Brown),Sedan (brązowy),セダン(茶)
+UVM_Car12BasePlaceable,,items,,,Sedan (Gray),Sedan (Gray),Sedan (Gray),,Sedán (gris),Sedan (szary),セダン(グレー)
+UVM_Car13BasePlaceable,,items,,,Sedan (Blue),Sedan (Bleu),Sedan (blau),,Sedán (azul),Sedan (niebieski),セダン(青)
+UVM_Car14BasePlaceable,,items,,,Sedan (Green),Sedan (vert),Sedan (Grün),,Sedan (verde),Sedan (zielony),セダン(緑)
+UVM_Car15BasePlaceable,,items,,,Sedan (Dark Green),Sedan (vert foncé),Sedan (dunkelgrün),,Sedán (verde oscuro),Sedan (ciemnozielony),セダン(深緑)
+UVM_Car16BasePlaceable,,items,,,Jeep 4x4 (Orange),Jeep 4x4 (Orange),Jeep 4x4 (orange),,Jeep 4x4 (naranja),Jeep 4x4 (pomarańczowy),4x4 (Orange)
+UVM_Car17BasePlaceable,,items,,,4x4 (Musturd),4x4 (Musturd),4x4 (Musturd),,4x4 (Musturd),4x4 (Musturd),4x4 (マスタード)
+UVM_Car18BasePlaceable,,items,,,4x4 (Blue),4x4 (Bleu),4x4 (blau),,4x4 (azul),4x4 (niebieski),4x4 (青)
+UVM_Car19BasePlaceable,,items,,,4x4 (Green),4x4 (vert),4x4 (Grün),,4x4 (verde),4x4 (zielony),4x4 (緑)
+UVM_Car20BasePlaceable,,items,,,4x4 (Light Blue),4x4 (bleu clair),4x4 (hellblau),,4x4 (azul claro),4x4 (jasnoniebieski),4x4 (オレンジ)
+UVM_Car21BasePlaceable,,items,,,Van (Brown),Van (Brown),Van (Brown),,Van (Brown),Van (brązowy),バン(茶)
+UVM_Car22BasePlaceable,,items,,,Van (Green),Van (vert),Van (Grün),,Van (verde),Van (zielony),バン(緑)
+UVM_Car23BasePlaceable,,items,,,Van (Yellow),Van (Jaune),Van (Gelb),,Van (amarillo),Van (Żółty),バン(黄)
+UVM_Car24BasePlaceable,,items,,,Van (White),Van (Blanc),Van (weiß),,Van (blanco),Van (biała),バン(白)
+UVM_Car25BasePlaceable,,items,,,Van (Blue/White),Van (Bleu / Blanc),Van (blau / weiß),,Van (azul / blanco),Van (niebieski / biały),バン(青/白)
+UVM_Car26BasePlaceable,,items,,,Semi,Semi,Halb,,Semi,Pół,セミトレーラー
+UVM_Car27BasePlaceable,,items,,,Police Car,Voiture de police,Polizeiauto,,Coche de policía,Radiowóz,パトカー
+UVM_Car28BasePlaceable,,items,,,Taxi,Taxi,Taxi,,Taxi,Taxi,タクシー
+UVM_Car29BasePlaceable,,items,,,Ambulance,Ambulance,Krankenwagen,,Ambulancia,Karetka,救急車
+UVM_Car30BasePlaceable,,items,,,Fire Truck,Camion de pompier,Feuerwehrauto,,Camión de bomberos,Wóz strażacki,消防車
+UVM_Car31BasePlaceable,,items,,,Armored Car,Voiture blindée,Panzerwagen,,Vehículo blindado,Opancerzony samochód,現金輸送車
+UVM_Car32BasePlaceable,,items,,,Military Truck 1,Camion militaire 1,Militärfahrzeug 1,,Military Truck 1,Military Truck 1,軍用トラック 1
+UVM_Car33BasePlaceable,,items,,,Military Truck 2,Truck 2 militaire,Militärfahrzeug 2,,Military Truck 2,Military Truck 2,軍用トラック 2
+UVM_Car34BasePlaceable,,items,,,Military Truck 3,Camion 3 militaire,Militärfahrzeug 3,,Military Truck 3,Military Truck 3,軍用トラック 3
+UVM_Car35BasePlaceable,,items,,,Military Truck 4,Camion 4 militaire,Militärfahrzeug 4,,Military Truck 4,Military Truck 4,軍用トラック 4
+UVM_Car36BasePlaceable,,items,,,Military Car (Blue),Voiture militaire (Bleu),Military Car (blau),,Coche militar (azul),Samochód wojskowy (niebieski),軍用車両(青)
+UVM_Car37BasePlaceable,,items,,,Military Car (Khaki),Voiture militaire (kaki),Military Car (Khaki),,Coche militar (Caqui),Samochód wojskowy (khaki),軍用車両(カーキ)
+UVM_Car38BasePlaceable,,items,,,Military Car (Black),Voiture militaire (Noir),Military Auto (schwarz),,Coche militar (Negro),Samochód wojskowy (czarny),軍用車両(黒)
+UVM_Car39BasePlaceable,,items,,,Military Car (Green),Voiture militaire (vert),Military Auto (Grün),,Coche militar (verde),Samochód wojskowy (zielony),軍用車両(緑)
+UVM_Car40BasePlaceable,,items,,,Military Car (Green/Roof),Voiture militaire (vert / toit),Military Auto (Grün / Dach),,Coche militar (verde / techo),Military Car (zielony / dachu),軍用車両(緑/屋根付き)
+UVM_Car41BasePlaceable,,items,,,Military Special 1,Spécial militaire 1,Military Special 1,,Militar 1 Especial,Specjalna wojskowa 1,特殊軍用車両 1
+UVM_Car42BasePlaceable,,items,,,Military Special 2,Spécial 2 militaires,Military Special 2,,Militar Especial 2,Specjalna wojskowa 2,特殊軍用車両 2
+UVM_Car43BasePlaceable,,items,,,Military Special 3,Spécial 3 militaires,Military Special 3,,3 Especial Militar,Specjalna Wojskowa 3,特殊軍用車両 3
+UVM_Car44BasePlaceable,,items,,,Military Special 4,Spécial 4 militaires,Military Special 4,,4 Especial Militar,Specjalna wojskowa 4,特殊軍用車両 4
+UVM_Car45BasePlaceable,,items,,,Military Special 5,5 spéciale militaire,Military Special 5,,5 Especial Militar,Wojskowy specjalne 5,特殊軍用車両 5
+UVM_Car46BasePlaceable,,items,,,Military Special 6,Spécial militaire 6,Military Special 6,,6 Especial Militar,Specjalna Wojskowa 6,特殊軍用車両 6
+,,,,,,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,
+UVM_Car1MaxPlaceable,,items,,,,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,
+UVM_Car2MaxPlaceable,,items,,,,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,
+UVM_Car3MaxPlaceable,,items,,,,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,
+UVM_Car4MaxPlaceable,,items,,,,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,
+UVM_Car5MaxPlaceable,,items,,,,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,
+UVM_Car6MaxPlaceable,,items,,,Bugatti  (Blue),Bugatti (Bleu),Bugatti (blau),,Bugatti (azul),Bugatti (niebieski),
+UVM_Car7MaxPlaceable,,items,,,,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,
+UVM_Car8MaxPlaceable,,items,,,,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,
+UVM_Car9MaxPlaceable,,items,,,,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,
+UVM_Car10MaxPlaceable,,items,,,,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,
+UVM_Car11MaxPlaceable,,items,,,,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,
+UVM_Car12MaxPlaceable,,items,,,,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,
+UVM_Car13MaxPlaceable,,items,,,,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,
+UVM_Car14MaxPlaceable,,items,,,,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,
+UVM_Car15MaxPlaceable,,items,,,,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,
+UVM_Car16MaxPlaceable,,items,,,,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,
+UVM_Car17MaxPlaceable,,items,,,,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,
+UVM_Car18MaxPlaceable,,items,,,,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,
+UVM_Car19MaxPlaceable,,items,,,,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,
+UVM_Car20MaxPlaceable,,items,,,,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,
+UVM_Car21MaxPlaceable,,items,,,,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,
+UVM_Car22MaxPlaceable,,items,,,,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,
+UVM_Car23MaxPlaceable,,items,,,,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,
+UVM_Car24MaxPlaceable,,items,,,,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,
+UVM_Car25MaxPlaceable,,items,,,,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,
+UVM_Car26MaxPlaceable,,items,,,,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,
+UVM_Car27MaxPlaceable,,items,,,,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,
+UVM_Car28MaxPlaceable,,items,,,,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,
+UVM_Car29MaxPlaceable,,items,,,,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,
+UVM_Car30MaxPlaceable,,items,,,,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,
+UVM_Car31MaxPlaceable,,items,,,,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,
+UVM_Car32MaxPlaceable,,items,,,,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,
+UVM_Car33MaxPlaceable,,items,,,,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,
+UVM_Car34MaxPlaceable,,items,,,,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,
+UVM_Car35MaxPlaceable,,items,,,,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,
+UVM_Car36MaxPlaceable,,items,,,,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,
+UVM_Car37MaxPlaceable,,items,,,,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,
+UVM_Car38MaxPlaceable,,items,,,,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,
+UVM_Car39MaxPlaceable,,items,,,,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,
+UVM_Car40MaxPlaceable,,items,,,,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,
+UVM_Car41MaxPlaceable,,items,,,,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,
+UVM_Car42MaxPlaceable,,items,,,,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,
+UVM_Car43MaxPlaceable,,items,,,,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,
+UVM_Car44MaxPlaceable,,items,,,,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,
+UVM_Car45MaxPlaceable,,items,,,,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,
+,,,,,,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,
+UVM_Car1Base,,vehicles,,,Sports Car (Black),Voiture de sport (Noir),Sport-Auto (schwarz),,Autos Deportivos (Negro),Sports Car (czarny),スポーツカー(黒)
+UVM_Car2Base,,vehicles,,,Sports Car (Blue Stripes),Voiture de sport (rayures bleues),Sport-Auto (blaue Streifen),,Autos Deportivos (rayas azules),Sports Car (niebieskie pasy),スポーツカー(青ストライプ)
+UVM_Car3Base,,vehicles,,,Sports Car (Red),Voiture de sport (Rouge),Sportwagen (rot),,Autos Deportivos (rojo),Sports Car (czerwony),スポーツカー(赤)
+UVM_Car4Base,,vehicles,,,Sports Car (Green),Voiture de sport (vert),Sport-Auto (Grün),,Autos Deportivos (verde),Sports Car (zielony),スポーツカー(緑)
+UVM_Car5Base,,vehicles,,,Sports Car (Gray),Voiture de sport (Gris),Sports Car (Gray),,Autos Deportivos (gris),Sports Car (szary),スポーツカー(グレー)
+UVM_Car6Base,,vehicles,,,Lamborghini (Yellow),Lamborghini (jaune),Lamborghini (Gelb),,Lamborghini (amarillo),Lamborghini (żółty),スーパーカー(黄色)
+UVM_Car7Base,,vehicles,,,Bugatti  (Blue),Bugatti (Bleu),Bugatti (blau),,Bugatti (azul),Bugatti (niebieski),スーパーカー(青)
+UVM_Car8Base,,vehicles,,,Super Car (Silver),Super Car (Argent),Super Car (Silber),,Super Car (plata),Super Car (srebrny),スーパーカー(銀)
+UVM_Car9Base,,vehicles,,,Porsche (Yellow Stripes),Porsche (rayures jaunes),Porsche (Gelb-Streifen),,Porsche (amarillo rayas),Porsche (żółte pasy),スーパーカー(黄色ストライプ)
+UVM_Car10Base,,vehicles,,,Super Car (Red),Super Car (Rouge),Super Car (rot),,Super Car (rojo),Super Car (czerwony),スーパーカー(赤)
+UVM_Car11Base,,vehicles,,,Sedan (Brown),Sedan (Brown),Sedan (Brown),,Sedán (Brown),Sedan (brązowy),セダン(茶)
+UVM_Car12Base,,vehicles,,,Sedan (Gray),Sedan (Gray),Sedan (Gray),,Sedán (gris),Sedan (szary),セダン(グレー)
+UVM_Car13Base,,vehicles,,,Sedan (Blue),Sedan (Bleu),Sedan (blau),,Sedán (azul),Sedan (niebieski),セダン(青)
+UVM_Car14Base,,vehicles,,,Sedan (Green),Sedan (vert),Sedan (Grün),,Sedan (verde),Sedan (zielony),セダン(緑)
+UVM_Car15Base,,vehicles,,,Sedan (Dark Green),Sedan (vert foncé),Sedan (dunkelgrün),,Sedán (verde oscuro),Sedan (ciemnozielony),セダン(深緑)
+UVM_Car16Base,,vehicles,,,Jeep 4x4 (Orange),Jeep 4x4 (Orange),Jeep 4x4 (orange),,Jeep 4x4 (naranja),Jeep 4x4 (pomarańczowy),4x4 (Orange)
+UVM_Car17Base,,vehicles,,,4x4 (Musturd),4x4 (Musturd),4x4 (Musturd),,4x4 (Musturd),4x4 (Musturd),4x4 (マスタード)
+UVM_Car18Base,,vehicles,,,4x4 (Blue),4x4 (Bleu),4x4 (blau),,4x4 (azul),4x4 (niebieski),4x4 (青)
+UVM_Car19Base,,vehicles,,,4x4 (Green),4x4 (vert),4x4 (Grün),,4x4 (verde),4x4 (zielony),4x4 (緑)
+UVM_Car20Base,,vehicles,,,4x4 (Light Blue),4x4 (bleu clair),4x4 (hellblau),,4x4 (azul claro),4x4 (jasnoniebieski),4x4 (オレンジ)
+UVM_Car21Base,,vehicles,,,Van (Brown),Van (Brown),Van (Brown),,Van (Brown),Van (brązowy),バン(茶)
+UVM_Car22Base,,vehicles,,,Van (Green),Van (vert),Van (Grün),,Van (verde),Van (zielony),バン(緑)
+UVM_Car23Base,,vehicles,,,Van (Yellow),Van (Jaune),Van (Gelb),,Van (amarillo),Van (Żółty),バン(黄)
+UVM_Car24Base,,vehicles,,,Van (White),Van (Blanc),Van (weiß),,Van (blanco),Van (biała),バン(白)
+UVM_Car25Base,,vehicles,,,Van (Blue/White),Van (Bleu / Blanc),Van (blau / weiß),,Van (azul / blanco),Van (niebieski / biały),バン(青/白)
+UVM_Car26Base,,vehicles,,,Semi,Semi,Halb,,Semi,Pół,セミトレーラー
+UVM_Car27Base,,vehicles,,,Police Car,Voiture de police,Polizeiauto,,Coche de policía,Radiowóz,パトカー
+UVM_Car28Base,,vehicles,,,Taxi,Taxi,Taxi,,Taxi,Taxi,タクシー
+UVM_Car29Base,,vehicles,,,Ambulance,Ambulance,Krankenwagen,,Ambulancia,Karetka,救急車
+UVM_Car30Base,,vehicles,,,Fire Truck,Camion de pompier,Feuerwehrauto,,Camión de bomberos,Wóz strażacki,消防車
+UVM_Car31Base,,vehicles,,,Armored Car,Voiture blindée,Panzerwagen,,Vehículo blindado,Opancerzony samochód,現金輸送車
+UVM_Car32Base,,vehicles,,,Military Truck 1,Camion militaire 1,Militärfahrzeug 1,,Military Truck 1,Military Truck 1,軍用トラック 1
+UVM_Car33Base,,vehicles,,,Military Truck 2,Truck 2 militaire,Militärfahrzeug 2,,Military Truck 2,Military Truck 2,軍用トラック 2
+UVM_Car34Base,,vehicles,,,Military Truck 3,Camion 3 militaire,Militärfahrzeug 3,,Military Truck 3,Military Truck 3,軍用トラック 3
+UVM_Car35Base,,vehicles,,,Military Truck 4,Camion 4 militaire,Militärfahrzeug 4,,Military Truck 4,Military Truck 4,軍用トラック 4
+UVM_Car36Base,,vehicles,,,Military Car (Blue),Voiture militaire (Bleu),Military Car (blau),,Coche militar (azul),Samochód wojskowy (niebieski),軍用車両(青)
+UVM_Car37Base,,vehicles,,,Military Car (Khaki),Voiture militaire (kaki),Military Car (Khaki),,Coche militar (Caqui),Samochód wojskowy (khaki),軍用車両(カーキ)
+UVM_Car38Base,,vehicles,,,Military Car (Black),Voiture militaire (Noir),Military Auto (schwarz),,Coche militar (Negro),Samochód wojskowy (czarny),軍用車両(黒)
+UVM_Car39Base,,vehicles,,,Military Car (Green),Voiture militaire (vert),Military Auto (Grün),,Coche militar (verde),Samochód wojskowy (zielony),軍用車両(緑)
+UVM_Car40Base,,vehicles,,,Military Car (Green/Roof),Voiture militaire (vert / toit),Military Auto (Grün / Dach),,Coche militar (verde / techo),Military Car (zielony / dachu),軍用車両(緑/屋根付き)
+UVM_Car41Base,,vehicles,,,Military Special 1,Spécial militaire 1,Military Special 1,,Militar 1 Especial,Specjalna wojskowa 1,特殊軍用車両 1
+UVM_Car42Base,,vehicles,,,Military Special 2,Spécial 2 militaires,Military Special 2,,Militar Especial 2,Specjalna wojskowa 2,特殊軍用車両 2
+UVM_Car43Base,,vehicles,,,Military Special 3,Spécial 3 militaires,Military Special 3,,3 Especial Militar,Specjalna Wojskowa 3,特殊軍用車両 3
+UVM_Car44Base,,vehicles,,,Military Special 4,Spécial 4 militaires,Military Special 4,,4 Especial Militar,Specjalna wojskowa 4,特殊軍用車両 4
+UVM_Car45Base,,vehicles,,,Military Special 5,5 spéciale militaire,Military Special 5,,5 Especial Militar,Wojskowy specjalne 5,特殊軍用車両 5
+UVM_Car46Base,,vehicles,,,Military Special 6,Spécial militaire 6,Military Special 6,,6 Especial Militar,Specjalna Wojskowa 6,特殊軍用車両 6
+,,vehicles,,,,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,
+UVM_Car1Max,,vehicles,,,,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,
+UVM_Car2Max,,vehicles,,,,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,
+UVM_Car3Max,,vehicles,,,,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,
+UVM_Car4Max,,vehicles,,,,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,
+UVM_Car5Max,,vehicles,,,,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,
+UVM_Car6Max,,vehicles,,,,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,
+UVM_Car7Max,,vehicles,,,,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,
+UVM_Car8Max,,vehicles,,,,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,
+UVM_Car9Max,,vehicles,,,,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,
+UVM_Car10Max,,vehicles,,,,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,
+UVM_Car11Max,,vehicles,,,,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,
+UVM_Car12Max,,vehicles,,,,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,
+UVM_Car13Max,,vehicles,,,,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,
+UVM_Car14Max,,vehicles,,,,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,
+UVM_Car15Max,,vehicles,,,,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,
+UVM_Car16Max,,vehicles,,,,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,
+UVM_Car17Max,,vehicles,,,,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,
+UVM_Car18Max,,vehicles,,,,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,
+UVM_Car19Max,,vehicles,,,,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,
+UVM_Car20Max,,vehicles,,,,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,
+UVM_Car21Max,,vehicles,,,,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,
+UVM_Car22Max,,vehicles,,,,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,
+UVM_Car23Max,,vehicles,,,,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,
+UVM_Car24Max,,vehicles,,,,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,
+UVM_Car25Max,,vehicles,,,,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,
+UVM_Car26Max,,vehicles,,,,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,
+UVM_Car27Max,,vehicles,,,,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,
+UVM_Car28Max,,vehicles,,,,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,
+UVM_Car29Max,,vehicles,,,,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,
+UVM_Car30Max,,vehicles,,,,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,
+UVM_Car31Max,,vehicles,,,,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,
+UVM_Car32Max,,vehicles,,,,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,
+UVM_Car33Max,,vehicles,,,,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,
+UVM_Car34Max,,vehicles,,,,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,
+UVM_Car35Max,,vehicles,,,,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,
+UVM_Car36Max,,vehicles,,,,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,
+UVM_Car37Max,,vehicles,,,,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,
+UVM_Car38Max,,vehicles,,,,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,
+UVM_Car39Max,,vehicles,,,,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,
+UVM_Car40Max,,vehicles,,,,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,
+UVM_Car41Max,,vehicles,,,,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,
+UVM_Car42Max,,vehicles,,,,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,
+UVM_Car43Max,,vehicles,,,,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,
+UVM_Car44Max,,vehicles,,,,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,
+UVM_Car45Max,,vehicles,,,,#VALUE!,#VALUE!,,#VALUE!,#VALUE!,

@@ -1,0 +1,1841 @@
+<UVM_Configs>
+		<remove xpath="/blocks/block[@name='cntArmyTruckOpen']"/>
+		<remove xpath="/blocks/block[@name='cntArmyTruckClosed']"/>
+	  <append xpath="/blocks">
+		<!-- framework -->
+		<block name="vair">
+			<property name="Material" value="Mair"/>
+			<property name="Shape" value="Invisible"/>
+			<property name="Texture" value="250"/>
+			<property name="FilterTags" value="fterrain"/>
+			<property name="SortOrder1" value="d0j0"/>
+			<property name="SortOrder2" value="0050"/>
+		</block>
+		<block name="masterSpawners">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="air"/>
+			<property name="Material" value="Mfakeair"/>
+			<property name="Class" value="SpawnEntity"/>
+			<property name="SpawnClass" value="ZMaster"/>
+		</block>
+		<block name="spawnVehicleBlock">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Extends" value="air"/>
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.Next" value="spawnVehicleNext"/>
+			<property name="PlantGrowing.GrowOnTop" value="UVM_Car1BaseShell"/>
+			<property name="PlantGrowing.GrowthRate" value="0.0001"/>
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<drop event="Destroy" count="0"/>
+		</block>
+		<block name="spawnVehicleNext">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="spawnVehicleBlock"/>
+			<property name="PlantGrowing.Next" value="spawnVehicleEnd"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="false"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.GrowthRate" value="0.25"/>
+		</block>
+		<block name="spawnVehicleEnd">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="spawnVehicleBlock"/>
+			<property name="MultiBlockDim" value="1,3,1"/>
+			<property name="PlantGrowing.Next" value="vair"/>
+			<property name="PlantGrowing.GrowthRate" value="0.0001"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="false"/>
+		</block>
+		<block name="cntArmyTruckOpen">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="CustomIcon" value="cntCar03SedanDamage0Master"/> <property name="CustomIconTint" value="ff8080"/>
+			<property name="ItemTypeIcon" value="explosion"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="Class" value="Loot"/>
+			<property name="LootList" value="16"/>
+			<property name="IsReplaceRandom" value="false"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="Place" value="TowardsPlacer"/>
+			<property name="Model" value="#Entities/Vehicles?Car/car_white_dmg0Prefab.prefab"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="ImposterDontBlock" value="true"/>
+			<property name="ShowModelOnFall" value="false"/>
+			<drop event="Destroy" count="0"/>
+			<property name="BigDecorationRadius" value="5"/>
+			<property name="CanDecorateOnSlopes" value="false"/>
+			<property name="ActivationDistance" value="8"/>
+			<property name="FilterTags" value="floot,fdesign"/>
+			<property name="DisplayInfo" value="Name"/>
+		</block>
+		<block name="cntArmyTruckClosed">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="CustomIcon" value="cntCar03SedanDamage0Master"/> <property name="CustomIconTint" value="ff8080"/>
+			<property name="ItemTypeIcon" value="explosion"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="Class" value="Loot"/>
+			<property name="LootList" value="16"/>
+			<property name="IsReplaceRandom" value="false"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="Place" value="TowardsPlacer"/>
+			<property name="Model" value="#Entities/Vehicles?Car/car_white_dmg0Prefab.prefab"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="ImposterDontBlock" value="true"/>
+			<property name="ShowModelOnFall" value="false"/>
+			<drop event="Destroy" count="0"/>
+			<property name="BigDecorationRadius" value="5"/>
+			<property name="CanDecorateOnSlopes" value="false"/>
+			<property name="ActivationDistance" value="8"/>
+			<property name="FilterTags" value="floot,fdesign"/>
+			<property name="DisplayInfo" value="Name"/>
+		</block>
+		<!-- end framework -->
+		<block name="UVM_Car1BaseShell">
+			<property name="Extends" value="cntCar03SedanDamage2Master"/>
+			<property name="Class" value="CarExplodeLoot"/>
+			<property name="LootList" value="19"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="Model" value="#@modfolder:Resources/UVM_Car1BaseShell.unity3d?UVM_Car1BaseShell"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="spawnVehicleBlock1"/>
+				<property name="Item" value="UVM_vehicleAccessories"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="1"/>
+			</property>
+			<property class="RepairItems"> <property name="resourceRepairKit" value="1"/> </property>
+			<property name="DowngradeBlock" value="cntCar03SedanDamage2v01"/>
+			<property name="MultiBlockDim" value="2,2,4"/>
+		</block>
+		<block name="spawnVehicleBlock1">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Extends" value="air"/>
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.Next" value="spawnVehicleNext"/>
+			<property name="PlantGrowing.GrowOnTop" value="UVM_Car1BaseSpawn"/>
+			<property name="PlantGrowing.GrowthRate" value="0.0001"/>
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<drop event="Destroy" count="0"/>
+		</block>
+		<block name="UVM_Car1BaseSpawn">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="masterSpawners"/>
+			<property name="SpawnClass" value="UVM_Car1Base"/>
+		</block>
+		
+		<block name="UVM_Car2BaseShell">
+			<property name="Extends" value="cntCar03SedanDamage2Master"/>
+			<property name="Class" value="CarExplodeLoot"/>
+			<property name="LootList" value="19"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="Model" value="#@modfolder:Resources/UVM_Car2BaseShell.unity3d?UVM_Car2BaseShell"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="spawnVehicleBlock2"/>
+				<property name="Item" value="UVM_vehicleAccessories"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="1"/>
+			</property>
+			<property class="RepairItems"> <property name="resourceRepairKit" value="1"/> </property>
+			<property name="DowngradeBlock" value="cntCar03SedanDamage2v01"/>
+			<property name="MultiBlockDim" value="2,2,4"/>
+		</block>
+		<block name="spawnVehicleBlock2">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Extends" value="air"/>
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.Next" value="spawnVehicleNext"/>
+			<property name="PlantGrowing.GrowOnTop" value="UVM_Car2BaseSpawn"/>
+			<property name="PlantGrowing.GrowthRate" value="0.0001"/>
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<drop event="Destroy" count="0"/>
+		</block>
+		<block name="UVM_Car2BaseSpawn">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="masterSpawners"/>
+			<property name="SpawnClass" value="UVM_Car2Base"/>
+			<property name="MultiBlockDim" value="2,2,4"/>
+		</block>
+		
+		<block name="UVM_Car3BaseShell">
+			<property name="Extends" value="cntCar03SedanDamage2Master"/>
+			<property name="Class" value="CarExplodeLoot"/>
+			<property name="LootList" value="19"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="Model" value="#@modfolder:Resources/UVM_Car3BaseShell.unity3d?UVM_Car3BaseShell"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="spawnVehicleBlock3"/>
+				<property name="Item" value="UVM_vehicleAccessories"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="1"/>
+			</property>
+			<property class="RepairItems"> <property name="resourceRepairKit" value="1"/> </property>
+			<property name="DowngradeBlock" value="cntCar03SedanDamage2v01"/>
+			<property name="MultiBlockDim" value="2,2,4"/>
+		</block>
+		<block name="spawnVehicleBlock3">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Extends" value="air"/>
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.Next" value="spawnVehicleNext"/>
+			<property name="PlantGrowing.GrowOnTop" value="UVM_Car3BaseSpawn"/>
+			<property name="PlantGrowing.GrowthRate" value="0.0001"/>
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<drop event="Destroy" count="0"/>
+		</block>
+		<block name="UVM_Car3BaseSpawn">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="masterSpawners"/>
+			<property name="SpawnClass" value="UVM_Car3Base"/>
+			<property name="MultiBlockDim" value="2,2,4"/>
+		</block>
+		
+		<block name="UVM_Car4BaseShell">
+			<property name="Extends" value="cntCar03SedanDamage2Master"/>
+			<property name="Class" value="CarExplodeLoot"/>
+			<property name="LootList" value="19"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="Model" value="#@modfolder:Resources/UVM_Car4BaseShell.unity3d?UVM_Car4BaseShell"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="spawnVehicleBlock4"/>
+				<property name="Item" value="UVM_vehicleAccessories"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="1"/>
+			</property>
+			<property class="RepairItems"> <property name="resourceRepairKit" value="1"/> </property>
+			<property name="DowngradeBlock" value="cntCar03SedanDamage2v01"/>
+			<property name="MultiBlockDim" value="2,2,4"/>
+		</block>
+		<block name="spawnVehicleBlock4">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Extends" value="air"/>
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.Next" value="spawnVehicleNext"/>
+			<property name="PlantGrowing.GrowOnTop" value="UVM_Car4BaseSpawn"/>
+			<property name="PlantGrowing.GrowthRate" value="0.0001"/>
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<drop event="Destroy" count="0"/>
+		</block>
+		<block name="UVM_Car4BaseSpawn">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="masterSpawners"/>
+			<property name="SpawnClass" value="UVM_Car4Base"/>
+			<property name="MultiBlockDim" value="2,2,4"/>
+		</block>
+		
+		<block name="UVM_Car5BaseShell">
+			<property name="Extends" value="cntCar03SedanDamage2Master"/>
+			<property name="Class" value="CarExplodeLoot"/>
+			<property name="LootList" value="19"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="Model" value="#@modfolder:Resources/UVM_Car5BaseShell.unity3d?UVM_Car5BaseShell"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="spawnVehicleBlock5"/>
+				<property name="Item" value="UVM_vehicleAccessories"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="1"/>
+			</property>
+			<property class="RepairItems"> <property name="resourceRepairKit" value="1"/> </property>
+			<property name="DowngradeBlock" value="cntCar03SedanDamage2v01"/>
+			<property name="MultiBlockDim" value="2,2,4"/>
+		</block>
+		<block name="spawnVehicleBlock5">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Extends" value="air"/>
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.Next" value="spawnVehicleNext"/>
+			<property name="PlantGrowing.GrowOnTop" value="UVM_Car5BaseSpawn"/>
+			<property name="PlantGrowing.GrowthRate" value="0.0001"/>
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<drop event="Destroy" count="0"/>
+		</block>
+		<block name="UVM_Car5BaseSpawn">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="masterSpawners"/>
+			<property name="SpawnClass" value="UVM_Car5Base"/>
+			<property name="MultiBlockDim" value="2,2,4"/>
+		</block>
+		
+		<block name="UVM_Car6BaseShell">
+			<property name="Extends" value="cntCar03SedanDamage2Master"/>
+			<property name="Class" value="CarExplodeLoot"/>
+			<property name="LootList" value="19"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="Model" value="#@modfolder:Resources/UVM_Car6BaseShell.unity3d?UVM_Car6BaseShell"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="spawnVehicleBlock6"/>
+				<property name="Item" value="UVM_vehicleAccessories"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="1"/>
+			</property>
+			<property class="RepairItems"> <property name="resourceRepairKit" value="1"/> </property>
+			<property name="DowngradeBlock" value="cntCar03SedanDamage2v01"/>
+			<property name="MultiBlockDim" value="2,2,4"/>
+		</block>
+		<block name="spawnVehicleBlock6">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Extends" value="air"/>
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.Next" value="spawnVehicleNext"/>
+			<property name="PlantGrowing.GrowOnTop" value="UVM_Car6BaseSpawn"/>
+			<property name="PlantGrowing.GrowthRate" value="0.0001"/>
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<drop event="Destroy" count="0"/>
+		</block>
+		<block name="UVM_Car6BaseSpawn">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="masterSpawners"/>
+			<property name="SpawnClass" value="UVM_Car6Base"/>
+			<property name="MultiBlockDim" value="2,2,4"/>
+		</block>
+		
+		<block name="UVM_Car7BaseShell">
+			<property name="Extends" value="cntCar03SedanDamage2Master"/>
+			<property name="Class" value="CarExplodeLoot"/>
+			<property name="LootList" value="19"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="Model" value="#@modfolder:Resources/UVM_Car7BaseShell.unity3d?UVM_Car7BaseShell"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="spawnVehicleBlock7"/>
+				<property name="Item" value="UVM_vehicleAccessories"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="1"/>
+			</property>
+			<property class="RepairItems"> <property name="resourceRepairKit" value="1"/> </property>
+			<property name="DowngradeBlock" value="cntCar03SedanDamage2v01"/>
+			<property name="MultiBlockDim" value="2,2,4"/>
+		</block>
+		<block name="spawnVehicleBlock7">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Extends" value="air"/>
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.Next" value="spawnVehicleNext"/>
+			<property name="PlantGrowing.GrowOnTop" value="UVM_Car7BaseSpawn"/>
+			<property name="PlantGrowing.GrowthRate" value="0.0001"/>
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<drop event="Destroy" count="0"/>
+		</block>
+		<block name="UVM_Car7BaseSpawn">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="masterSpawners"/>
+			<property name="SpawnClass" value="UVM_Car7Base"/>
+			<property name="MultiBlockDim" value="2,2,4"/>
+		</block>
+		
+		<block name="UVM_Car8BaseShell">
+			<property name="Extends" value="cntCar03SedanDamage2Master"/>
+			<property name="Class" value="CarExplodeLoot"/>
+			<property name="LootList" value="19"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="Model" value="#@modfolder:Resources/UVM_Car8BaseShell.unity3d?UVM_Car8BaseShell"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="spawnVehicleBlock8"/>
+				<property name="Item" value="UVM_vehicleAccessories"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="1"/>
+			</property>
+			<property class="RepairItems"> <property name="resourceRepairKit" value="1"/> </property>
+			<property name="DowngradeBlock" value="cntCar03SedanDamage2v01"/>
+			<property name="MultiBlockDim" value="2,2,4"/>
+		</block>
+		<block name="spawnVehicleBlock8">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Extends" value="air"/>
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.Next" value="spawnVehicleNext"/>
+			<property name="PlantGrowing.GrowOnTop" value="UVM_Car8BaseSpawn"/>
+			<property name="PlantGrowing.GrowthRate" value="0.0001"/>
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<drop event="Destroy" count="0"/>
+		</block>
+		<block name="UVM_Car8BaseSpawn">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="masterSpawners"/>
+			<property name="SpawnClass" value="UVM_Car8Base"/>
+			<property name="MultiBlockDim" value="2,2,4"/>
+		</block>
+		
+		<block name="UVM_Car9BaseShell">
+			<property name="Extends" value="cntCar03SedanDamage2Master"/>
+			<property name="Class" value="CarExplodeLoot"/>
+			<property name="LootList" value="19"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="Model" value="#@modfolder:Resources/UVM_Car9BaseShell.unity3d?UVM_Car9BaseShell"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="spawnVehicleBlock9"/>
+				<property name="Item" value="UVM_vehicleAccessories"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="1"/>
+			</property>
+			<property class="RepairItems"> <property name="resourceRepairKit" value="1"/> </property>
+			<property name="DowngradeBlock" value="cntCar03SedanDamage2v01"/>
+			<property name="MultiBlockDim" value="2,2,4"/>
+		</block>
+		<block name="spawnVehicleBlock9">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Extends" value="air"/>
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.Next" value="spawnVehicleNext"/>
+			<property name="PlantGrowing.GrowOnTop" value="UVM_Car9BaseSpawn"/>
+			<property name="PlantGrowing.GrowthRate" value="0.0001"/>
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<drop event="Destroy" count="0"/>
+		</block>
+		<block name="UVM_Car9BaseSpawn">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="masterSpawners"/>
+			<property name="SpawnClass" value="UVM_Car9Base"/>
+			<property name="MultiBlockDim" value="2,2,4"/>
+		</block>
+		
+		<block name="UVM_Car10BaseShell">
+			<property name="Extends" value="cntCar03SedanDamage2Master"/>
+			<property name="Class" value="CarExplodeLoot"/>
+			<property name="LootList" value="19"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="Model" value="#@modfolder:Resources/UVM_Car10BaseShell.unity3d?UVM_Car10BaseShell"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="spawnVehicleBlock10"/>
+				<property name="Item" value="UVM_vehicleAccessories"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="1"/>
+			</property>
+			<property class="RepairItems"> <property name="resourceRepairKit" value="1"/> </property>
+			<property name="DowngradeBlock" value="cntCar03SedanDamage2v01"/>
+			<property name="MultiBlockDim" value="2,2,4"/>
+		</block>
+		<block name="spawnVehicleBlock10">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Extends" value="air"/>
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.Next" value="spawnVehicleNext"/>
+			<property name="PlantGrowing.GrowOnTop" value="UVM_Car10BaseSpawn"/>
+			<property name="PlantGrowing.GrowthRate" value="0.0001"/>
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<drop event="Destroy" count="0"/>
+		</block>
+		<block name="UVM_Car10BaseSpawn">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="masterSpawners"/>
+			<property name="SpawnClass" value="UVM_Car10Base"/>
+			<property name="MultiBlockDim" value="2,2,4"/>
+		</block>
+		
+		<block name="UVM_Car11BaseShell">
+			<property name="Extends" value="cntCar03SedanDamage2Master"/>
+			<property name="Class" value="CarExplodeLoot"/>
+			<property name="LootList" value="19"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="Model" value="#@modfolder:Resources/UVM_Car11BaseShell.unity3d?UVM_Car11BaseShell"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="spawnVehicleBlock11"/>
+				<property name="Item" value="UVM_vehicleAccessories"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="1"/>
+			</property>
+			<property class="RepairItems"> <property name="resourceRepairKit" value="1"/> </property>
+			<property name="DowngradeBlock" value="cntCar03SedanDamage2v01"/>
+			<property name="MultiBlockDim" value="2,2,4"/>
+		</block>
+		<block name="spawnVehicleBlock11">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Extends" value="air"/>
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.Next" value="spawnVehicleNext"/>
+			<property name="PlantGrowing.GrowOnTop" value="UVM_Car11BaseSpawn"/>
+			<property name="PlantGrowing.GrowthRate" value="0.0001"/>
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<drop event="Destroy" count="0"/>
+		</block>
+		<block name="UVM_Car11BaseSpawn">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="masterSpawners"/>
+			<property name="SpawnClass" value="UVM_Car11Base"/>
+			<property name="MultiBlockDim" value="2,2,4"/>
+		</block>
+		
+		<block name="UVM_Car12BaseShell">
+			<property name="Extends" value="cntCar03SedanDamage2Master"/>
+			<property name="Class" value="CarExplodeLoot"/>
+			<property name="LootList" value="19"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="Model" value="#@modfolder:Resources/UVM_Car12BaseShell.unity3d?UVM_Car12BaseShell"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="spawnVehicleBlock12"/>
+				<property name="Item" value="UVM_vehicleAccessories"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="1"/>
+			</property>
+			<property class="RepairItems"> <property name="resourceRepairKit" value="1"/> </property>
+			<property name="DowngradeBlock" value="cntCar03SedanDamage2v01"/>
+			<property name="MultiBlockDim" value="2,2,4"/>
+		</block>
+		<block name="spawnVehicleBlock12">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Extends" value="air"/>
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.Next" value="spawnVehicleNext"/>
+			<property name="PlantGrowing.GrowOnTop" value="UVM_Car12BaseSpawn"/>
+			<property name="PlantGrowing.GrowthRate" value="0.0001"/>
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<drop event="Destroy" count="0"/>
+		</block>
+		<block name="UVM_Car12BaseSpawn">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="masterSpawners"/>
+			<property name="SpawnClass" value="UVM_Car12Base"/>
+			<property name="MultiBlockDim" value="2,2,4"/>
+		</block>
+		
+		<block name="UVM_Car13BaseShell">
+			<property name="Extends" value="cntCar03SedanDamage2Master"/>
+			<property name="Class" value="CarExplodeLoot"/>
+			<property name="LootList" value="19"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="Model" value="#@modfolder:Resources/UVM_Car13BaseShell.unity3d?UVM_Car13BaseShell"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="spawnVehicleBlock13"/>
+				<property name="Item" value="UVM_vehicleAccessories"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="1"/>
+			</property>
+			<property class="RepairItems"> <property name="resourceRepairKit" value="1"/> </property>
+			<property name="DowngradeBlock" value="cntCar03SedanDamage2v01"/>
+			<property name="MultiBlockDim" value="2,2,4"/>
+		</block>
+		<block name="spawnVehicleBlock13">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Extends" value="air"/>
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.Next" value="spawnVehicleNext"/>
+			<property name="PlantGrowing.GrowOnTop" value="UVM_Car13BaseSpawn"/>
+			<property name="PlantGrowing.GrowthRate" value="0.0001"/>
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<drop event="Destroy" count="0"/>
+		</block>
+		<block name="UVM_Car13BaseSpawn">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="masterSpawners"/>
+			<property name="SpawnClass" value="UVM_Car13Base"/>
+			<property name="MultiBlockDim" value="2,2,4"/>
+		</block>
+		
+		<block name="UVM_Car14BaseShell">
+			<property name="Extends" value="cntCar03SedanDamage2Master"/>
+			<property name="Class" value="CarExplodeLoot"/>
+			<property name="LootList" value="19"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="Model" value="#@modfolder:Resources/UVM_Car14BaseShell.unity3d?UVM_Car14BaseShell"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="spawnVehicleBlock14"/>
+				<property name="Item" value="UVM_vehicleAccessories"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="1"/>
+			</property>
+			<property class="RepairItems"> <property name="resourceRepairKit" value="1"/> </property>
+			<property name="DowngradeBlock" value="cntCar03SedanDamage2v01"/>
+			<property name="MultiBlockDim" value="2,2,4"/>
+		</block>
+		<block name="spawnVehicleBlock14">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Extends" value="air"/>
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.Next" value="spawnVehicleNext"/>
+			<property name="PlantGrowing.GrowOnTop" value="UVM_Car14BaseSpawn"/>
+			<property name="PlantGrowing.GrowthRate" value="0.0001"/>
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<drop event="Destroy" count="0"/>
+		</block>
+		<block name="UVM_Car14BaseSpawn">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="masterSpawners"/>
+			<property name="SpawnClass" value="UVM_Car14Base"/>
+			<property name="MultiBlockDim" value="2,2,4"/>
+		</block>
+		
+		<block name="UVM_Car15BaseShell">
+			<property name="Extends" value="cntCar03SedanDamage2Master"/>
+			<property name="Class" value="CarExplodeLoot"/>
+			<property name="LootList" value="19"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="Model" value="#@modfolder:Resources/UVM_Car15BaseShell.unity3d?UVM_Car15BaseShell"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="spawnVehicleBlock15"/>
+				<property name="Item" value="UVM_vehicleAccessories"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="1"/>
+			</property>
+			<property class="RepairItems"> <property name="resourceRepairKit" value="1"/> </property>
+			<property name="DowngradeBlock" value="cntCar03SedanDamage2v01"/>
+			<property name="MultiBlockDim" value="2,2,4"/>
+		</block>
+		<block name="spawnVehicleBlock15">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Extends" value="air"/>
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.Next" value="spawnVehicleNext"/>
+			<property name="PlantGrowing.GrowOnTop" value="UVM_Car15BaseSpawn"/>
+			<property name="PlantGrowing.GrowthRate" value="0.0001"/>
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<drop event="Destroy" count="0"/>
+		</block>
+		<block name="UVM_Car15BaseSpawn">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="masterSpawners"/>
+			<property name="SpawnClass" value="UVM_Car15Base"/>
+			<property name="MultiBlockDim" value="2,2,4"/>
+		</block>
+		
+		<block name="UVM_Car16BaseShell">
+			<property name="Extends" value="cntCar03SedanDamage2Master"/>
+			<property name="Class" value="CarExplodeLoot"/>
+			<property name="LootList" value="19"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="Model" value="#@modfolder:Resources/UVM_Car16BaseShell.unity3d?UVM_Car16BaseShell"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="spawnVehicleBlock16"/>
+				<property name="Item" value="UVM_vehicleAccessories"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="1"/>
+			</property>
+			<property class="RepairItems"> <property name="resourceRepairKit" value="1"/> </property>
+			<property name="DowngradeBlock" value="cntCar03SedanDamage2v01"/>
+			<property name="MultiBlockDim" value="2,2,4"/>
+		</block>
+		<block name="spawnVehicleBlock16">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Extends" value="air"/>
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.Next" value="spawnVehicleNext"/>
+			<property name="PlantGrowing.GrowOnTop" value="UVM_Car16BaseSpawn"/>
+			<property name="PlantGrowing.GrowthRate" value="0.0001"/>
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<drop event="Destroy" count="0"/>
+		</block>
+		<block name="UVM_Car16BaseSpawn">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="masterSpawners"/>
+			<property name="SpawnClass" value="UVM_Car16Base"/>
+			<property name="MultiBlockDim" value="2,2,4"/>
+		</block>
+		
+		<block name="UVM_Car17BaseShell">
+			<property name="Extends" value="cntCar03SedanDamage2Master"/>
+			<property name="Class" value="CarExplodeLoot"/>
+			<property name="LootList" value="19"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="Model" value="#@modfolder:Resources/UVM_Car17BaseShell.unity3d?UVM_Car17BaseShell"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="spawnVehicleBlock17"/>
+				<property name="Item" value="UVM_vehicleAccessories"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="1"/>
+			</property>
+			<property class="RepairItems"> <property name="resourceRepairKit" value="1"/> </property>
+			<property name="DowngradeBlock" value="cntCar03SedanDamage2v01"/>
+			<property name="MultiBlockDim" value="2,2,4"/>
+		</block>
+		<block name="spawnVehicleBlock17">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Extends" value="air"/>
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.Next" value="spawnVehicleNext"/>
+			<property name="PlantGrowing.GrowOnTop" value="UVM_Car17BaseSpawn"/>
+			<property name="PlantGrowing.GrowthRate" value="0.0001"/>
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<drop event="Destroy" count="0"/>
+		</block>
+		<block name="UVM_Car17BaseSpawn">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="masterSpawners"/>
+			<property name="SpawnClass" value="UVM_Car17Base"/>
+			<property name="MultiBlockDim" value="2,2,4"/>
+		</block>
+		
+		<block name="UVM_Car18BaseShell">
+			<property name="Extends" value="cntCar03SedanDamage2Master"/>
+			<property name="Class" value="CarExplodeLoot"/>
+			<property name="LootList" value="19"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="Model" value="#@modfolder:Resources/UVM_Car18BaseShell.unity3d?UVM_Car18BaseShell"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="spawnVehicleBlock18"/>
+				<property name="Item" value="UVM_vehicleAccessories"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="1"/>
+			</property>
+			<property class="RepairItems"> <property name="resourceRepairKit" value="1"/> </property>
+			<property name="DowngradeBlock" value="cntCar03SedanDamage2v01"/>
+			<property name="MultiBlockDim" value="2,2,4"/>
+		</block>
+		<block name="spawnVehicleBlock18">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Extends" value="air"/>
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.Next" value="spawnVehicleNext"/>
+			<property name="PlantGrowing.GrowOnTop" value="UVM_Car18BaseSpawn"/>
+			<property name="PlantGrowing.GrowthRate" value="0.0001"/>
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<drop event="Destroy" count="0"/>
+		</block>
+		<block name="UVM_Car18BaseSpawn">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="masterSpawners"/>
+			<property name="SpawnClass" value="UVM_Car18Base"/>
+			<property name="MultiBlockDim" value="2,2,4"/>
+		</block>
+		
+		<block name="UVM_Car19BaseShell">
+			<property name="Extends" value="cntCar03SedanDamage2Master"/>
+			<property name="Class" value="CarExplodeLoot"/>
+			<property name="LootList" value="19"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="Model" value="#@modfolder:Resources/UVM_Car19BaseShell.unity3d?UVM_Car19BaseShell"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="spawnVehicleBlock19"/>
+				<property name="Item" value="UVM_vehicleAccessories"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="1"/>
+			</property>
+			<property class="RepairItems"> <property name="resourceRepairKit" value="1"/> </property>
+			<property name="DowngradeBlock" value="cntCar03SedanDamage2v01"/>
+			<property name="MultiBlockDim" value="2,2,4"/>
+		</block>
+		<block name="spawnVehicleBlock19">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Extends" value="air"/>
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.Next" value="spawnVehicleNext"/>
+			<property name="PlantGrowing.GrowOnTop" value="UVM_Car19BaseSpawn"/>
+			<property name="PlantGrowing.GrowthRate" value="0.0001"/>
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<drop event="Destroy" count="0"/>
+		</block>
+		<block name="UVM_Car19BaseSpawn">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="masterSpawners"/>
+			<property name="SpawnClass" value="UVM_Car19Base"/>
+			<property name="MultiBlockDim" value="2,2,4"/>
+		</block>
+		
+		<block name="UVM_Car20BaseShell">
+			<property name="Extends" value="cntCar03SedanDamage2Master"/>
+			<property name="Class" value="CarExplodeLoot"/>
+			<property name="LootList" value="19"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="Model" value="#@modfolder:Resources/UVM_Car20BaseShell.unity3d?UVM_Car20BaseShell"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="spawnVehicleBlock20"/>
+				<property name="Item" value="UVM_vehicleAccessories"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="1"/>
+			</property>
+			<property class="RepairItems"> <property name="resourceRepairKit" value="1"/> </property>
+			<property name="DowngradeBlock" value="cntCar03SedanDamage2v01"/>
+			<property name="MultiBlockDim" value="2,2,4"/>
+		</block>
+		<block name="spawnVehicleBlock20">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Extends" value="air"/>
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.Next" value="spawnVehicleNext"/>
+			<property name="PlantGrowing.GrowOnTop" value="UVM_Car20BaseSpawn"/>
+			<property name="PlantGrowing.GrowthRate" value="0.0001"/>
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<drop event="Destroy" count="0"/>
+		</block>
+		<block name="UVM_Car20BaseSpawn">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="masterSpawners"/>
+			<property name="SpawnClass" value="UVM_Car20Base"/>
+			<property name="MultiBlockDim" value="2,2,4"/>
+		</block>
+		
+		<block name="UVM_Car21BaseShell">
+			<property name="Extends" value="cntCar03SedanDamage2Master"/>
+			<property name="Class" value="CarExplodeLoot"/>
+			<property name="LootList" value="19"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="Model" value="#@modfolder:Resources/UVM_Car21BaseShell.unity3d?UVM_Car21BaseShell"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="spawnVehicleBlock21"/>
+				<property name="Item" value="UVM_vehicleAccessories"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="1"/>
+			</property>
+			<property class="RepairItems"> <property name="resourceRepairKit" value="1"/> </property>
+			<property name="DowngradeBlock" value="cntCar03SedanDamage2v01"/>
+			<property name="MultiBlockDim" value="2,2,4"/>
+		</block>
+		<block name="spawnVehicleBlock21">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Extends" value="air"/>
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.Next" value="spawnVehicleNext"/>
+			<property name="PlantGrowing.GrowOnTop" value="UVM_Car21BaseSpawn"/>
+			<property name="PlantGrowing.GrowthRate" value="0.0001"/>
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<drop event="Destroy" count="0"/>
+		</block>
+		<block name="UVM_Car21BaseSpawn">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="masterSpawners"/>
+			<property name="SpawnClass" value="UVM_Car21Base"/>
+			<property name="MultiBlockDim" value="2,2,4"/>
+		</block>
+		
+		<block name="UVM_Car22BaseShell">
+			<property name="Extends" value="cntCar03SedanDamage2Master"/>
+			<property name="Class" value="CarExplodeLoot"/>
+			<property name="LootList" value="19"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="IsTerrainDecoration" value="false"/>
+			<property name="Model" value="#@modfolder:Resources/UVM_Car22BaseShell.unity3d?UVM_Car22BaseShell"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="spawnVehicleBlock22"/>
+				<property name="Item" value="UVM_vehicleAccessories"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="1"/>
+			</property>
+			<property class="RepairItems"> <property name="resourceRepairKit" value="1"/> </property>
+			<property name="DowngradeBlock" value="cntCar03SedanDamage2v01"/>
+			<property name="MultiBlockDim" value="4,5,8"/>
+		</block>
+		<block name="spawnVehicleBlock22">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Extends" value="air"/>
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.Next" value="spawnVehicleNext"/>
+			<property name="PlantGrowing.GrowOnTop" value="UVM_Car22BaseSpawn"/>
+			<property name="PlantGrowing.GrowthRate" value="0.0001"/>
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<drop event="Destroy" count="0"/>
+		</block>
+		<block name="UVM_Car22BaseSpawn">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="masterSpawners"/>
+			<property name="SpawnClass" value="UVM_Car22Base"/>
+		</block>
+		
+		<block name="UVM_Car23BaseShell">
+			<property name="Extends" value="cntCar03SedanDamage2Master"/>
+			<property name="Class" value="CarExplodeLoot"/>
+			<property name="LootList" value="19"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="Model" value="#@modfolder:Resources/UVM_Car23BaseShell.unity3d?UVM_Car23BaseShell"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="spawnVehicleBlock23"/>
+				<property name="Item" value="UVM_vehicleAccessories"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="1"/>
+			</property>
+			<property class="RepairItems"> <property name="resourceRepairKit" value="1"/> </property>
+			<property name="DowngradeBlock" value="cntCar03SedanDamage2v01"/>
+			<property name="MultiBlockDim" value="2,2,4"/>
+		</block>
+		<block name="spawnVehicleBlock23">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Extends" value="air"/>
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.Next" value="spawnVehicleNext"/>
+			<property name="PlantGrowing.GrowOnTop" value="UVM_Car23BaseSpawn"/>
+			<property name="PlantGrowing.GrowthRate" value="0.0001"/>
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<drop event="Destroy" count="0"/>
+		</block>
+		<block name="UVM_Car23BaseSpawn">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="masterSpawners"/>
+			<property name="SpawnClass" value="UVM_Car23Base"/>
+			<property name="MultiBlockDim" value="2,2,4"/>
+		</block>
+		
+		<block name="UVM_Car24BaseShell">
+			<property name="Extends" value="cntCar03SedanDamage2Master"/>
+			<property name="Class" value="CarExplodeLoot"/>
+			<property name="LootList" value="19"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="Model" value="#@modfolder:Resources/UVM_Car24BaseShell.unity3d?UVM_Car24BaseShell"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="spawnVehicleBlock24"/>
+				<property name="Item" value="UVM_vehicleAccessories"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="1"/>
+			</property>
+			<property class="RepairItems"> <property name="resourceRepairKit" value="1"/> </property>
+			<property name="DowngradeBlock" value="cntCar03SedanDamage2v01"/>
+			<property name="MultiBlockDim" value="2,2,4"/>
+		</block>
+		<block name="spawnVehicleBlock24">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Extends" value="air"/>
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.Next" value="spawnVehicleNext"/>
+			<property name="PlantGrowing.GrowOnTop" value="UVM_Car24BaseSpawn"/>
+			<property name="PlantGrowing.GrowthRate" value="0.0001"/>
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<drop event="Destroy" count="0"/>
+		</block>
+		<block name="UVM_Car24BaseSpawn">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="masterSpawners"/>
+			<property name="SpawnClass" value="UVM_Car24Base"/>
+			<property name="MultiBlockDim" value="2,2,4"/>
+		</block>
+		
+		<block name="UVM_Car25BaseShell">
+			<property name="Extends" value="cntCar03SedanDamage2Master"/>
+			<property name="Class" value="CarExplodeLoot"/>
+			<property name="LootList" value="19"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="Model" value="#@modfolder:Resources/UVM_Car25BaseShell.unity3d?UVM_Car25BaseShell"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="spawnVehicleBlock25"/>
+				<property name="Item" value="UVM_vehicleAccessories"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="1"/>
+			</property>
+			<property class="RepairItems"> <property name="resourceRepairKit" value="1"/> </property>
+			<property name="DowngradeBlock" value="cntCar03SedanDamage2v01"/>
+			<property name="MultiBlockDim" value="2,2,4"/>
+		</block>
+		<block name="spawnVehicleBlock25">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Extends" value="air"/>
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.Next" value="spawnVehicleNext"/>
+			<property name="PlantGrowing.GrowOnTop" value="UVM_Car25BaseSpawn"/>
+			<property name="PlantGrowing.GrowthRate" value="0.0001"/>
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<drop event="Destroy" count="0"/>
+		</block>
+		<block name="UVM_Car25BaseSpawn">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="masterSpawners"/>
+			<property name="SpawnClass" value="UVM_Car25Base"/>
+			<property name="MultiBlockDim" value="2,2,4"/>
+		</block>
+		
+		<block name="UVM_Car26BaseShell">
+			<property name="Extends" value="cntCar03SedanDamage2Master"/>
+			<property name="Class" value="CarExplodeLoot"/>
+			<property name="LootList" value="19"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="Model" value="#@modfolder:Resources/UVM_Car26BaseShell.unity3d?UVM_Car26BaseShell"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="spawnVehicleBlock26"/>
+				<property name="Item" value="UVM_vehicleAccessories"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="1"/>
+			</property>
+			<property class="RepairItems"> <property name="resourceRepairKit" value="1"/> </property>
+			<property name="DowngradeBlock" value="cntCar03SedanDamage2v01"/>
+			<property name="MultiBlockDim" value="2,2,4"/>
+		</block>
+		<block name="spawnVehicleBlock26">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Extends" value="air"/>
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.Next" value="spawnVehicleNext"/>
+			<property name="PlantGrowing.GrowOnTop" value="UVM_Car26BaseSpawn"/>
+			<property name="PlantGrowing.GrowthRate" value="0.0001"/>
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<drop event="Destroy" count="0"/>
+		</block>
+		<block name="UVM_Car26BaseSpawn">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="masterSpawners"/>
+			<property name="SpawnClass" value="UVM_Car26Base"/>
+			<property name="MultiBlockDim" value="2,2,4"/>
+		</block>
+		
+		<block name="UVM_Car27BaseShell">
+			<property name="Extends" value="cntCar03SedanDamage2Master"/>
+			<property name="Class" value="CarExplodeLoot"/>
+			<property name="LootList" value="19"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="Model" value="#@modfolder:Resources/UVM_Car27BaseShell.unity3d?UVM_Car27BaseShell"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="spawnVehicleBlock27"/>
+				<property name="Item" value="UVM_vehicleAccessories"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="1"/>
+			</property>
+			<property class="RepairItems"> <property name="resourceRepairKit" value="1"/> </property>
+			<property name="DowngradeBlock" value="cntCar03SedanDamage2v01"/>
+			<property name="MultiBlockDim" value="2,2,4"/>
+		</block>
+		<block name="spawnVehicleBlock27">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Extends" value="air"/>
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.Next" value="spawnVehicleNext"/>
+			<property name="PlantGrowing.GrowOnTop" value="UVM_Car27BaseSpawn"/>
+			<property name="PlantGrowing.GrowthRate" value="0.0001"/>
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<drop event="Destroy" count="0"/>
+		</block>
+		<block name="UVM_Car27BaseSpawn">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="masterSpawners"/>
+			<property name="SpawnClass" value="UVM_Car27Base"/>
+			<property name="MultiBlockDim" value="2,2,4"/>
+		</block>
+		
+		<block name="UVM_Car28BaseShell">
+			<property name="Extends" value="cntCar03SedanDamage2Master"/>
+			<property name="Class" value="CarExplodeLoot"/>
+			<property name="LootList" value="19"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="Model" value="#@modfolder:Resources/UVM_Car28BaseShell.unity3d?UVM_Car28BaseShell"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="spawnVehicleBlock28"/>
+				<property name="Item" value="UVM_vehicleAccessories"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="1"/>
+			</property>
+			<property class="RepairItems"> <property name="resourceRepairKit" value="1"/> </property>
+			<property name="DowngradeBlock" value="cntCar03SedanDamage2v01"/>
+			<property name="MultiBlockDim" value="2,2,4"/>
+		</block>
+		<block name="spawnVehicleBlock28">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Extends" value="air"/>
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.Next" value="spawnVehicleNext"/>
+			<property name="PlantGrowing.GrowOnTop" value="UVM_Car28BaseSpawn"/>
+			<property name="PlantGrowing.GrowthRate" value="0.0001"/>
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<drop event="Destroy" count="0"/>
+		</block>
+		<block name="UVM_Car28BaseSpawn">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="masterSpawners"/>
+			<property name="SpawnClass" value="UVM_Car28Base"/>
+			<property name="MultiBlockDim" value="2,2,4"/>
+		</block>
+		
+		<block name="UVM_Car29BaseShell">
+			<property name="Extends" value="cntCar03SedanDamage2Master"/>
+			<property name="Class" value="CarExplodeLoot"/>
+			<property name="LootList" value="19"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="Model" value="#@modfolder:Resources/UVM_Car29BaseShell.unity3d?UVM_Car29BaseShell"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="spawnVehicleBlock29"/>
+				<property name="Item" value="UVM_vehicleAccessories"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="1"/>
+			</property>
+			<property class="RepairItems"> <property name="resourceRepairKit" value="1"/> </property>
+			<property name="DowngradeBlock" value="cntCar03SedanDamage2v01"/>
+			<property name="MultiBlockDim" value="2,2,4"/>
+		</block>
+		<block name="spawnVehicleBlock29">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Extends" value="air"/>
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.Next" value="spawnVehicleNext"/>
+			<property name="PlantGrowing.GrowOnTop" value="UVM_Car29BaseSpawn"/>
+			<property name="PlantGrowing.GrowthRate" value="0.0001"/>
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<drop event="Destroy" count="0"/>
+		</block>
+		<block name="UVM_Car29BaseSpawn">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="masterSpawners"/>
+			<property name="SpawnClass" value="UVM_Car29Base"/>
+			<property name="MultiBlockDim" value="2,2,4"/>
+		</block>
+		
+		<block name="UVM_Car30BaseShell">
+			<property name="Extends" value="cntCar03SedanDamage2Master"/>
+			<property name="Class" value="CarExplodeLoot"/>
+			<property name="LootList" value="19"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="Model" value="#@modfolder:Resources/UVM_Car30BaseShell.unity3d?UVM_Car30BaseShell"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="spawnVehicleBlock30"/>
+				<property name="Item" value="UVM_vehicleAccessories"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="1"/>
+			</property>
+			<property class="RepairItems"> <property name="resourceRepairKit" value="1"/> </property>
+			<property name="DowngradeBlock" value="cntCar03SedanDamage2v01"/>
+			<property name="MultiBlockDim" value="2,2,4"/>
+		</block>
+		<block name="spawnVehicleBlock30">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Extends" value="air"/>
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.Next" value="spawnVehicleNext"/>
+			<property name="PlantGrowing.GrowOnTop" value="UVM_Car30BaseSpawn"/>
+			<property name="PlantGrowing.GrowthRate" value="0.0001"/>
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<drop event="Destroy" count="0"/>
+		</block>
+		<block name="UVM_Car30BaseSpawn">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="masterSpawners"/>
+			<property name="SpawnClass" value="UVM_Car30Base"/>
+			<property name="MultiBlockDim" value="2,2,4"/>
+		</block>
+		
+		<block name="UVM_Car31BaseShell">
+			<property name="Extends" value="cntCar03SedanDamage2Master"/>
+			<property name="Class" value="CarExplodeLoot"/>
+			<property name="LootList" value="19"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="Model" value="#@modfolder:Resources/UVM_Car31BaseShell.unity3d?UVM_Car31BaseShell"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="spawnVehicleBlock31"/>
+				<property name="Item" value="UVM_vehicleAccessories"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="1"/>
+			</property>
+			<property class="RepairItems"> <property name="resourceRepairKit" value="1"/> </property>
+			<property name="DowngradeBlock" value="cntCar03SedanDamage2v01"/>
+			<property name="MultiBlockDim" value="2,2,4"/>
+		</block>
+		<block name="spawnVehicleBlock31">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Extends" value="air"/>
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.Next" value="spawnVehicleNext"/>
+			<property name="PlantGrowing.GrowOnTop" value="UVM_Car31BaseSpawn"/>
+			<property name="PlantGrowing.GrowthRate" value="0.0001"/>
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<drop event="Destroy" count="0"/>
+		</block>
+		<block name="UVM_Car31BaseSpawn">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="masterSpawners"/>
+			<property name="SpawnClass" value="UVM_Car31Base"/>
+			<property name="MultiBlockDim" value="2,2,4"/>
+		</block>
+		
+		<block name="UVM_Car32BaseShell">
+			<property name="Extends" value="cntCar03SedanDamage2Master"/>
+			<property name="Class" value="CarExplodeLoot"/>
+			<property name="LootList" value="83"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="Model" value="#@modfolder:Resources/UVM_Car32BaseShell.unity3d?UVM_Car32BaseShell"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="spawnVehicleBlock32"/>
+				<property name="Item" value="UVM_vehicleAccessories"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="1"/>
+			</property>
+			<property class="RepairItems"> <property name="resourceRepairKit" value="1"/> </property>
+			<property name="DowngradeBlock" value="cntCar03SedanDamage2v01"/>
+			<property name="MultiBlockDim" value="2,2,4"/>
+		</block>
+		<block name="spawnVehicleBlock32">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Extends" value="air"/>
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.Next" value="spawnVehicleNext"/>
+			<property name="PlantGrowing.GrowOnTop" value="UVM_Car32BaseSpawn"/>
+			<property name="PlantGrowing.GrowthRate" value="0.0001"/>
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<drop event="Destroy" count="0"/>
+		</block>
+		<block name="UVM_Car32BaseSpawn">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="masterSpawners"/>
+			<property name="SpawnClass" value="UVM_Car32Base"/>
+			<property name="MultiBlockDim" value="2,2,4"/>
+		</block>
+		
+		<block name="UVM_Car33BaseShell">
+			<property name="Extends" value="cntCar03SedanDamage2Master"/>
+			<property name="Class" value="CarExplodeLoot"/>
+			<property name="LootList" value="83"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="Model" value="#@modfolder:Resources/UVM_Car33BaseShell.unity3d?UVM_Car33BaseShell"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="spawnVehicleBlock33"/>
+				<property name="Item" value="UVM_vehicleAccessories"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="1"/>
+			</property>
+			<property class="RepairItems"> <property name="resourceRepairKit" value="1"/> </property>
+			<property name="DowngradeBlock" value="cntCar03SedanDamage2v01"/>
+			<property name="MultiBlockDim" value="2,2,4"/>
+		</block>
+		<block name="spawnVehicleBlock33">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Extends" value="air"/>
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.Next" value="spawnVehicleNext"/>
+			<property name="PlantGrowing.GrowOnTop" value="UVM_Car33BaseSpawn"/>
+			<property name="PlantGrowing.GrowthRate" value="0.0001"/>
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<drop event="Destroy" count="0"/>
+		</block>
+		<block name="UVM_Car33BaseSpawn">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="masterSpawners"/>
+			<property name="SpawnClass" value="UVM_Car33Base"/>
+			<property name="MultiBlockDim" value="2,2,4"/>
+		</block>
+		
+		<block name="UVM_Car34BaseShell">
+			<property name="Extends" value="cntCar03SedanDamage2Master"/>
+			<property name="Class" value="CarExplodeLoot"/>
+			<property name="LootList" value="83"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="Model" value="#@modfolder:Resources/UVM_Car34BaseShell.unity3d?UVM_Car34BaseShell"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="spawnVehicleBlock34"/>
+				<property name="Item" value="UVM_vehicleAccessories"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="1"/>
+			</property>
+			<property class="RepairItems"> <property name="resourceRepairKit" value="1"/> </property>
+			<property name="DowngradeBlock" value="cntCar03SedanDamage2v01"/>
+			<property name="MultiBlockDim" value="2,2,4"/>
+		</block>
+		<block name="spawnVehicleBlock34">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Extends" value="air"/>
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.Next" value="spawnVehicleNext"/>
+			<property name="PlantGrowing.GrowOnTop" value="UVM_Car34BaseSpawn"/>
+			<property name="PlantGrowing.GrowthRate" value="0.0001"/>
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<drop event="Destroy" count="0"/>
+		</block>
+		<block name="UVM_Car34BaseSpawn">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="masterSpawners"/>
+			<property name="SpawnClass" value="UVM_Car34Base"/>
+			<property name="MultiBlockDim" value="2,2,4"/>
+		</block>
+		
+		<block name="UVM_Car35BaseShell">
+			<property name="Extends" value="cntCar03SedanDamage2Master"/>
+			<property name="Class" value="CarExplodeLoot"/>
+			<property name="LootList" value="83"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="Model" value="#@modfolder:Resources/UVM_Car35BaseShell.unity3d?UVM_Car35BaseShell"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="spawnVehicleBlock35"/>
+				<property name="Item" value="UVM_vehicleAccessories"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="1"/>
+			</property>
+			<property class="RepairItems"> <property name="resourceRepairKit" value="1"/> </property>
+			<property name="DowngradeBlock" value="cntCar03SedanDamage2v01"/>
+			<property name="MultiBlockDim" value="2,2,4"/>
+		</block>
+		<block name="spawnVehicleBlock35">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Extends" value="air"/>
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.Next" value="spawnVehicleNext"/>
+			<property name="PlantGrowing.GrowOnTop" value="UVM_Car35BaseSpawn"/>
+			<property name="PlantGrowing.GrowthRate" value="0.0001"/>
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<drop event="Destroy" count="0"/>
+		</block>
+		<block name="UVM_Car35BaseSpawn">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="masterSpawners"/>
+			<property name="SpawnClass" value="UVM_Car35Base"/>
+			<property name="MultiBlockDim" value="2,2,4"/>
+		</block>
+		
+		<block name="UVM_Car36BaseShell">
+			<property name="Extends" value="cntCar03SedanDamage2Master"/>
+			<property name="Class" value="CarExplodeLoot"/>
+			<property name="LootList" value="83"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="Model" value="#@modfolder:Resources/UVM_Car36BaseShell.unity3d?UVM_Car36BaseShell"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="spawnVehicleBlock36"/>
+				<property name="Item" value="UVM_vehicleAccessories"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="1"/>
+			</property>
+			<property class="RepairItems"> <property name="resourceRepairKit" value="1"/> </property>
+			<property name="DowngradeBlock" value="cntCar03SedanDamage2v01"/>
+			<property name="MultiBlockDim" value="2,2,4"/>
+		</block>
+		<block name="spawnVehicleBlock36">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Extends" value="air"/>
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.Next" value="spawnVehicleNext"/>
+			<property name="PlantGrowing.GrowOnTop" value="UVM_Car36BaseSpawn"/>
+			<property name="PlantGrowing.GrowthRate" value="0.0001"/>
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<drop event="Destroy" count="0"/>
+		</block>
+		<block name="UVM_Car36BaseSpawn">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="masterSpawners"/>
+			<property name="SpawnClass" value="UVM_Car36Base"/>
+			<property name="MultiBlockDim" value="2,2,4"/>
+		</block>
+		
+		<block name="UVM_Car37BaseShell">
+			<property name="Extends" value="cntCar03SedanDamage2Master"/>
+			<property name="Class" value="CarExplodeLoot"/>
+			<property name="LootList" value="83"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="Model" value="#@modfolder:Resources/UVM_Car37BaseShell.unity3d?UVM_Car37BaseShell"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="spawnVehicleBlock37"/>
+				<property name="Item" value="UVM_vehicleAccessories"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="1"/>
+			</property>
+			<property class="RepairItems"> <property name="resourceRepairKit" value="1"/> </property>
+			<property name="DowngradeBlock" value="cntCar03SedanDamage2v01"/>
+			<property name="MultiBlockDim" value="2,2,4"/>
+		</block>
+		<block name="spawnVehicleBlock37">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Extends" value="air"/>
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.Next" value="spawnVehicleNext"/>
+			<property name="PlantGrowing.GrowOnTop" value="UVM_Car37BaseSpawn"/>
+			<property name="PlantGrowing.GrowthRate" value="0.0001"/>
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<drop event="Destroy" count="0"/>
+		</block>
+		<block name="UVM_Car37BaseSpawn">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="masterSpawners"/>
+			<property name="SpawnClass" value="UVM_Car37Base"/>
+			<property name="MultiBlockDim" value="2,2,4"/>
+		</block>
+		
+		<block name="UVM_Car38BaseShell">
+			<property name="Extends" value="cntCar03SedanDamage2Master"/>
+			<property name="Class" value="CarExplodeLoot"/>
+			<property name="LootList" value="83"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="Model" value="#@modfolder:Resources/UVM_Car38BaseShell.unity3d?UVM_Car38BaseShell"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="spawnVehicleBlock38"/>
+				<property name="Item" value="UVM_vehicleAccessories"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="1"/>
+			</property>
+			<property class="RepairItems"> <property name="resourceRepairKit" value="1"/> </property>
+			<property name="DowngradeBlock" value="cntCar03SedanDamage2v01"/>
+			<property name="MultiBlockDim" value="2,2,4"/>
+		</block>
+		<block name="spawnVehicleBlock38">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Extends" value="air"/>
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.Next" value="spawnVehicleNext"/>
+			<property name="PlantGrowing.GrowOnTop" value="UVM_Car38BaseSpawn"/>
+			<property name="PlantGrowing.GrowthRate" value="0.0001"/>
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<drop event="Destroy" count="0"/>
+		</block>
+		<block name="UVM_Car38BaseSpawn">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="masterSpawners"/>
+			<property name="SpawnClass" value="UVM_Car38Base"/>
+			<property name="MultiBlockDim" value="2,2,4"/>
+		</block>
+		<block name="UVM_Car39BaseShell">
+			<property name="Extends" value="cntCar03SedanDamage2Master"/>
+			<property name="Class" value="CarExplodeLoot"/>
+			<property name="LootList" value="83"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="Model" value="#@modfolder:Resources/UVM_Car39BaseShell.unity3d?UVM_Car39BaseShell"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="spawnVehicleBlock39"/>
+				<property name="Item" value="UVM_vehicleAccessories"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="1"/>
+			</property>
+			<property class="RepairItems"> <property name="resourceRepairKit" value="1"/> </property>
+			<property name="DowngradeBlock" value="cntCar03SedanDamage2v01"/>
+			<property name="MultiBlockDim" value="2,2,4"/>
+		</block>
+		<block name="spawnVehicleBlock39">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Extends" value="air"/>
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.Next" value="spawnVehicleNext"/>
+			<property name="PlantGrowing.GrowOnTop" value="UVM_Car39BaseSpawn"/>
+			<property name="PlantGrowing.GrowthRate" value="0.0001"/>
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<drop event="Destroy" count="0"/>
+		</block>
+		<block name="UVM_Car39BaseSpawn">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="masterSpawners"/>
+			<property name="SpawnClass" value="UVM_Car39Base"/>
+			<property name="MultiBlockDim" value="2,2,4"/>
+		</block>
+		
+		<block name="UVM_Car40BaseShell">
+			<property name="Extends" value="cntCar03SedanDamage2Master"/>
+			<property name="Class" value="CarExplodeLoot"/>
+			<property name="LootList" value="83"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="Model" value="#@modfolder:Resources/UVM_Car40BaseShell.unity3d?UVM_Car40BaseShell"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="spawnVehicleBlock40"/>
+				<property name="Item" value="UVM_vehicleAccessories"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="1"/>
+			</property>
+			<property class="RepairItems"> <property name="resourceRepairKit" value="1"/> </property>
+			<property name="DowngradeBlock" value="cntCar03SedanDamage2v01"/>
+			<property name="MultiBlockDim" value="2,2,4"/>
+		</block>
+		<block name="spawnVehicleBlock40">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Extends" value="air"/>
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.Next" value="spawnVehicleNext"/>
+			<property name="PlantGrowing.GrowOnTop" value="UVM_Car40BaseSpawn"/>
+			<property name="PlantGrowing.GrowthRate" value="0.0001"/>
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<drop event="Destroy" count="0"/>
+		</block>
+		<block name="UVM_Car40BaseSpawn">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="masterSpawners"/>
+			<property name="SpawnClass" value="UVM_Car40Base"/>
+			<property name="MultiBlockDim" value="2,2,4"/>
+		</block>
+		
+		<block name="UVM_Car41BaseShell">
+			<property name="Extends" value="cntCar03SedanDamage2Master"/>
+			<property name="Class" value="CarExplodeLoot"/>
+			<property name="LootList" value="83"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="Model" value="#@modfolder:Resources/UVM_Car41BaseShell.unity3d?UVM_Car41BaseShell"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="spawnVehicleBlock41"/>
+				<property name="Item" value="UVM_vehicleAccessories"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="1"/>
+			</property>
+			<property class="RepairItems"> <property name="resourceRepairKit" value="1"/> </property>
+			<property name="DowngradeBlock" value="cntCar03SedanDamage2v01"/>
+			<property name="MultiBlockDim" value="2,2,4"/>
+		</block>
+		<block name="spawnVehicleBlock41">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Extends" value="air"/>
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.Next" value="spawnVehicleNext"/>
+			<property name="PlantGrowing.GrowOnTop" value="UVM_Car41BaseSpawn"/>
+			<property name="PlantGrowing.GrowthRate" value="0.0001"/>
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<drop event="Destroy" count="0"/>
+		</block>
+		<block name="UVM_Car41BaseSpawn">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="masterSpawners"/>
+			<property name="SpawnClass" value="UVM_Car41Base"/>
+			<property name="MultiBlockDim" value="2,2,4"/>
+		</block>
+		
+		<block name="UVM_Car42BaseShell">
+			<property name="Extends" value="cntCar03SedanDamage2Master"/>
+			<property name="Class" value="CarExplodeLoot"/>
+			<property name="LootList" value="83"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="Model" value="#@modfolder:Resources/UVM_Car42BaseShell.unity3d?UVM_Car42BaseShell"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="spawnVehicleBlock42"/>
+				<property name="Item" value="UVM_vehicleAccessories"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="1"/>
+			</property>
+			<property class="RepairItems"> <property name="resourceRepairKit" value="1"/> </property>
+			<property name="DowngradeBlock" value="cntCar03SedanDamage2v01"/>
+			<property name="MultiBlockDim" value="2,2,4"/>
+		</block>
+		<block name="spawnVehicleBlock42">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Extends" value="air"/>
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.Next" value="spawnVehicleNext"/>
+			<property name="PlantGrowing.GrowOnTop" value="UVM_Car42BaseSpawn"/>
+			<property name="PlantGrowing.GrowthRate" value="0.0001"/>
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<drop event="Destroy" count="0"/>
+		</block>
+		<block name="UVM_Car42BaseSpawn">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="masterSpawners"/>
+			<property name="SpawnClass" value="UVM_Car42Base"/>
+			<property name="MultiBlockDim" value="2,2,4"/>
+		</block>
+		<block name="UVM_Car43BaseShell">
+			<property name="Extends" value="cntCar03SedanDamage2Master"/>
+			<property name="Class" value="CarExplodeLoot"/>
+			<property name="LootList" value="83"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="Model" value="#@modfolder:Resources/UVM_Car43BaseShell.unity3d?UVM_Car43BaseShell"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="spawnVehicleBlock43"/>
+				<property name="Item" value="UVM_vehicleAccessories"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="1"/>
+			</property>
+			<property class="RepairItems"> <property name="resourceRepairKit" value="1"/> </property>
+			<property name="DowngradeBlock" value="cntCar03SedanDamage2v01"/>
+			<property name="MultiBlockDim" value="2,2,4"/>
+		</block>
+		<block name="spawnVehicleBlock43">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Extends" value="air"/>
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.Next" value="spawnVehicleNext"/>
+			<property name="PlantGrowing.GrowOnTop" value="UVM_Car43BaseSpawn"/>
+			<property name="PlantGrowing.GrowthRate" value="0.0001"/>
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<drop event="Destroy" count="0"/>
+		</block>
+		<block name="UVM_Car43BaseSpawn">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="masterSpawners"/>
+			<property name="SpawnClass" value="UVM_Car43Base"/>
+			<property name="MultiBlockDim" value="2,2,4"/>
+		</block>
+		
+		<block name="UVM_Car44BaseShell">
+			<property name="Extends" value="cntCar03SedanDamage2Master"/>
+			<property name="Class" value="CarExplodeLoot"/>
+			<property name="LootList" value="83"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="Model" value="#@modfolder:Resources/UVM_Car44BaseShell.unity3d?UVM_Car44BaseShell"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="spawnVehicleBlock44"/>
+				<property name="Item" value="UVM_vehicleAccessories"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="1"/>
+			</property>
+			<property class="RepairItems"> <property name="resourceRepairKit" value="1"/> </property>
+			<property name="DowngradeBlock" value="cntCar03SedanDamage2v01"/>
+			<property name="MultiBlockDim" value="2,2,4"/>
+		</block>
+		<block name="spawnVehicleBlock44">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Extends" value="air"/>
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.Next" value="spawnVehicleNext"/>
+			<property name="PlantGrowing.GrowOnTop" value="UVM_Car44BaseSpawn"/>
+			<property name="PlantGrowing.GrowthRate" value="0.0001"/>
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<drop event="Destroy" count="0"/>
+		</block>
+		<block name="UVM_Car44BaseSpawn">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="masterSpawners"/>
+			<property name="SpawnClass" value="UVM_Car44Base"/>
+			<property name="MultiBlockDim" value="2,2,4"/>
+		</block>
+		
+		<block name="UVM_Car45BaseShell">
+			<property name="Extends" value="cntCar03SedanDamage2Master"/>
+			<property name="Class" value="CarExplodeLoot"/>
+			<property name="LootList" value="83"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="Model" value="#@modfolder:Resources/UVM_Car45BaseShell.unity3d?UVM_Car45BaseShell"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="spawnVehicleBlock45"/>
+				<property name="Item" value="UVM_vehicleAccessories"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="1"/>
+			</property>
+			<property class="RepairItems"> <property name="resourceRepairKit" value="1"/> </property>
+			<property name="DowngradeBlock" value="cntCar03SedanDamage2v01"/>
+			<property name="MultiBlockDim" value="2,2,4"/>
+		</block>
+		<block name="spawnVehicleBlock45">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Extends" value="air"/>
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.Next" value="spawnVehicleNext"/>
+			<property name="PlantGrowing.GrowOnTop" value="UVM_Car45BaseSpawn"/>
+			<property name="PlantGrowing.GrowthRate" value="0.0001"/>
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<drop event="Destroy" count="0"/>
+		</block>
+		<block name="UVM_Car45BaseSpawn">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="masterSpawners"/>
+			<property name="SpawnClass" value="UVM_Car45Base"/>
+			<property name="MultiBlockDim" value="2,2,4"/>
+		</block>
+		
+		<block name="UVM_Car46BaseShell">
+			<property name="Extends" value="cntCar03SedanDamage2Master"/>
+			<property name="Class" value="CarExplodeLoot"/>
+			<property name="LootList" value="83"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="Model" value="#@modfolder:Resources/UVM_Car46BaseShell.unity3d?UVM_Car46BaseShell"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="spawnVehicleBlock46"/>
+				<property name="Item" value="UVM_vehicleAccessories"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="1"/>
+			</property>
+			<property class="RepairItems"> <property name="resourceRepairKit" value="1"/> </property>
+			<property name="DowngradeBlock" value="cntCar03SedanDamage2v01"/>
+			<property name="MultiBlockDim" value="2,2,4"/>
+		</block>
+		<block name="spawnVehicleBlock46">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Extends" value="air"/>
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.Next" value="spawnVehicleNext"/>
+			<property name="PlantGrowing.GrowOnTop" value="UVM_Car46BaseSpawn"/>
+			<property name="PlantGrowing.GrowthRate" value="0.0001"/>
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<drop event="Destroy" count="0"/>
+		</block>
+		<block name="UVM_Car46BaseSpawn">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="masterSpawners"/>
+			<property name="SpawnClass" value="UVM_Car46Base"/>
+			<property name="MultiBlockDim" value="2,2,4"/>
+		</block>
+	  </append>
+</UVM_Configs>

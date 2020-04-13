@@ -1,0 +1,10 @@
+<UVM_Configs>
+
+	  <append xpath="/materials">
+		<material id="Mfakeair">
+		<property name="collidable" value="false"/>
+		<property name="lightopacity" value="0"/>
+		<property name="ground_cover" value="true"/>
+		</material>
+	  </append>
+</UVM_Configs>

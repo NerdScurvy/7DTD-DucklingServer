@@ -1,0 +1,879 @@
+<UVM_Configs>
+		<append xpath="/entity_classes">	
+      <entity_class name="UVM_Car1Base">
+        <property name="Tags" value="vehicle"/>
+        <property name="Class" value="EntityVJeep"/>
+        <property name="Parent" value="Cars"/>
+        <property name="Prefab" value="#@modfolder:Resources/UVM_Car1Base.unity3d?UVM_Car1Base"/>
+        <property name="ModelType" value="Standard"/>
+        <property name="SurfaceCategory" value="metal"/>
+        <property name="IgnoreTrigger" value="true"/>
+        <property name="LootListAlive" value="77"/>
+        <property name="IsEnemyEntity" value="false"/>
+		
+        <property name="Explosion.ParticleIndex" value="6"/>
+        <property name="Explosion.RadiusBlocks" value="5"/>
+        <property name="Explosion.RadiusEntities" value="5"/>
+        <property name="Explosion.BlockDamage" value="100"/>
+        <property name="Explosion.EntityDamage" value="100"/>
+        <property name="RotateToGround" value="true"/>
+        <property name="Faction" value="none"/>
+        <property name="MapIcon" value="ui_game_symbol_4x4"/>
+      </entity_class>
+	  <entity_class name="UVM_Car2Base">
+        <property name="Tags" value="vehicle"/>
+        <property name="Class" value="EntityVJeep"/>
+        <property name="Parent" value="Cars"/>
+        <property name="Prefab" value="#@modfolder:Resources/UVM_Car2Base.unity3d?UVM_Car2Base"/>
+        <property name="ModelType" value="Standard"/>
+        <property name="SurfaceCategory" value="metal"/>
+        <property name="IgnoreTrigger" value="true"/>
+        <property name="LootListAlive" value="77"/>
+        <property name="IsEnemyEntity" value="false"/>
+        <property name="Explosion.ParticleIndex" value="6"/>
+        <property name="Explosion.RadiusBlocks" value="5"/>
+        <property name="Explosion.RadiusEntities" value="5"/>
+        <property name="Explosion.BlockDamage" value="100"/>
+        <property name="Explosion.EntityDamage" value="100"/>
+        <property name="RotateToGround" value="true"/>
+        <property name="Faction" value="none"/>
+        <property name="MapIcon" value="ui_game_symbol_4x4"/>
+      </entity_class>
+	  <entity_class name="UVM_Car3Base">
+        <property name="Tags" value="vehicle"/>
+        <property name="Class" value="EntityVJeep"/>
+        <property name="Parent" value="Cars"/>
+        <property name="Prefab" value="#@modfolder:Resources/UVM_Car3Base.unity3d?UVM_Car3Base"/>
+        <property name="ModelType" value="Standard"/>
+        <property name="SurfaceCategory" value="metal"/>
+        <property name="IgnoreTrigger" value="true"/>
+        <property name="LootListAlive" value="77"/>
+        <property name="IsEnemyEntity" value="false"/>
+        <property name="Explosion.ParticleIndex" value="6"/>
+        <property name="Explosion.RadiusBlocks" value="5"/>
+        <property name="Explosion.RadiusEntities" value="5"/>
+        <property name="Explosion.BlockDamage" value="100"/>
+        <property name="Explosion.EntityDamage" value="100"/>
+        <property name="RotateToGround" value="true"/>
+        <property name="Faction" value="none"/>
+        <property name="MapIcon" value="ui_game_symbol_4x4"/>
+      </entity_class>
+	  <entity_class name="UVM_Car4Base">
+        <property name="Tags" value="vehicle"/>
+        <property name="Class" value="EntityVJeep"/>
+        <property name="Parent" value="Cars"/>
+        <property name="Prefab" value="#@modfolder:Resources/UVM_Car4Base.unity3d?UVM_Car4Base"/>
+        <property name="ModelType" value="Standard"/>
+        <property name="SurfaceCategory" value="metal"/>
+        <property name="IgnoreTrigger" value="true"/>
+        <property name="LootListAlive" value="77"/>
+        <property name="IsEnemyEntity" value="false"/>
+        <property name="Explosion.ParticleIndex" value="6"/>
+        <property name="Explosion.RadiusBlocks" value="5"/>
+        <property name="Explosion.RadiusEntities" value="5"/>
+        <property name="Explosion.BlockDamage" value="100"/>
+        <property name="Explosion.EntityDamage" value="100"/>
+        <property name="RotateToGround" value="true"/>
+        <property name="Faction" value="none"/>
+        <property name="MapIcon" value="ui_game_symbol_4x4"/>
+      </entity_class>
+	  <entity_class name="UVM_Car5Base">
+        <property name="Tags" value="vehicle"/>
+        <property name="Class" value="EntityVJeep"/>
+        <property name="Parent" value="Cars"/>
+        <property name="Prefab" value="#@modfolder:Resources/UVM_Car5Base.unity3d?UVM_Car5Base"/>
+        <property name="ModelType" value="Standard"/>
+        <property name="SurfaceCategory" value="metal"/>
+        <property name="IgnoreTrigger" value="true"/>
+        <property name="LootListAlive" value="77"/>
+        <property name="IsEnemyEntity" value="false"/>
+        <property name="Explosion.ParticleIndex" value="6"/>
+        <property name="Explosion.RadiusBlocks" value="5"/>
+        <property name="Explosion.RadiusEntities" value="5"/>
+        <property name="Explosion.BlockDamage" value="100"/>
+        <property name="Explosion.EntityDamage" value="100"/>
+        <property name="RotateToGround" value="true"/>
+        <property name="Faction" value="none"/>
+        <property name="MapIcon" value="ui_game_symbol_4x4"/>
+      </entity_class>
+	  <entity_class name="UVM_Car6Base">
+        <property name="Tags" value="vehicle"/>
+        <property name="Class" value="EntityVJeep"/>
+        <property name="Parent" value="Cars"/>
+        <property name="Prefab" value="#@modfolder:Resources/UVM_Car6Base.unity3d?UVM_Car6Base"/>
+        <property name="ModelType" value="Standard"/>
+        <property name="SurfaceCategory" value="metal"/>
+        <property name="IgnoreTrigger" value="true"/>
+        <property name="LootListAlive" value="76"/>
+        <property name="IsEnemyEntity" value="false"/>
+        <property name="Explosion.ParticleIndex" value="6"/>
+        <property name="Explosion.RadiusBlocks" value="5"/>
+        <property name="Explosion.RadiusEntities" value="5"/>
+        <property name="Explosion.BlockDamage" value="100"/>
+        <property name="Explosion.EntityDamage" value="100"/>
+        <property name="RotateToGround" value="true"/>
+        <property name="Faction" value="none"/>
+        <property name="MapIcon" value="ui_game_symbol_4x4"/>
+      </entity_class>
+	  <entity_class name="UVM_Car7Base">
+        <property name="Tags" value="vehicle"/>
+        <property name="Class" value="EntityVJeep"/>
+        <property name="Parent" value="Cars"/>
+        <property name="Prefab" value="#@modfolder:Resources/UVM_Car7Base.unity3d?UVM_Car7Base"/>
+        <property name="ModelType" value="Standard"/>
+        <property name="SurfaceCategory" value="metal"/>
+        <property name="IgnoreTrigger" value="true"/>
+        <property name="LootListAlive" value="76"/>
+        <property name="IsEnemyEntity" value="false"/>
+        <property name="Explosion.ParticleIndex" value="6"/>
+        <property name="Explosion.RadiusBlocks" value="5"/>
+        <property name="Explosion.RadiusEntities" value="5"/>
+        <property name="Explosion.BlockDamage" value="100"/>
+        <property name="Explosion.EntityDamage" value="100"/>
+        <property name="RotateToGround" value="true"/>
+        <property name="Faction" value="none"/>
+        <property name="MapIcon" value="ui_game_symbol_4x4"/>
+      </entity_class>
+	  <entity_class name="UVM_Car8Base">
+        <property name="Tags" value="vehicle"/>
+        <property name="Class" value="EntityVJeep"/>
+        <property name="Parent" value="Cars"/>
+        <property name="Prefab" value="#@modfolder:Resources/UVM_Car8Base.unity3d?UVM_Car8Base"/>
+        <property name="ModelType" value="Standard"/>
+        <property name="SurfaceCategory" value="metal"/>
+        <property name="IgnoreTrigger" value="true"/>
+        <property name="LootListAlive" value="76"/>
+        <property name="IsEnemyEntity" value="false"/>
+        <property name="Explosion.ParticleIndex" value="6"/>
+        <property name="Explosion.RadiusBlocks" value="5"/>
+        <property name="Explosion.RadiusEntities" value="5"/>
+        <property name="Explosion.BlockDamage" value="100"/>
+        <property name="Explosion.EntityDamage" value="100"/>
+        <property name="RotateToGround" value="true"/>
+        <property name="Faction" value="none"/>
+        <property name="MapIcon" value="ui_game_symbol_4x4"/>
+      </entity_class>
+	  <entity_class name="UVM_Car9Base">
+        <property name="Tags" value="vehicle"/>
+        <property name="Class" value="EntityVJeep"/>
+        <property name="Parent" value="Cars"/>
+        <property name="Prefab" value="#@modfolder:Resources/UVM_Car9Base.unity3d?UVM_Car9Base"/>
+        <property name="ModelType" value="Standard"/>
+        <property name="SurfaceCategory" value="metal"/>
+        <property name="IgnoreTrigger" value="true"/>
+        <property name="LootListAlive" value="76"/>
+        <property name="IsEnemyEntity" value="false"/>
+        <property name="Explosion.ParticleIndex" value="6"/>
+        <property name="Explosion.RadiusBlocks" value="5"/>
+        <property name="Explosion.RadiusEntities" value="5"/>
+        <property name="Explosion.BlockDamage" value="100"/>
+        <property name="Explosion.EntityDamage" value="100"/>
+        <property name="RotateToGround" value="true"/>
+        <property name="Faction" value="none"/>
+        <property name="MapIcon" value="ui_game_symbol_4x4"/>
+      </entity_class>
+	  <entity_class name="UVM_Car10Base">
+        <property name="Tags" value="vehicle"/>
+        <property name="Class" value="EntityVJeep"/>
+        <property name="Parent" value="Cars"/>
+        <property name="Prefab" value="#@modfolder:Resources/UVM_Car10Base.unity3d?UVM_Car10Base"/>
+        <property name="ModelType" value="Standard"/>
+        <property name="SurfaceCategory" value="metal"/>
+        <property name="IgnoreTrigger" value="true"/>
+        <property name="LootListAlive" value="76"/>
+        <property name="IsEnemyEntity" value="false"/>
+        <property name="Explosion.ParticleIndex" value="6"/>
+        <property name="Explosion.RadiusBlocks" value="5"/>
+        <property name="Explosion.RadiusEntities" value="5"/>
+        <property name="Explosion.BlockDamage" value="100"/>
+        <property name="Explosion.EntityDamage" value="100"/>
+        <property name="RotateToGround" value="true"/>
+        <property name="Faction" value="none"/>
+        <property name="MapIcon" value="ui_game_symbol_4x4"/>
+      </entity_class>
+	  <entity_class name="UVM_Car11Base">
+        <property name="Tags" value="vehicle"/>
+        <property name="Class" value="EntityVJeep"/>
+        <property name="Parent" value="Cars"/>
+        <property name="Prefab" value="#@modfolder:Resources/UVM_Car11Base.unity3d?UVM_Car11Base"/>
+        <property name="ModelType" value="Standard"/>
+        <property name="SurfaceCategory" value="metal"/>
+        <property name="IgnoreTrigger" value="true"/>
+        <property name="LootListAlive" value="77"/>
+        <property name="IsEnemyEntity" value="false"/>
+        <property name="Explosion.ParticleIndex" value="6"/>
+        <property name="Explosion.RadiusBlocks" value="5"/>
+        <property name="Explosion.RadiusEntities" value="5"/>
+        <property name="Explosion.BlockDamage" value="100"/>
+        <property name="Explosion.EntityDamage" value="100"/>
+        <property name="RotateToGround" value="true"/>
+        <property name="Faction" value="none"/>
+        <property name="MapIcon" value="ui_game_symbol_4x4"/>
+      </entity_class>
+	  <entity_class name="UVM_Car12Base">
+        <property name="Tags" value="vehicle"/>
+        <property name="Class" value="EntityVJeep"/>
+        <property name="Parent" value="Cars"/>
+        <property name="Prefab" value="#@modfolder:Resources/UVM_Car12Base.unity3d?UVM_Car12Base"/>
+        <property name="ModelType" value="Standard"/>
+        <property name="SurfaceCategory" value="metal"/>
+        <property name="IgnoreTrigger" value="true"/>
+        <property name="LootListAlive" value="77"/>
+        <property name="IsEnemyEntity" value="false"/>
+        <property name="Explosion.ParticleIndex" value="6"/>
+        <property name="Explosion.RadiusBlocks" value="5"/>
+        <property name="Explosion.RadiusEntities" value="5"/>
+        <property name="Explosion.BlockDamage" value="100"/>
+        <property name="Explosion.EntityDamage" value="100"/>
+        <property name="RotateToGround" value="true"/>
+        <property name="Faction" value="none"/>
+        <property name="MapIcon" value="ui_game_symbol_4x4"/>
+      </entity_class>
+	  <entity_class name="UVM_Car13Base">
+        <property name="Tags" value="vehicle"/>
+        <property name="Class" value="EntityVJeep"/>
+        <property name="Parent" value="Cars"/>
+        <property name="Prefab" value="#@modfolder:Resources/UVM_Car13Base.unity3d?UVM_Car13Base"/>
+        <property name="ModelType" value="Standard"/>
+        <property name="SurfaceCategory" value="metal"/>
+        <property name="IgnoreTrigger" value="true"/>
+        <property name="LootListAlive" value="77"/>
+        <property name="IsEnemyEntity" value="false"/>
+        <property name="Explosion.ParticleIndex" value="6"/>
+        <property name="Explosion.RadiusBlocks" value="5"/>
+        <property name="Explosion.RadiusEntities" value="5"/>
+        <property name="Explosion.BlockDamage" value="100"/>
+        <property name="Explosion.EntityDamage" value="100"/>
+        <property name="RotateToGround" value="true"/>
+        <property name="Faction" value="none"/>
+        <property name="MapIcon" value="ui_game_symbol_4x4"/>
+      </entity_class>
+	  <entity_class name="UVM_Car14Base">
+        <property name="Tags" value="vehicle"/>
+        <property name="Class" value="EntityVJeep"/>
+        <property name="Parent" value="Cars"/>
+        <property name="Prefab" value="#@modfolder:Resources/UVM_Car14Base.unity3d?UVM_Car14Base"/>
+        <property name="ModelType" value="Standard"/>
+        <property name="SurfaceCategory" value="metal"/>
+        <property name="IgnoreTrigger" value="true"/>
+        <property name="LootListAlive" value="77"/>
+        <property name="IsEnemyEntity" value="false"/>
+        <property name="Explosion.ParticleIndex" value="6"/>
+        <property name="Explosion.RadiusBlocks" value="5"/>
+        <property name="Explosion.RadiusEntities" value="5"/>
+        <property name="Explosion.BlockDamage" value="100"/>
+        <property name="Explosion.EntityDamage" value="100"/>
+        <property name="RotateToGround" value="true"/>
+        <property name="Faction" value="none"/>
+        <property name="MapIcon" value="ui_game_symbol_4x4"/>
+      </entity_class>
+	  <entity_class name="UVM_Car15Base">
+        <property name="Tags" value="vehicle"/>
+        <property name="Class" value="EntityVJeep"/>
+        <property name="Parent" value="Cars"/>
+        <property name="Prefab" value="#@modfolder:Resources/UVM_Car15Base.unity3d?UVM_Car15Base"/>
+        <property name="ModelType" value="Standard"/>
+        <property name="SurfaceCategory" value="metal"/>
+        <property name="IgnoreTrigger" value="true"/>
+        <property name="LootListAlive" value="77"/>
+        <property name="IsEnemyEntity" value="false"/>
+        <property name="Explosion.ParticleIndex" value="6"/>
+        <property name="Explosion.RadiusBlocks" value="5"/>
+        <property name="Explosion.RadiusEntities" value="5"/>
+        <property name="Explosion.BlockDamage" value="100"/>
+        <property name="Explosion.EntityDamage" value="100"/>
+        <property name="RotateToGround" value="true"/>
+        <property name="Faction" value="none"/>
+        <property name="MapIcon" value="ui_game_symbol_4x4"/>
+      </entity_class>
+	  <entity_class name="UVM_Car16Base">
+        <property name="Tags" value="vehicle"/>
+        <property name="Class" value="EntityVJeep"/>
+        <property name="Parent" value="Cars"/>
+        <property name="Prefab" value="#@modfolder:Resources/UVM_Car16Base.unity3d?UVM_Car16Base"/>
+        <property name="ModelType" value="Standard"/>
+        <property name="SurfaceCategory" value="metal"/>
+        <property name="IgnoreTrigger" value="true"/>
+        <property name="LootListAlive" value="78"/>
+        <property name="IsEnemyEntity" value="false"/>
+        <property name="Explosion.ParticleIndex" value="6"/>
+        <property name="Explosion.RadiusBlocks" value="5"/>
+        <property name="Explosion.RadiusEntities" value="5"/>
+        <property name="Explosion.BlockDamage" value="100"/>
+        <property name="Explosion.EntityDamage" value="100"/>
+        <property name="RotateToGround" value="true"/>
+        <property name="Faction" value="none"/>
+        <property name="MapIcon" value="ui_game_symbol_4x4"/>
+      </entity_class>
+	  <entity_class name="UVM_Car17Base">
+        <property name="Tags" value="vehicle"/>
+        <property name="Class" value="EntityVJeep"/>
+        <property name="Parent" value="Cars"/>
+        <property name="Prefab" value="#@modfolder:Resources/UVM_Car17Base.unity3d?UVM_Car17Base"/>
+        <property name="ModelType" value="Standard"/>
+        <property name="SurfaceCategory" value="metal"/>
+        <property name="IgnoreTrigger" value="true"/>
+        <property name="LootListAlive" value="78"/>
+        <property name="IsEnemyEntity" value="false"/>
+        <property name="Explosion.ParticleIndex" value="6"/>
+        <property name="Explosion.RadiusBlocks" value="5"/>
+        <property name="Explosion.RadiusEntities" value="5"/>
+        <property name="Explosion.BlockDamage" value="100"/>
+        <property name="Explosion.EntityDamage" value="100"/>
+        <property name="RotateToGround" value="true"/>
+        <property name="Faction" value="none"/>
+        <property name="MapIcon" value="ui_game_symbol_4x4"/>
+      </entity_class>
+	  <entity_class name="UVM_Car18Base">
+        <property name="Tags" value="vehicle"/>
+        <property name="Class" value="EntityVJeep"/>
+        <property name="Parent" value="Cars"/>
+        <property name="Prefab" value="#@modfolder:Resources/UVM_Car18Base.unity3d?UVM_Car18Base"/>
+        <property name="ModelType" value="Standard"/>
+        <property name="SurfaceCategory" value="metal"/>
+        <property name="IgnoreTrigger" value="true"/>
+        <property name="LootListAlive" value="78"/>
+        <property name="IsEnemyEntity" value="false"/>
+        <property name="Explosion.ParticleIndex" value="6"/>
+        <property name="Explosion.RadiusBlocks" value="5"/>
+        <property name="Explosion.RadiusEntities" value="5"/>
+        <property name="Explosion.BlockDamage" value="100"/>
+        <property name="Explosion.EntityDamage" value="100"/>
+        <property name="RotateToGround" value="true"/>
+        <property name="Faction" value="none"/>
+        <property name="MapIcon" value="ui_game_symbol_4x4"/>
+      </entity_class>
+	  <entity_class name="UVM_Car19Base">
+        <property name="Tags" value="vehicle"/>
+        <property name="Class" value="EntityVJeep"/>
+        <property name="Parent" value="Cars"/>
+        <property name="Prefab" value="#@modfolder:Resources/UVM_Car19Base.unity3d?UVM_Car19Base"/>
+        <property name="ModelType" value="Standard"/>
+        <property name="SurfaceCategory" value="metal"/>
+        <property name="IgnoreTrigger" value="true"/>
+        <property name="LootListAlive" value="78"/>
+        <property name="IsEnemyEntity" value="false"/>
+        <property name="Explosion.ParticleIndex" value="6"/>
+        <property name="Explosion.RadiusBlocks" value="5"/>
+        <property name="Explosion.RadiusEntities" value="5"/>
+        <property name="Explosion.BlockDamage" value="100"/>
+        <property name="Explosion.EntityDamage" value="100"/>
+        <property name="RotateToGround" value="true"/>
+        <property name="Faction" value="none"/>
+        <property name="MapIcon" value="ui_game_symbol_4x4"/>
+      </entity_class>
+	  <entity_class name="UVM_Car20Base">
+        <property name="Tags" value="vehicle"/>
+        <property name="Class" value="EntityVJeep"/>
+        <property name="Parent" value="Cars"/>
+        <property name="Prefab" value="#@modfolder:Resources/UVM_Car20Base.unity3d?UVM_Car20Base"/>
+        <property name="ModelType" value="Standard"/>
+        <property name="SurfaceCategory" value="metal"/>
+        <property name="IgnoreTrigger" value="true"/>
+        <property name="LootListAlive" value="78"/>
+        <property name="IsEnemyEntity" value="false"/>
+        <property name="Explosion.ParticleIndex" value="6"/>
+        <property name="Explosion.RadiusBlocks" value="5"/>
+        <property name="Explosion.RadiusEntities" value="5"/>
+        <property name="Explosion.BlockDamage" value="100"/>
+        <property name="Explosion.EntityDamage" value="100"/>
+        <property name="RotateToGround" value="true"/>
+        <property name="Faction" value="none"/>
+        <property name="MapIcon" value="ui_game_symbol_4x4"/>
+      </entity_class>
+	  <entity_class name="UVM_Car21Base">
+        <property name="Tags" value="vehicle"/>
+        <property name="Class" value="EntityVJeep"/>
+        <property name="Parent" value="Cars"/>
+        <property name="Prefab" value="#@modfolder:Resources/UVM_Car21Base.unity3d?UVM_Car21Base"/>
+        <property name="ModelType" value="Standard"/>
+        <property name="SurfaceCategory" value="metal"/>
+        <property name="IgnoreTrigger" value="true"/>
+        <property name="LootListAlive" value="80"/>
+        <property name="IsEnemyEntity" value="false"/>
+        <property name="Explosion.ParticleIndex" value="6"/>
+        <property name="Explosion.RadiusBlocks" value="5"/>
+        <property name="Explosion.RadiusEntities" value="5"/>
+        <property name="Explosion.BlockDamage" value="100"/>
+        <property name="Explosion.EntityDamage" value="100"/>
+        <property name="RotateToGround" value="true"/>
+        <property name="Faction" value="none"/>
+        <property name="MapIcon" value="ui_game_symbol_4x4"/>
+      </entity_class>
+	   <entity_class name="UVM_Car22Base">
+        <property name="Tags" value="vehicle"/>
+        <property name="Class" value="EntityVJeep"/>
+        <property name="Parent" value="Cars"/>
+        <property name="Prefab" value="#@modfolder:Resources/UVM_Car22Base.unity3d?UVM_Car22Base"/>
+        <property name="ModelType" value="Standard"/>
+        <property name="SurfaceCategory" value="metal"/>
+        <property name="IgnoreTrigger" value="true"/>
+        <property name="LootListAlive" value="80"/>
+        <property name="IsEnemyEntity" value="false"/>
+        <property name="Explosion.ParticleIndex" value="6"/>
+        <property name="Explosion.RadiusBlocks" value="5"/>
+        <property name="Explosion.RadiusEntities" value="5"/>
+        <property name="Explosion.BlockDamage" value="100"/>
+        <property name="Explosion.EntityDamage" value="100"/>
+        <property name="RotateToGround" value="true"/>
+        <property name="Faction" value="none"/>
+        <property name="MapIcon" value="ui_game_symbol_4x4"/>
+      </entity_class>
+	  <entity_class name="UVM_Car23Base">
+        <property name="Tags" value="vehicle"/>
+        <property name="Class" value="EntityVJeep"/>
+        <property name="Parent" value="Cars"/>
+        <property name="Prefab" value="#@modfolder:Resources/UVM_Car23Base.unity3d?UVM_Car23Base"/>
+        <property name="ModelType" value="Standard"/>
+        <property name="SurfaceCategory" value="metal"/>
+        <property name="IgnoreTrigger" value="true"/>
+        <property name="LootListAlive" value="80"/>
+        <property name="IsEnemyEntity" value="false"/>
+        <property name="Explosion.ParticleIndex" value="6"/>
+        <property name="Explosion.RadiusBlocks" value="5"/>
+        <property name="Explosion.RadiusEntities" value="5"/>
+        <property name="Explosion.BlockDamage" value="100"/>
+        <property name="Explosion.EntityDamage" value="100"/>
+        <property name="RotateToGround" value="true"/>
+        <property name="Faction" value="none"/>
+        <property name="MapIcon" value="ui_game_symbol_4x4"/>
+      </entity_class>
+	  <entity_class name="UVM_Car24Base">
+        <property name="Tags" value="vehicle"/>
+        <property name="Class" value="EntityVJeep"/>
+        <property name="Parent" value="Cars"/>
+        <property name="Prefab" value="#@modfolder:Resources/UVM_Car24Base.unity3d?UVM_Car24Base"/>
+        <property name="ModelType" value="Standard"/>
+        <property name="SurfaceCategory" value="metal"/>
+        <property name="IgnoreTrigger" value="true"/>
+        <property name="LootListAlive" value="80"/>
+        <property name="IsEnemyEntity" value="false"/>
+        <property name="Explosion.ParticleIndex" value="6"/>
+        <property name="Explosion.RadiusBlocks" value="5"/>
+        <property name="Explosion.RadiusEntities" value="5"/>
+        <property name="Explosion.BlockDamage" value="100"/>
+        <property name="Explosion.EntityDamage" value="100"/>
+        <property name="RotateToGround" value="true"/>
+        <property name="Faction" value="none"/>
+        <property name="MapIcon" value="ui_game_symbol_4x4"/>
+      </entity_class>
+	  <entity_class name="UVM_Car25Base">
+        <property name="Tags" value="vehicle"/>
+        <property name="Class" value="EntityVJeep"/>
+        <property name="Parent" value="Cars"/>
+        <property name="Prefab" value="#@modfolder:Resources/UVM_Car25Base.unity3d?UVM_Car25Base"/>
+        <property name="ModelType" value="Standard"/>
+        <property name="SurfaceCategory" value="metal"/>
+        <property name="IgnoreTrigger" value="true"/>
+        <property name="LootListAlive" value="80"/>
+        <property name="IsEnemyEntity" value="false"/>
+        <property name="Explosion.ParticleIndex" value="6"/>
+        <property name="Explosion.RadiusBlocks" value="5"/>
+        <property name="Explosion.RadiusEntities" value="5"/>
+        <property name="Explosion.BlockDamage" value="100"/>
+        <property name="Explosion.EntityDamage" value="100"/>
+        <property name="RotateToGround" value="true"/>
+        <property name="Faction" value="none"/>
+        <property name="MapIcon" value="ui_game_symbol_4x4"/>
+      </entity_class>
+	  <entity_class name="UVM_Car26Base">
+        <property name="Tags" value="vehicle"/>
+        <property name="Class" value="EntityVJeep"/>
+        <property name="Parent" value="Cars"/>
+        <property name="Prefab" value="#@modfolder:Resources/UVM_Car26Base.unity3d?UVM_Car26Base"/>
+        <property name="ModelType" value="Standard"/>
+        <property name="SurfaceCategory" value="metal"/>
+        <property name="IgnoreTrigger" value="true"/>
+        <property name="LootListAlive" value="583"/>
+        <property name="IsEnemyEntity" value="false"/>
+        <property name="Explosion.ParticleIndex" value="6"/>
+        <property name="Explosion.RadiusBlocks" value="5"/>
+        <property name="Explosion.RadiusEntities" value="5"/>
+        <property name="Explosion.BlockDamage" value="100"/>
+        <property name="Explosion.EntityDamage" value="100"/>
+        <property name="RotateToGround" value="true"/>
+        <property name="Faction" value="none"/>
+        <property name="MapIcon" value="ui_game_symbol_4x4"/>
+      </entity_class>
+	  <entity_class name="UVM_Car27Base">
+        <property name="Tags" value="vehicle"/>
+        <property name="Class" value="EntityVJeep"/>
+        <property name="Parent" value="Cars"/>
+        <property name="Prefab" value="#@modfolder:Resources/UVM_Car27Base.unity3d?UVM_Car27Base"/>
+        <property name="ModelType" value="Standard"/>
+        <property name="SurfaceCategory" value="metal"/>
+        <property name="IgnoreTrigger" value="true"/>
+        <property name="LootListAlive" value="77"/>
+        <property name="IsEnemyEntity" value="false"/>
+        <property name="Explosion.ParticleIndex" value="6"/>
+        <property name="Explosion.RadiusBlocks" value="5"/>
+        <property name="Explosion.RadiusEntities" value="5"/>
+        <property name="Explosion.BlockDamage" value="100"/>
+        <property name="Explosion.EntityDamage" value="100"/>
+        <property name="RotateToGround" value="true"/>
+        <property name="Faction" value="none"/>
+        <property name="MapIcon" value="ui_game_symbol_4x4"/>
+      </entity_class>
+	  <entity_class name="UVM_Car28Base">
+        <property name="Tags" value="vehicle"/>
+        <property name="Class" value="EntityVJeep"/>
+        <property name="Parent" value="Cars"/>
+        <property name="Prefab" value="#@modfolder:Resources/UVM_Car28Base.unity3d?UVM_Car28Base"/>
+        <property name="ModelType" value="Standard"/>
+        <property name="SurfaceCategory" value="metal"/>
+        <property name="IgnoreTrigger" value="true"/>
+        <property name="LootListAlive" value="77"/>
+        <property name="IsEnemyEntity" value="false"/>
+        <property name="Explosion.ParticleIndex" value="6"/>
+        <property name="Explosion.RadiusBlocks" value="5"/>
+        <property name="Explosion.RadiusEntities" value="5"/>
+        <property name="Explosion.BlockDamage" value="100"/>
+        <property name="Explosion.EntityDamage" value="100"/>
+        <property name="RotateToGround" value="true"/>
+        <property name="Faction" value="none"/>
+        <property name="MapIcon" value="ui_game_symbol_4x4"/>
+      </entity_class>
+	  <entity_class name="UVM_Car29Base">
+        <property name="Tags" value="vehicle"/>
+        <property name="Class" value="EntityVJeep"/>
+        <property name="Parent" value="Cars"/>
+        <property name="Prefab" value="#@modfolder:Resources/UVM_Car29Base.unity3d?UVM_Car29Base"/>
+        <property name="ModelType" value="Standard"/>
+        <property name="SurfaceCategory" value="metal"/>
+        <property name="IgnoreTrigger" value="true"/>
+        <property name="LootListAlive" value="79"/>
+        <property name="IsEnemyEntity" value="false"/>
+        <property name="Explosion.ParticleIndex" value="6"/>
+        <property name="Explosion.RadiusBlocks" value="5"/>
+        <property name="Explosion.RadiusEntities" value="5"/>
+        <property name="Explosion.BlockDamage" value="100"/>
+        <property name="Explosion.EntityDamage" value="100"/>
+        <property name="RotateToGround" value="true"/>
+        <property name="Faction" value="none"/>
+        <property name="MapIcon" value="ui_game_symbol_4x4"/>
+      </entity_class>
+	  <entity_class name="UVM_Car30Base">
+        <property name="Tags" value="vehicle"/>
+        <property name="Class" value="EntityVJeep"/>
+        <property name="Parent" value="Cars"/>
+        <property name="Prefab" value="#@modfolder:Resources/UVM_Car30Base.unity3d?UVM_Car30Base"/>
+        <property name="ModelType" value="Standard"/>
+        <property name="SurfaceCategory" value="metal"/>
+        <property name="IgnoreTrigger" value="true"/>
+        <property name="LootListAlive" value="79"/>
+        <property name="IsEnemyEntity" value="false"/>
+        <property name="Explosion.ParticleIndex" value="6"/>
+        <property name="Explosion.RadiusBlocks" value="5"/>
+        <property name="Explosion.RadiusEntities" value="5"/>
+        <property name="Explosion.BlockDamage" value="100"/>
+        <property name="Explosion.EntityDamage" value="100"/>
+        <property name="RotateToGround" value="true"/>
+        <property name="Faction" value="none"/>
+        <property name="MapIcon" value="ui_game_symbol_4x4"/>
+      </entity_class>
+	  <entity_class name="UVM_Car31Base">
+        <property name="Tags" value="vehicle"/>
+        <property name="Class" value="EntityVJeep"/>
+        <property name="Parent" value="Cars"/>
+        <property name="Prefab" value="#@modfolder:Resources/UVM_Car31Base.unity3d?UVM_Car31Base"/>
+        <property name="ModelType" value="Standard"/>
+        <property name="SurfaceCategory" value="metal"/>
+        <property name="IgnoreTrigger" value="true"/>
+        <property name="LootListAlive" value="583"/>
+        <property name="IsEnemyEntity" value="false"/>
+        <property name="Explosion.ParticleIndex" value="6"/>
+        <property name="Explosion.RadiusBlocks" value="5"/>
+        <property name="Explosion.RadiusEntities" value="5"/>
+        <property name="Explosion.BlockDamage" value="100"/>
+        <property name="Explosion.EntityDamage" value="100"/>
+        <property name="RotateToGround" value="true"/>
+        <property name="Faction" value="none"/>
+        <property name="MapIcon" value="ui_game_symbol_4x4"/>
+      </entity_class>
+	  <entity_class name="UVM_Car32Base">   <!-- Change loot storage for this next set -->
+        <property name="Tags" value="vehicle"/>
+        <property name="Class" value="EntityVJeep"/>
+        <property name="Parent" value="Cars"/>
+        <property name="Prefab" value="#@modfolder:Resources/UVM_Car32Base.unity3d?UVM_Car32Base"/>
+        <property name="ModelType" value="Standard"/>
+        <property name="SurfaceCategory" value="metal"/>
+        <property name="IgnoreTrigger" value="true"/>
+        <property name="LootListAlive" value="80"/>
+        <property name="IsEnemyEntity" value="false"/>
+        <property name="Explosion.ParticleIndex" value="6"/>
+        <property name="Explosion.RadiusBlocks" value="5"/>
+        <property name="Explosion.RadiusEntities" value="5"/>
+        <property name="Explosion.BlockDamage" value="100"/>
+        <property name="Explosion.EntityDamage" value="100"/>
+        <property name="RotateToGround" value="true"/>
+        <property name="Faction" value="none"/>
+        <property name="MapIcon" value="ui_game_symbol_4x4"/>
+      </entity_class>
+	  <entity_class name="UVM_Car33Base">
+        <property name="Tags" value="vehicle"/>
+        <property name="Class" value="EntityVJeep"/>
+        <property name="Parent" value="Cars"/>
+        <property name="Prefab" value="#@modfolder:Resources/UVM_Car33Base.unity3d?UVM_Car33Base"/>
+        <property name="ModelType" value="Standard"/>
+        <property name="SurfaceCategory" value="metal"/>
+        <property name="IgnoreTrigger" value="true"/>
+        <property name="LootListAlive" value="80"/>
+        <property name="IsEnemyEntity" value="false"/>
+        <property name="Explosion.ParticleIndex" value="6"/>
+        <property name="Explosion.RadiusBlocks" value="5"/>
+        <property name="Explosion.RadiusEntities" value="5"/>
+        <property name="Explosion.BlockDamage" value="100"/>
+        <property name="Explosion.EntityDamage" value="100"/>
+        <property name="RotateToGround" value="true"/>
+        <property name="Faction" value="none"/>
+        <property name="MapIcon" value="ui_game_symbol_4x4"/>
+      </entity_class>
+	  <entity_class name="UVM_Car34Base">
+        <property name="Tags" value="vehicle"/>
+        <property name="Class" value="EntityVJeep"/>
+        <property name="Parent" value="Cars"/>
+        <property name="Prefab" value="#@modfolder:Resources/UVM_Car34Base.unity3d?UVM_Car34Base"/>
+        <property name="ModelType" value="Standard"/>
+        <property name="SurfaceCategory" value="metal"/>
+        <property name="IgnoreTrigger" value="true"/>
+        <property name="LootListAlive" value="583"/>
+        <property name="IsEnemyEntity" value="false"/>
+        <property name="Explosion.ParticleIndex" value="6"/>
+        <property name="Explosion.RadiusBlocks" value="5"/>
+        <property name="Explosion.RadiusEntities" value="5"/>
+        <property name="Explosion.BlockDamage" value="100"/>
+        <property name="Explosion.EntityDamage" value="100"/>
+        <property name="RotateToGround" value="true"/>
+        <property name="Faction" value="none"/>
+        <property name="MapIcon" value="ui_game_symbol_4x4"/>
+      </entity_class>
+	  <entity_class name="UVM_Car35Base">
+        <property name="Tags" value="vehicle"/>
+        <property name="Class" value="EntityVJeep"/>
+        <property name="Parent" value="Cars"/>
+        <property name="Prefab" value="#@modfolder:Resources/UVM_Car35Base.unity3d?UVM_Car35Base"/>
+        <property name="ModelType" value="Standard"/>
+        <property name="SurfaceCategory" value="metal"/>
+        <property name="IgnoreTrigger" value="true"/>
+        <property name="LootListAlive" value="583"/>
+        <property name="IsEnemyEntity" value="false"/>
+        <property name="Explosion.ParticleIndex" value="6"/>
+        <property name="Explosion.RadiusBlocks" value="5"/>
+        <property name="Explosion.RadiusEntities" value="5"/>
+        <property name="Explosion.BlockDamage" value="100"/>
+        <property name="Explosion.EntityDamage" value="100"/>
+        <property name="RotateToGround" value="true"/>
+        <property name="Faction" value="none"/>
+        <property name="MapIcon" value="ui_game_symbol_4x4"/>
+      </entity_class>
+	  <entity_class name="UVM_Car36Base">
+        <property name="Tags" value="vehicle"/>
+        <property name="Class" value="EntityVJeep"/>
+        <property name="Parent" value="Cars"/>
+        <property name="Prefab" value="#@modfolder:Resources/UVM_Car36Base.unity3d?UVM_Car36Base"/>
+        <property name="ModelType" value="Standard"/>
+        <property name="SurfaceCategory" value="metal"/>
+        <property name="IgnoreTrigger" value="true"/>
+        <property name="LootListAlive" value="78"/>
+        <property name="IsEnemyEntity" value="false"/>
+        <property name="Explosion.ParticleIndex" value="6"/>
+        <property name="Explosion.RadiusBlocks" value="5"/>
+        <property name="Explosion.RadiusEntities" value="5"/>
+        <property name="Explosion.BlockDamage" value="100"/>
+        <property name="Explosion.EntityDamage" value="100"/>
+        <property name="RotateToGround" value="true"/>
+        <property name="Faction" value="none"/>
+        <property name="MapIcon" value="ui_game_symbol_4x4"/>
+      </entity_class>
+	  <entity_class name="UVM_Car37Base">
+        <property name="Tags" value="vehicle"/>
+        <property name="Class" value="EntityVJeep"/>
+        <property name="Parent" value="Cars"/>
+        <property name="Prefab" value="#@modfolder:Resources/UVM_Car37Base.unity3d?UVM_Car37Base"/>
+        <property name="ModelType" value="Standard"/>
+        <property name="SurfaceCategory" value="metal"/>
+        <property name="IgnoreTrigger" value="true"/>
+        <property name="LootListAlive" value="77"/>
+        <property name="IsEnemyEntity" value="false"/>
+        <property name="Explosion.ParticleIndex" value="6"/>
+        <property name="Explosion.RadiusBlocks" value="5"/>
+        <property name="Explosion.RadiusEntities" value="5"/>
+        <property name="Explosion.BlockDamage" value="100"/>
+        <property name="Explosion.EntityDamage" value="100"/>
+        <property name="RotateToGround" value="true"/>
+        <property name="Faction" value="none"/>
+        <property name="MapIcon" value="ui_game_symbol_4x4"/>
+      </entity_class>
+	  <entity_class name="UVM_Car38Base">
+        <property name="Tags" value="vehicle"/>
+        <property name="Class" value="EntityVJeep"/>
+        <property name="Parent" value="Cars"/>
+        <property name="Prefab" value="#@modfolder:Resources/UVM_Car38Base.unity3d?UVM_Car38Base"/>
+        <property name="ModelType" value="Standard"/>
+        <property name="SurfaceCategory" value="metal"/>
+        <property name="IgnoreTrigger" value="true"/>
+        <property name="LootListAlive" value="77"/>
+        <property name="IsEnemyEntity" value="false"/>
+        <property name="Explosion.ParticleIndex" value="6"/>
+        <property name="Explosion.RadiusBlocks" value="5"/>
+        <property name="Explosion.RadiusEntities" value="5"/>
+        <property name="Explosion.BlockDamage" value="100"/>
+        <property name="Explosion.EntityDamage" value="100"/>
+        <property name="RotateToGround" value="true"/>
+        <property name="Faction" value="none"/>
+        <property name="MapIcon" value="ui_game_symbol_4x4"/>
+      </entity_class>
+	  <entity_class name="UVM_Car39Base">
+        <property name="Tags" value="vehicle"/>
+        <property name="Class" value="EntityVJeep"/>
+        <property name="Parent" value="Cars"/>
+        <property name="Prefab" value="#@modfolder:Resources/UVM_Car39Base.unity3d?UVM_Car39Base"/>
+        <property name="ModelType" value="Standard"/>
+        <property name="SurfaceCategory" value="metal"/>
+        <property name="IgnoreTrigger" value="true"/>
+        <property name="LootListAlive" value="77"/>
+        <property name="IsEnemyEntity" value="false"/>
+        <property name="Explosion.ParticleIndex" value="6"/>
+        <property name="Explosion.RadiusBlocks" value="5"/>
+        <property name="Explosion.RadiusEntities" value="5"/>
+        <property name="Explosion.BlockDamage" value="100"/>
+        <property name="Explosion.EntityDamage" value="100"/>
+        <property name="RotateToGround" value="true"/>
+        <property name="Faction" value="none"/>
+        <property name="MapIcon" value="ui_game_symbol_4x4"/>
+      </entity_class>
+	  <entity_class name="UVM_Car40Base">
+        <property name="Tags" value="vehicle"/>
+        <property name="Class" value="EntityVJeep"/>
+        <property name="Parent" value="Cars"/>
+        <property name="Prefab" value="#@modfolder:Resources/UVM_Car40Base.unity3d?UVM_Car40Base"/>
+        <property name="ModelType" value="Standard"/>
+        <property name="SurfaceCategory" value="metal"/>
+        <property name="IgnoreTrigger" value="true"/>
+        <property name="LootListAlive" value="78"/>
+        <property name="IsEnemyEntity" value="false"/>
+        <property name="Explosion.ParticleIndex" value="6"/>
+        <property name="Explosion.RadiusBlocks" value="5"/>
+        <property name="Explosion.RadiusEntities" value="5"/>
+        <property name="Explosion.BlockDamage" value="100"/>
+        <property name="Explosion.EntityDamage" value="100"/>
+        <property name="RotateToGround" value="true"/>
+        <property name="Faction" value="none"/>
+        <property name="MapIcon" value="ui_game_symbol_4x4"/>
+      </entity_class>
+	  <entity_class name="UVM_Car41Base">
+        <property name="Tags" value="vehicle"/>
+        <property name="Class" value="EntityVJeep"/>
+        <property name="Parent" value="Cars"/>
+        <property name="Prefab" value="#@modfolder:Resources/UVM_Car41Base.unity3d?UVM_Car41Base"/>
+        <property name="ModelType" value="Standard"/>
+        <property name="SurfaceCategory" value="metal"/>
+        <property name="IgnoreTrigger" value="true"/>
+        <property name="LootListAlive" value="79"/>
+        <property name="IsEnemyEntity" value="false"/>
+        <property name="Explosion.ParticleIndex" value="6"/>
+        <property name="Explosion.RadiusBlocks" value="5"/>
+        <property name="Explosion.RadiusEntities" value="5"/>
+        <property name="Explosion.BlockDamage" value="100"/>
+        <property name="Explosion.EntityDamage" value="100"/>
+        <property name="RotateToGround" value="true"/>
+        <property name="Faction" value="none"/>
+        <property name="MapIcon" value="ui_game_symbol_4x4"/>
+      </entity_class>
+	  <entity_class name="UVM_Car42Base">
+        <property name="Tags" value="vehicle"/>
+        <property name="Class" value="EntityVJeep"/>
+        <property name="Parent" value="Cars"/>
+        <property name="Prefab" value="#@modfolder:Resources/UVM_Car42Base.unity3d?UVM_Car42Base"/>
+        <property name="ModelType" value="Standard"/>
+        <property name="SurfaceCategory" value="metal"/>
+        <property name="IgnoreTrigger" value="true"/>
+        <property name="LootListAlive" value="79"/> 
+        <property name="IsEnemyEntity" value="false"/>
+        <property name="Explosion.ParticleIndex" value="6"/>
+        <property name="Explosion.RadiusBlocks" value="5"/>
+        <property name="Explosion.RadiusEntities" value="5"/>
+        <property name="Explosion.BlockDamage" value="100"/>
+        <property name="Explosion.EntityDamage" value="100"/>
+        <property name="RotateToGround" value="true"/>
+        <property name="Faction" value="none"/>
+        <property name="MapIcon" value="ui_game_symbol_4x4"/>
+      </entity_class>
+	  <entity_class name="UVM_Car43Base">
+        <property name="Tags" value="vehicle"/>
+        <property name="Class" value="EntityVJeep"/>
+        <property name="Parent" value="Cars"/>
+        <property name="Prefab" value="#@modfolder:Resources/UVM_Car43Base.unity3d?UVM_Car43Base"/>
+        <property name="ModelType" value="Standard"/>
+        <property name="SurfaceCategory" value="metal"/>
+        <property name="IgnoreTrigger" value="true"/>
+        <property name="LootListAlive" value="79"/>
+        <property name="IsEnemyEntity" value="false"/>
+        <property name="Explosion.ParticleIndex" value="6"/>
+        <property name="Explosion.RadiusBlocks" value="5"/>
+        <property name="Explosion.RadiusEntities" value="5"/>
+        <property name="Explosion.BlockDamage" value="100"/>
+        <property name="Explosion.EntityDamage" value="100"/>
+        <property name="RotateToGround" value="true"/>
+        <property name="Faction" value="none"/>
+        <property name="MapIcon" value="ui_game_symbol_4x4"/>
+      </entity_class>
+	  <entity_class name="UVM_Car44Base">
+        <property name="Tags" value="vehicle"/>
+        <property name="Class" value="EntityVJeep"/>
+        <property name="Parent" value="Cars"/>
+        <property name="Prefab" value="#@modfolder:Resources/UVM_Car44Base.unity3d?UVM_Car44Base"/>
+        <property name="ModelType" value="Standard"/>
+        <property name="SurfaceCategory" value="metal"/>
+        <property name="IgnoreTrigger" value="true"/>
+        <property name="LootListAlive" value="79"/>
+        <property name="IsEnemyEntity" value="false"/>
+        <property name="Explosion.ParticleIndex" value="6"/>
+        <property name="Explosion.RadiusBlocks" value="5"/>
+        <property name="Explosion.RadiusEntities" value="5"/>
+        <property name="Explosion.BlockDamage" value="100"/>
+        <property name="Explosion.EntityDamage" value="100"/>
+        <property name="RotateToGround" value="true"/>
+        <property name="Faction" value="none"/>
+        <property name="MapIcon" value="ui_game_symbol_4x4"/>
+      </entity_class>
+	  <entity_class name="UVM_Car45Base">
+        <property name="Tags" value="vehicle"/>
+        <property name="Class" value="EntityVJeep"/>
+        <property name="Parent" value="Cars"/>
+        <property name="Prefab" value="#@modfolder:Resources/UVM_Car45Base.unity3d?UVM_Car45Base"/>
+        <property name="ModelType" value="Standard"/>
+        <property name="SurfaceCategory" value="metal"/>
+        <property name="IgnoreTrigger" value="true"/>
+        <property name="LootListAlive" value="79"/>
+        <property name="IsEnemyEntity" value="false"/>
+        <property name="Explosion.ParticleIndex" value="6"/>
+        <property name="Explosion.RadiusBlocks" value="5"/>
+        <property name="Explosion.RadiusEntities" value="5"/>
+        <property name="Explosion.BlockDamage" value="100"/>
+        <property name="Explosion.EntityDamage" value="100"/>
+        <property name="RotateToGround" value="true"/>
+        <property name="Faction" value="none"/>
+        <property name="MapIcon" value="ui_game_symbol_4x4"/>
+      </entity_class>
+	  <entity_class name="UVM_Car46Base">
+        <property name="Tags" value="vehicle"/>
+        <property name="Class" value="EntityVJeep"/>
+        <property name="Parent" value="Cars"/>
+        <property name="Prefab" value="#@modfolder:Resources/UVM_Car46Base.unity3d?UVM_Car46Base"/>
+        <property name="ModelType" value="Standard"/>
+        <property name="SurfaceCategory" value="metal"/>
+        <property name="IgnoreTrigger" value="true"/>
+        <property name="LootListAlive" value="77"/>
+        <property name="IsEnemyEntity" value="false"/>
+        <property name="Explosion.ParticleIndex" value="6"/>
+        <property name="Explosion.RadiusBlocks" value="5"/>
+        <property name="Explosion.RadiusEntities" value="5"/>
+        <property name="Explosion.BlockDamage" value="100"/>
+        <property name="Explosion.EntityDamage" value="100"/>
+        <property name="RotateToGround" value="true"/>
+        <property name="Faction" value="none"/>
+        <property name="MapIcon" value="ui_game_symbol_4x4"/>
+      </entity_class>
+		</append>
+</UVM_Configs>

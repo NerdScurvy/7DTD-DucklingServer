@@ -1,0 +1,22 @@
+<UVM_Configs>
+
+	  <append xpath="/recipes">
+		<recipe name="UVM_vehicleAccessories" count="1" craft_time="210" craft_area="workbench" tags="perkGreaseMonkey,learnable,workbenchCrafting">
+			<ingredient name="carBattery" count="1"/>
+			<ingredient name="vehicleWheels" count="4"/>
+			<ingredient name="smallEngine" count="1"/>
+			<ingredient name="ammoGasCan" count="7500"/>
+			<ingredient name="resourceMechanicalParts" count="16"/>
+			<effect_group>
+				<passive_effect name="CraftingIngredientCount" operation="perc_add" level="0,3" value=".5,.5" tags="resourceMechanicalParts"/>
+			</effect_group>
+		</recipe>
+		<recipe name="UVM_Impactwrench" count="1" craft_area="workbench" tags="perkGreaseMonkey,learnable,workbenchCrafting">
+			<ingredient name="resourceForgedSteel" count="20"/>
+			<ingredient name="resourceMechanicalParts" count="20"/>
+			<ingredient name="resourceDuctTape" count="2"/>
+			<ingredient name="resourceScrapPolymers" count="10"/>
+			<ingredient name="resourceSpring" count="5"/>
+		</recipe>
+	  </append>
+</UVM_Configs>

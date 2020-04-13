@@ -1,0 +1,3 @@
+<UVM_Configs>
+<set xpath="/progression/perks/perk[@name='perkGreaseMonkey']/effect_group/passive_effect[@level='4,5']/@tags">vehicle4x4TruckChassis,vehicle4x4TruckAccessories,UVM_Impactwrench,UVM_vehicleAccessories</set>
+</UVM_Configs>

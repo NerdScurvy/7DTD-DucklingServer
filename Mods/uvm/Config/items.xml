@@ -1,0 +1,2132 @@
+<UVM_Configs>
+
+<set xpath="/items/item[@name='smallEngine']/property[@class='Attributes']/property[@name='VehicleNoise' and @value='1,.1']/@value">7,.7</set>
+
+
+<append xpath="/items">
+
+<item name="UVM_Impactwrench"> <!-- T3 Tools -->
+	<property name="Tags" value="tool,nailgun,sideAttachments,selfLoading,canHaveCosmetic"/>
+	<property name="DisplayType" value="meleeRepairTool"/>
+	<property name="HoldType" value="37"/>
+	<property name="Meshfile" value="#@modfolder:Resources/UVM_Impactwrench.unity3d?UVM_Impactwrench"/>
+	<property name="Material" value="MmechanicalParts"/> <property name="Weight" value="10"/>
+	<property name="RepairTools" value="resourceRepairKit"/>
+	<property name="DegradationBreaksAfter" value="false"/>
+	<property name="SoundJammed" value="weapon_jam"/>
+	<property name="CrosshairUpAfterShot" value="true"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="UnlockedBy" value="perkAdvancedEngineering,UVM_ImpactwrenchSchematic"/>
+	<property name="ShowQuality" value="true"/>
+	<property class="Action0"> <!-- UseAction -->
+		<property name="Class" value="Repair"/>
+		<property name="Delay" value=".73"/> <!-- Repair actions still need the delay amount -->
+		<property name="Repair_amount" value="1000"/>
+		<property name="Upgrade_hit_offset" value="-5"/>
+		<property name="Repair_action_sound" value="nailgun_fire"/>
+		<property name="Upgrade_action_sound" value="nailgun_fire"/>
+		<property name="Allowed_upgrade_items" value="UVM_vehicleAccessories"/>
+		<!--<property name="Restricted_upgrade_items" value="concrete"/>-->
+	</property>
+	<property name="Group" value="Tools/Traps"/>
+	<property name="RepairExpMultiplier" value="10.8"/>
+	<property name="EconomicValue" value="1000"/>
+	<effect_group name="gunToolNailgun" tiered="false">
+		<passive_effect name="DegradationMax" operation="base_set" value="1000" tags="nailgun"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="nailgun"/>
+		<passive_effect name="ModSlots" operation="base_set" value="0"/>
+	</effect_group>
+</item>
+
+<item name="UVM_ImpactwrenchSchematic">
+	<property name="Extends" value="schematicNoQualityMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="UVM_Impactwrench"/>
+	<property name="Unlocks" value="UVM_Impactwrench"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="UVM_Impactwrench" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="UVM_vehicleAccessories">
+	<property name="HoldType" value="45"/>
+	<property name="CustomIcon" value="UVM_vehicleAccessories"/>
+	<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="Weight" value="20"/>
+	<property name="Stacknumber" value="10"/> <!-- STK resource -->
+	<property name="EconomicValue" value="25"/>
+	<property name="EconomicBundleSize" value="50"/>
+	<property name="Group" value="Resources"/>
+	<property name="RepairAmount" value="100"/>
+	<property name="LootExpValue" value="1"/>
+	<property name="CraftingIngredientTime" value=".25"/>
+</item>
+
+<item name="UVM_vehicleAccessoriesSchematic">
+	<property name="Extends" value="schematicNoQualityMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="UVM_vehicleAccessories"/>
+	<property name="Unlocks" value="UVM_vehicleAccessories"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="UVM_vehicleAccessories" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="vehicleWheels" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+ 
+<item name="UVM_Car1BasePlaceable">
+	<property name="Tags" value="vehicle"/>
+	<property name="DescriptionKey" value="vehiclePlaceableGroupDesc"/>
+	<property name="HoldType" value="7"/>
+	<property name="CustomIcon" value="UVM_Car1Base"/>
+	<property name="HoldingItemHidden" value="true"/>
+	<property name="Meshfile" value="#@modfolder:Resources/UVM_Car1Base.unity3d?UVM_Car1Base"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="EconomicValue" value="6000"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="Action1">
+		<property name="Class" value="SpawnVehicle"/>
+		<property name="Vehicle" value="UVM_Car1Base"/>
+	</property>
+	<effect_group name="UVM_Car1BasePlaceable" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="1"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="1000"/>
+	</effect_group>
+</item>
+
+<item name="UVM_Car2BasePlaceable">
+	<property name="Tags" value="vehicle"/>
+	<property name="DescriptionKey" value="vehiclePlaceableGroupDesc"/>
+	<property name="HoldType" value="7"/>
+	<property name="CustomIcon" value="UVM_Car2Base"/>
+	<property name="HoldingItemHidden" value="true"/>
+	<property name="Meshfile" value="#@modfolder:Resources/UVM_Car2Base.unity3d?UVM_Car2Base"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="EconomicValue" value="6000"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="Action1">
+		<property name="Class" value="SpawnVehicle"/>
+		<property name="Vehicle" value="UVM_Car2Base"/>
+	</property>
+	<effect_group name="UVM_Car2BasePlaceable" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="1"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="1000"/>
+	</effect_group>
+</item>
+
+<item name="UVM_Car3BasePlaceable">
+	<property name="Tags" value="vehicle"/>
+	<property name="DescriptionKey" value="vehiclePlaceableGroupDesc"/>
+	<property name="HoldType" value="7"/>
+	<property name="CustomIcon" value="UVM_Car3Base"/>
+	<property name="HoldingItemHidden" value="true"/>
+	<property name="Meshfile" value="#@modfolder:Resources/UVM_Car3Base.unity3d?UVM_Car3Base"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="EconomicValue" value="6000"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="Action1">
+		<property name="Class" value="SpawnVehicle"/>
+		<property name="Vehicle" value="UVM_Car3Base"/>
+	</property>
+	<effect_group name="UVM_Car3BasePlaceable" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="1"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="1000"/>
+	</effect_group>
+</item>
+
+<item name="UVM_Car4BasePlaceable">
+	<property name="Tags" value="vehicle"/>
+	<property name="DescriptionKey" value="vehiclePlaceableGroupDesc"/>
+	<property name="HoldType" value="7"/>
+	<property name="CustomIcon" value="UVM_Car4Base"/>
+	<property name="HoldingItemHidden" value="true"/>
+	<property name="Meshfile" value="#@modfolder:Resources/UVM_Car4Base.unity3d?UVM_Car4Base"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="EconomicValue" value="6000"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="Action1">
+		<property name="Class" value="SpawnVehicle"/>
+		<property name="Vehicle" value="UVM_Car4Base"/>
+	</property>
+	<effect_group name="UVM_Car4BasePlaceable" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="1"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="1000"/>
+	</effect_group>
+</item>
+
+<item name="UVM_Car5BasePlaceable">
+	<property name="Tags" value="vehicle"/>
+	<property name="DescriptionKey" value="vehiclePlaceableGroupDesc"/>
+	<property name="HoldType" value="7"/>
+	<property name="CustomIcon" value="UVM_Car5Base"/>
+	<property name="HoldingItemHidden" value="true"/>
+	<property name="Meshfile" value="#@modfolder:Resources/UVM_Car5Base.unity3d?UVM_Car5Base"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="EconomicValue" value="6000"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="Action1">
+		<property name="Class" value="SpawnVehicle"/>
+		<property name="Vehicle" value="UVM_Car5Base"/>
+	</property>
+	<effect_group name="UVM_Car5BasePlaceable" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="1"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="1000"/>
+	</effect_group>
+</item>
+
+<item name="UVM_Car6BasePlaceable">
+	<property name="Tags" value="vehicle"/>
+	<property name="DescriptionKey" value="vehiclePlaceableGroupDesc"/>
+	<property name="HoldType" value="7"/>
+	<property name="CustomIcon" value="UVM_Car6Base"/>
+	<property name="HoldingItemHidden" value="true"/>
+	<property name="Meshfile" value="#@modfolder:Resources/UVM_Car6Base.unity3d?UVM_Car6Base"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="EconomicValue" value="6000"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="Action1">
+		<property name="Class" value="SpawnVehicle"/>
+		<property name="Vehicle" value="UVM_Car6Base"/>
+	</property>
+	<effect_group name="UVM_Car6BasePlaceable" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="1"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="3000"/>
+	</effect_group>
+</item>
+
+<item name="UVM_Car7BasePlaceable">
+	<property name="Tags" value="vehicle"/>
+	<property name="DescriptionKey" value="vehiclePlaceableGroupDesc"/>
+	<property name="HoldType" value="7"/>
+	<property name="CustomIcon" value="UVM_Car7Base"/>
+	<property name="HoldingItemHidden" value="true"/>
+	<property name="Meshfile" value="#@modfolder:Resources/UVM_Car7Base.unity3d?UVM_Car7Base"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="EconomicValue" value="6000"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="Action1">
+		<property name="Class" value="SpawnVehicle"/>
+		<property name="Vehicle" value="UVM_Car7Base"/>
+	</property>
+	<effect_group name="UVM_Car7BasePlaceable" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="1"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="3000"/>
+	</effect_group>
+</item>  
+
+<item name="UVM_Car8BasePlaceable">
+	<property name="Tags" value="vehicle"/>
+	<property name="DescriptionKey" value="vehiclePlaceableGroupDesc"/>
+	<property name="HoldType" value="7"/>
+  <property name="CustomIcon" value="UVM_Car8Base"/>
+	<property name="HoldingItemHidden" value="true"/>
+	<property name="Meshfile" value="#@modfolder:Resources/UVM_Car8Base.unity3d?UVM_Car8Base"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="EconomicValue" value="6000"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="Action1">
+		<property name="Class" value="SpawnVehicle"/>
+		<property name="Vehicle" value="UVM_Car8Base"/>
+	</property>
+	<effect_group name="UVM_Car8BasePlaceable" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="1"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="3000"/>
+	</effect_group>
+</item>
+
+<item name="UVM_Car9BasePlaceable">
+	<property name="Tags" value="vehicle"/>
+	<property name="DescriptionKey" value="vehiclePlaceableGroupDesc"/>
+	<property name="HoldType" value="7"/>
+  <property name="CustomIcon" value="UVM_Car9Base"/>
+	<property name="HoldingItemHidden" value="true"/>
+	<property name="Meshfile" value="#@modfolder:Resources/UVM_Car9Base.unity3d?UVM_Car9Base"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="EconomicValue" value="6000"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="Action1">
+		<property name="Class" value="SpawnVehicle"/>
+		<property name="Vehicle" value="UVM_Car9Base"/>
+	</property>
+	<effect_group name="UVM_Car9BasePlaceable" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="1"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="3000"/>
+	</effect_group>
+</item>
+
+<item name="UVM_Car10BasePlaceable">
+	<property name="Tags" value="vehicle"/>
+	<property name="DescriptionKey" value="vehiclePlaceableGroupDesc"/>
+	<property name="HoldType" value="7"/>
+  <property name="CustomIcon" value="UVM_Car10Base"/>
+	<property name="HoldingItemHidden" value="true"/>
+	<property name="Meshfile" value="#@modfolder:Resources/UVM_Car10Base.unity3d?UVM_Car10Base"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="EconomicValue" value="6000"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="Action1">
+		<property name="Class" value="SpawnVehicle"/>
+		<property name="Vehicle" value="UVM_Car10Base"/>
+	</property>
+	<effect_group name="UVM_Car10BasePlaceable" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="1"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="3000"/>
+	</effect_group>
+</item>
+
+<item name="UVM_Car11BasePlaceable">
+	<property name="Tags" value="vehicle"/>
+	<property name="DescriptionKey" value="vehiclePlaceableGroupDesc"/>
+	<property name="HoldType" value="7"/>
+  <property name="CustomIcon" value="UVM_Car11Base"/>
+	<property name="HoldingItemHidden" value="true"/>
+	<property name="Meshfile" value="#@modfolder:Resources/UVM_Car11Base.unity3d?UVM_Car11Base"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="EconomicValue" value="6000"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="Action1">
+		<property name="Class" value="SpawnVehicle"/>
+		<property name="Vehicle" value="UVM_Car11Base"/>
+	</property>
+	<effect_group name="UVM_Car11BasePlaceable" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="1"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="2500"/>
+	</effect_group>
+</item>
+
+<item name="UVM_Car12BasePlaceable">
+	<property name="Tags" value="vehicle"/>
+	<property name="DescriptionKey" value="vehiclePlaceableGroupDesc"/>
+	<property name="HoldType" value="7"/>
+  <property name="CustomIcon" value="UVM_Car12Base"/>
+	<property name="HoldingItemHidden" value="true"/>
+	<property name="Meshfile" value="#@modfolder:Resources/UVM_Car12Base.unity3d?UVM_Car12Base"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="EconomicValue" value="6000"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="Action1">
+		<property name="Class" value="SpawnVehicle"/>
+		<property name="Vehicle" value="UVM_Car12Base"/>
+	</property>
+	<effect_group name="UVM_Car12BasePlaceable" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="1"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="2500"/>
+	</effect_group>
+</item>
+
+<item name="UVM_Car13BasePlaceable">
+	<property name="Tags" value="vehicle"/>
+	<property name="DescriptionKey" value="vehiclePlaceableGroupDesc"/>
+	<property name="HoldType" value="7"/>
+  <property name="CustomIcon" value="UVM_Car13Base"/>
+	<property name="HoldingItemHidden" value="true"/>
+	<property name="Meshfile" value="#@modfolder:Resources/UVM_Car13Base.unity3d?UVM_Car13Base"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="EconomicValue" value="6000"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="Action1">
+		<property name="Class" value="SpawnVehicle"/>
+		<property name="Vehicle" value="UVM_Car13Base"/>
+	</property>
+	<effect_group name="UVM_Car13BasePlaceable" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="1"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="2500"/>
+	</effect_group>
+</item>
+
+<item name="UVM_Car14BasePlaceable">
+	<property name="Tags" value="vehicle"/>
+	<property name="DescriptionKey" value="vehiclePlaceableGroupDesc"/>
+	<property name="HoldType" value="7"/>
+  <property name="CustomIcon" value="UVM_Car14Base"/>
+	<property name="HoldingItemHidden" value="true"/>
+	<property name="Meshfile" value="#@modfolder:Resources/UVM_Car14Base.unity3d?UVM_Car14Base"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="EconomicValue" value="6000"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="Action1">
+		<property name="Class" value="SpawnVehicle"/>
+		<property name="Vehicle" value="UVM_Car14Base"/>
+	</property>
+	<effect_group name="UVM_Car14BasePlaceable" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="1"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="2500"/>
+	</effect_group>
+</item>
+
+<item name="UVM_Car15BasePlaceable">
+	<property name="Tags" value="vehicle"/>
+	<property name="DescriptionKey" value="vehiclePlaceableGroupDesc"/>
+	<property name="HoldType" value="7"/>
+  <property name="CustomIcon" value="UVM_Car15Base"/>
+	<property name="HoldingItemHidden" value="true"/>
+	<property name="Meshfile" value="#@modfolder:Resources/UVM_Car15Base.unity3d?UVM_Car15Base"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="EconomicValue" value="6000"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="Action1">
+		<property name="Class" value="SpawnVehicle"/>
+		<property name="Vehicle" value="UVM_Car15Base"/>
+	</property>
+	<effect_group name="UVM_Car15BasePlaceable" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="1"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="2500"/>
+	</effect_group>
+</item>
+
+<item name="UVM_Car16BasePlaceable">
+	<property name="Tags" value="vehicle"/>
+	<property name="DescriptionKey" value="vehiclePlaceableGroupDesc"/>
+	<property name="HoldType" value="7"/>
+  <property name="CustomIcon" value="UVM_Car16Base"/>
+	<property name="HoldingItemHidden" value="true"/>
+	<property name="Meshfile" value="#@modfolder:Resources/UVM_Car16Base.unity3d?UVM_Car16Base"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="EconomicValue" value="6000"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="Action1">
+		<property name="Class" value="SpawnVehicle"/>
+		<property name="Vehicle" value="UVM_Car16Base"/>
+	</property>
+	<effect_group name="UVM_Car16BasePlaceable" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="1"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="7500"/>
+	</effect_group>
+</item>
+
+<item name="UVM_Car17BasePlaceable">
+	<property name="Tags" value="vehicle"/>
+	<property name="DescriptionKey" value="vehiclePlaceableGroupDesc"/>
+	<property name="HoldType" value="7"/>
+  <property name="CustomIcon" value="UVM_Car17Base"/>
+	<property name="HoldingItemHidden" value="true"/>
+	<property name="Meshfile" value="#@modfolder:Resources/UVM_Car17Base.unity3d?UVM_Car17Base"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="EconomicValue" value="6000"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="Action1">
+		<property name="Class" value="SpawnVehicle"/>
+		<property name="Vehicle" value="UVM_Car17Base"/>
+	</property>
+	<effect_group name="UVM_Car17BasePlaceable" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="1"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="7500"/>
+	</effect_group>
+</item>
+
+<item name="UVM_Car18BasePlaceable">
+	<property name="Tags" value="vehicle"/>
+	<property name="DescriptionKey" value="vehiclePlaceableGroupDesc"/>
+	<property name="HoldType" value="7"/>
+	<property name="CustomIcon" value="UVM_Car18Base"/>
+	<property name="HoldingItemHidden" value="true"/>
+	<property name="Meshfile" value="#@modfolder:Resources/UVM_Car18Base.unity3d?UVM_Car18Base"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="EconomicValue" value="6000"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="Action1">
+		<property name="Class" value="SpawnVehicle"/>
+		<property name="Vehicle" value="UVM_Car18Base"/>
+	</property>
+	<effect_group name="UVM_Car18BasePlaceable" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="1"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="7500"/>
+	</effect_group>
+</item>
+
+<item name="UVM_Car19BasePlaceable">
+	<property name="Tags" value="vehicle"/>
+	<property name="DescriptionKey" value="vehiclePlaceableGroupDesc"/>
+	<property name="HoldType" value="7"/>
+	<property name="CustomIcon" value="UVM_Car19Base"/>
+	<property name="HoldingItemHidden" value="true"/>
+	<property name="Meshfile" value="#@modfolder:Resources/UVM_Car19Base.unity3d?UVM_Car19Base"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="EconomicValue" value="6000"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="Action1">
+		<property name="Class" value="SpawnVehicle"/>
+		<property name="Vehicle" value="UVM_Car19Base"/>
+	</property>
+	<effect_group name="UVM_Car19BasePlaceable" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="1"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="7500"/>
+	</effect_group>
+</item>
+
+<item name="UVM_Car20BasePlaceable">
+	<property name="Tags" value="vehicle"/>
+	<property name="DescriptionKey" value="vehiclePlaceableGroupDesc"/>
+	<property name="HoldType" value="7"/>
+	<property name="CustomIcon" value="UVM_Car20Base"/>
+	<property name="HoldingItemHidden" value="true"/>
+	<property name="Meshfile" value="#@modfolder:Resources/UVM_Car20Base.unity3d?UVM_Car20Base"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="EconomicValue" value="6000"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="Action1">
+		<property name="Class" value="SpawnVehicle"/>
+		<property name="Vehicle" value="UVM_Car20Base"/>
+	</property>
+	<effect_group name="UVM_Car20BasePlaceable" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="1"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="7500"/>
+	</effect_group>
+</item>
+
+<item name="UVM_Car21BasePlaceable">
+	<property name="Tags" value="vehicle"/>
+	<property name="DescriptionKey" value="vehiclePlaceableGroupDesc"/>
+	<property name="HoldType" value="7"/>
+	<property name="CustomIcon" value="UVM_Car21Base"/>
+	<property name="HoldingItemHidden" value="true"/>
+	<property name="Meshfile" value="#@modfolder:Resources/UVM_Car21Base.unity3d?UVM_Car21Base"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="EconomicValue" value="6000"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="Action1">
+		<property name="Class" value="SpawnVehicle"/>
+		<property name="Vehicle" value="UVM_Car21Base"/>
+	</property>
+	<effect_group name="UVM_Car21BasePlaceable" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="1"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="4500"/>
+	</effect_group>
+</item>
+
+<item name="UVM_Car22BasePlaceable">
+	<property name="Tags" value="vehicle"/>
+	<property name="DescriptionKey" value="vehiclePlaceableGroupDesc"/>
+	<property name="HoldType" value="7"/>
+	<property name="CustomIcon" value="UVM_Car22Base"/>
+	<property name="HoldingItemHidden" value="true"/>
+	<property name="Meshfile" value="#@modfolder:Resources/UVM_Car22Base.unity3d?UVM_Car22Base"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="EconomicValue" value="6000"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="Action1">
+		<property name="Class" value="SpawnVehicle"/>
+		<property name="Vehicle" value="UVM_Car22Base"/>
+	</property>
+	<effect_group name="UVM_Car22BasePlaceable" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="1"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="4500"/>
+	</effect_group>
+</item>
+
+<item name="UVM_Car23BasePlaceable">
+	<property name="Tags" value="vehicle"/>
+	<property name="DescriptionKey" value="vehiclePlaceableGroupDesc"/>
+	<property name="HoldType" value="7"/>
+  <property name="CustomIcon" value="UVM_Car23Base"/>
+	<property name="HoldingItemHidden" value="true"/>
+	<property name="Meshfile" value="#@modfolder:Resources/UVM_Car23Base.unity3d?UVM_Car23Base"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="EconomicValue" value="6000"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="Action1">
+		<property name="Class" value="SpawnVehicle"/>
+		<property name="Vehicle" value="UVM_Car23Base"/>
+	</property>
+	<effect_group name="UVM_Car23BasePlaceable" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="1"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="4500"/>
+	</effect_group>
+</item>  
+
+<item name="UVM_Car24BasePlaceable">
+	<property name="Tags" value="vehicle"/>
+	<property name="DescriptionKey" value="vehiclePlaceableGroupDesc"/>
+	<property name="HoldType" value="7"/>
+  <property name="CustomIcon" value="UVM_Car24Base"/>
+	<property name="HoldingItemHidden" value="true"/>
+	<property name="Meshfile" value="#@modfolder:Resources/UVM_Car24Base.unity3d?UVM_Car24Base"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="EconomicValue" value="6000"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="Action1">
+		<property name="Class" value="SpawnVehicle"/>
+		<property name="Vehicle" value="UVM_Car24Base"/>
+	</property>
+	<effect_group name="UVM_Car24BasePlaceable" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="1"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="4500"/>
+	</effect_group>
+</item>
+
+<item name="UVM_Car25BasePlaceable">
+	<property name="Tags" value="vehicle"/>
+	<property name="DescriptionKey" value="vehiclePlaceableGroupDesc"/>
+	<property name="HoldType" value="7"/>
+  <property name="CustomIcon" value="UVM_Car25Base"/>
+	<property name="HoldingItemHidden" value="true"/>
+	<property name="Meshfile" value="#@modfolder:Resources/UVM_Car25Base.unity3d?UVM_Car25Base"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="EconomicValue" value="6000"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="Action1">
+		<property name="Class" value="SpawnVehicle"/>
+		<property name="Vehicle" value="UVM_Car25Base"/>
+	</property>
+	<effect_group name="UVM_Car25BasePlaceable" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="1"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="4500"/>
+	</effect_group>
+</item>
+
+<item name="UVM_Car26BasePlaceable">
+	<property name="Tags" value="vehicle"/>
+	<property name="DescriptionKey" value="vehiclePlaceableGroupDesc"/>
+	<property name="HoldType" value="7"/>
+  <property name="CustomIcon" value="UVM_Car26Base"/>
+	<property name="HoldingItemHidden" value="true"/>
+	<property name="Meshfile" value="#@modfolder:Resources/UVM_Car26Base.unity3d?UVM_Car26Base"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="EconomicValue" value="6000"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="Action1">
+		<property name="Class" value="SpawnVehicle"/>
+		<property name="Vehicle" value="UVM_Car26Base"/>
+	</property>
+	<effect_group name="UVM_Car26BasePlaceable" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="1"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="5500"/>
+	</effect_group>
+</item>
+
+<item name="UVM_Car27BasePlaceable">
+	<property name="Tags" value="vehicle"/>
+	<property name="DescriptionKey" value="vehiclePlaceableGroupDesc"/>
+	<property name="HoldType" value="7"/>
+  <property name="CustomIcon" value="UVM_Car27Base"/>
+	<property name="HoldingItemHidden" value="true"/>
+	<property name="Meshfile" value="#@modfolder:Resources/UVM_Car27Base.unity3d?UVM_Car27Base"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="EconomicValue" value="6000"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="Action1">
+		<property name="Class" value="SpawnVehicle"/>
+		<property name="Vehicle" value="UVM_Car27Base"/>
+	</property>
+	<effect_group name="UVM_Car27BasePlaceable" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="1"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="2500"/>
+	</effect_group>
+</item>
+
+<item name="UVM_Car28BasePlaceable">
+	<property name="Tags" value="vehicle"/>
+	<property name="DescriptionKey" value="vehiclePlaceableGroupDesc"/>
+	<property name="HoldType" value="7"/>
+  <property name="CustomIcon" value="UVM_Car28Base"/>
+	<property name="HoldingItemHidden" value="true"/>
+	<property name="Meshfile" value="#@modfolder:Resources/UVM_Car28Base.unity3d?UVM_Car28Base"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="EconomicValue" value="6000"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="Action1">
+		<property name="Class" value="SpawnVehicle"/>
+		<property name="Vehicle" value="UVM_Car28Base"/>
+	</property>
+	<effect_group name="UVM_Car28BasePlaceable" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="1"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="2500"/>
+	</effect_group>
+</item>
+
+<item name="UVM_Car29BasePlaceable">
+	<property name="Tags" value="vehicle"/>
+	<property name="DescriptionKey" value="vehiclePlaceableGroupDesc"/>
+	<property name="HoldType" value="7"/>
+  <property name="CustomIcon" value="UVM_Car29Base"/>
+	<property name="HoldingItemHidden" value="true"/>
+	<property name="Meshfile" value="#@modfolder:Resources/UVM_Car29Base.unity3d?UVM_Car29Base"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="EconomicValue" value="6000"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="Action1">
+		<property name="Class" value="SpawnVehicle"/>
+		<property name="Vehicle" value="UVM_Car29Base"/>
+	</property>
+	<effect_group name="UVM_Car29BasePlaceable" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="1"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="4500"/>
+	</effect_group>
+</item>
+
+<item name="UVM_Car30BasePlaceable">
+	<property name="Tags" value="vehicle"/>
+	<property name="DescriptionKey" value="vehiclePlaceableGroupDesc"/>
+	<property name="HoldType" value="7"/>
+  <property name="CustomIcon" value="UVM_Car30Base"/>
+	<property name="HoldingItemHidden" value="true"/>
+	<property name="Meshfile" value="#@modfolder:Resources/UVM_Car30Base.unity3d?UVM_Car30Base"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="EconomicValue" value="6000"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="Action1">
+		<property name="Class" value="SpawnVehicle"/>
+		<property name="Vehicle" value="UVM_Car30Base"/>
+	</property>
+	<effect_group name="UVM_Car30BasePlaceable" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="1"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="7500"/>
+	</effect_group>
+</item>
+
+<item name="UVM_Car31BasePlaceable">
+	<property name="Tags" value="vehicle"/>
+	<property name="DescriptionKey" value="vehiclePlaceableGroupDesc"/>
+	<property name="HoldType" value="7"/>
+  <property name="CustomIcon" value="UVM_Car31Base"/>
+	<property name="HoldingItemHidden" value="true"/>
+	<property name="Meshfile" value="#@modfolder:Resources/UVM_Car31Base.unity3d?UVM_Car31Base"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="EconomicValue" value="6000"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="Action1">
+		<property name="Class" value="SpawnVehicle"/>
+		<property name="Vehicle" value="UVM_Car31Base"/>
+	</property>
+	<effect_group name="UVM_Car31BasePlaceable" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="1"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="9000"/>
+	</effect_group>
+</item>
+
+<!-- New Additions -->
+
+<item name="UVM_Car32BasePlaceable">
+	<property name="Tags" value="vehicle"/>
+	<property name="DescriptionKey" value="vehiclePlaceableGroupDesc"/>
+	<property name="HoldType" value="7"/>
+  <property name="CustomIcon" value="UVM_Car32Base"/>
+	<property name="HoldingItemHidden" value="true"/>
+	<property name="Meshfile" value="#@modfolder:Resources/UVM_Car32Base.unity3d?UVM_Car32Base"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="EconomicValue" value="6000"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="Action1">
+		<property name="Class" value="SpawnVehicle"/>
+		<property name="Vehicle" value="UVM_Car32Base"/>
+	</property>
+	<effect_group name="UVM_Car32BasePlaceable" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="1"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="12000"/>
+	</effect_group>
+</item>
+
+<item name="UVM_Car33BasePlaceable">
+	<property name="Tags" value="vehicle"/>
+	<property name="DescriptionKey" value="vehiclePlaceableGroupDesc"/>
+	<property name="HoldType" value="7"/>
+  <property name="CustomIcon" value="UVM_Car33Base"/>
+	<property name="HoldingItemHidden" value="true"/>
+	<property name="Meshfile" value="#@modfolder:Resources/UVM_Car33Base.unity3d?UVM_Car33Base"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="EconomicValue" value="6000"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="Action1">
+		<property name="Class" value="SpawnVehicle"/>
+		<property name="Vehicle" value="UVM_Car33Base"/>
+	</property>
+	<effect_group name="UVM_Car33BasePlaceable" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="1"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="12000"/>
+	</effect_group>
+</item>
+
+<item name="UVM_Car34BasePlaceable">
+	<property name="Tags" value="vehicle"/>
+	<property name="DescriptionKey" value="vehiclePlaceableGroupDesc"/>
+	<property name="HoldType" value="7"/>
+  <property name="CustomIcon" value="UVM_Car34Base"/>
+	<property name="HoldingItemHidden" value="true"/>
+	<property name="Meshfile" value="#@modfolder:Resources/UVM_Car34Base.unity3d?UVM_Car34Base"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="EconomicValue" value="6000"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="Action1">
+		<property name="Class" value="SpawnVehicle"/>
+		<property name="Vehicle" value="UVM_Car34Base"/>
+	</property>
+	<effect_group name="UVM_Car34BasePlaceable" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="1"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="12000"/>
+	</effect_group>
+</item>
+
+<item name="UVM_Car35BasePlaceable">
+	<property name="Tags" value="vehicle"/>
+	<property name="DescriptionKey" value="vehiclePlaceableGroupDesc"/>
+	<property name="HoldType" value="7"/>
+	<property name="CustomIcon" value="UVM_Car35Base"/>
+	<property name="HoldingItemHidden" value="true"/>
+	<property name="Meshfile" value="#@modfolder:Resources/UVM_Car35Base.unity3d?UVM_Car35Base"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="EconomicValue" value="6000"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="Action1">
+		<property name="Class" value="SpawnVehicle"/>
+		<property name="Vehicle" value="UVM_Car35Base"/>
+	</property>
+	<effect_group name="UVM_Car35BasePlaceable" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="1"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="12000"/>
+	</effect_group>
+</item>
+
+<item name="UVM_Car36BasePlaceable">
+	<property name="Tags" value="vehicle"/>
+	<property name="DescriptionKey" value="vehiclePlaceableGroupDesc"/>
+	<property name="HoldType" value="7"/>
+  <property name="CustomIcon" value="UVM_Car36Base"/>
+	<property name="HoldingItemHidden" value="true"/>
+	<property name="Meshfile" value="#@modfolder:Resources/UVM_Car36Base.unity3d?UVM_Car36Base"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="EconomicValue" value="6000"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="Action1">
+		<property name="Class" value="SpawnVehicle"/>
+		<property name="Vehicle" value="UVM_Car36Base"/>
+	</property>
+	<effect_group name="UVM_Car36BasePlaceable" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="1"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="7000"/>
+	</effect_group>
+</item>
+
+<item name="UVM_Car37BasePlaceable">
+	<property name="Tags" value="vehicle"/>
+	<property name="DescriptionKey" value="vehiclePlaceableGroupDesc"/>
+	<property name="HoldType" value="7"/>
+  <property name="CustomIcon" value="UVM_Car37Base"/>
+	<property name="HoldingItemHidden" value="true"/>
+	<property name="Meshfile" value="#@modfolder:Resources/UVM_Car37Base.unity3d?UVM_Car37Base"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="EconomicValue" value="6000"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="Action1">
+		<property name="Class" value="SpawnVehicle"/>
+		<property name="Vehicle" value="UVM_Car37Base"/>
+	</property>
+	<effect_group name="UVM_Car37BasePlaceable" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="1"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="7000"/>
+	</effect_group>
+</item>
+
+<item name="UVM_Car38BasePlaceable">
+	<property name="Tags" value="vehicle"/>
+	<property name="DescriptionKey" value="vehiclePlaceableGroupDesc"/>
+	<property name="HoldType" value="7"/>
+  <property name="CustomIcon" value="UVM_Car38Base"/>
+	<property name="HoldingItemHidden" value="true"/>
+	<property name="Meshfile" value="#@modfolder:Resources/UVM_Car38Base.unity3d?UVM_Car38Base"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="EconomicValue" value="6000"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="Action1">
+		<property name="Class" value="SpawnVehicle"/>
+		<property name="Vehicle" value="UVM_Car38Base"/>
+	</property>
+	<effect_group name="UVM_Car38BasePlaceable" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="1"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="5000"/>
+	</effect_group>
+</item>
+
+<item name="UVM_Car39BasePlaceable">
+	<property name="Tags" value="vehicle"/>
+	<property name="DescriptionKey" value="vehiclePlaceableGroupDesc"/>
+	<property name="HoldType" value="7"/>
+  <property name="CustomIcon" value="UVM_Car39Base"/>
+	<property name="HoldingItemHidden" value="true"/>
+	<property name="Meshfile" value="#@modfolder:Resources/UVM_Car39Base.unity3d?UVM_Car39Base"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="EconomicValue" value="6000"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="Action1">
+		<property name="Class" value="SpawnVehicle"/>
+		<property name="Vehicle" value="UVM_Car39Base"/>
+	</property>
+	<effect_group name="UVM_Car39BasePlaceable" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="4"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="7000"/>
+	</effect_group>
+</item>
+
+<item name="UVM_Car40BasePlaceable">
+	<property name="Tags" value="vehicle"/>
+	<property name="DescriptionKey" value="vehiclePlaceableGroupDesc"/>
+	<property name="HoldType" value="7"/>
+  <property name="CustomIcon" value="UVM_Car40Base"/>
+	<property name="HoldingItemHidden" value="true"/>
+	<property name="Meshfile" value="#@modfolder:Resources/UVM_Car40Base.unity3d?UVM_Car40Base"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="EconomicValue" value="6000"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="Action1">
+		<property name="Class" value="SpawnVehicle"/>
+		<property name="Vehicle" value="UVM_Car40Base"/>
+	</property>
+	<effect_group name="UVM_Car40BasePlaceable" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="1"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="7000"/>
+	</effect_group>
+</item>
+
+<item name="UVM_Car41BasePlaceable">
+	<property name="Tags" value="vehicle"/>
+	<property name="DescriptionKey" value="vehiclePlaceableGroupDesc"/>
+	<property name="HoldType" value="7"/>
+  <property name="CustomIcon" value="UVM_Car41Base"/>
+	<property name="HoldingItemHidden" value="true"/>
+	<property name="Meshfile" value="#@modfolder:Resources/UVM_Car41Base.unity3d?UVM_Car41Base"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="EconomicValue" value="6000"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="Action1">
+		<property name="Class" value="SpawnVehicle"/>
+		<property name="Vehicle" value="UVM_Car41Base"/>
+	</property>
+	<effect_group name="UVM_Car41BasePlaceable" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="4"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="14000"/>
+	</effect_group>
+</item>
+
+<item name="UVM_Car42BasePlaceable">
+	<property name="Tags" value="vehicle"/>
+	<property name="DescriptionKey" value="vehiclePlaceableGroupDesc"/>
+	<property name="HoldType" value="7"/>
+  <property name="CustomIcon" value="UVM_Car42Base"/>
+	<property name="HoldingItemHidden" value="true"/>
+	<property name="Meshfile" value="#@modfolder:Resources/UVM_Car42Base.unity3d?UVM_Car42Base"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="EconomicValue" value="6000"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="Action1">
+		<property name="Class" value="SpawnVehicle"/>
+		<property name="Vehicle" value="UVM_Car42Base"/>
+	</property>
+	<effect_group name="UVM_Car42BasePlaceable" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="1"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="14000"/> <!-- Check dmg -->
+	</effect_group>
+</item>
+
+<item name="UVM_Car43BasePlaceable">
+	<property name="Tags" value="vehicle"/>
+	<property name="DescriptionKey" value="vehiclePlaceableGroupDesc"/>
+	<property name="HoldType" value="7"/>
+  <property name="CustomIcon" value="UVM_Car43Base"/>
+	<property name="HoldingItemHidden" value="true"/>
+	<property name="Meshfile" value="#@modfolder:Resources/UVM_Car43Base.unity3d?UVM_Car43Base"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="EconomicValue" value="6000"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="Action1">
+		<property name="Class" value="SpawnVehicle"/>
+		<property name="Vehicle" value="UVM_Car43Base"/>
+	</property>
+	<effect_group name="UVM_Car43BasePlaceable" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="1"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="13000"/>
+	</effect_group>
+</item>
+
+<item name="UVM_Car44BasePlaceable">
+	<property name="Tags" value="vehicle"/>
+	<property name="DescriptionKey" value="vehiclePlaceableGroupDesc"/>
+	<property name="HoldType" value="7"/>
+  <property name="CustomIcon" value="UVM_Car44Base"/>
+	<property name="HoldingItemHidden" value="true"/>
+	<property name="Meshfile" value="#@modfolder:Resources/UVM_Car44Base.unity3d?UVM_Car44Base"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="EconomicValue" value="6000"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="Action1">
+		<property name="Class" value="SpawnVehicle"/>
+		<property name="Vehicle" value="UVM_Car44Base"/>
+	</property>
+	<effect_group name="UVM_Car44BasePlaceable" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="1"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="12000"/>
+	</effect_group>
+</item>
+
+<item name="UVM_Car45BasePlaceable">
+	<property name="Tags" value="vehicle"/>
+	<property name="DescriptionKey" value="vehiclePlaceableGroupDesc"/>
+	<property name="HoldType" value="7"/>
+  <property name="CustomIcon" value="UVM_Car45Base"/>
+	<property name="HoldingItemHidden" value="true"/>
+	<property name="Meshfile" value="#@modfolder:Resources/UVM_Car45Base.unity3d?UVM_Car45Base"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="EconomicValue" value="6000"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="Action1">
+		<property name="Class" value="SpawnVehicle"/>
+		<property name="Vehicle" value="UVM_Car45Base"/>
+	</property>
+	<effect_group name="UVM_Car45BasePlaceable" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="1"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="14000"/>
+	</effect_group>
+</item>
+
+   <item name="UVM_Car46BasePlaceable">
+	<property name="Tags" value="vehicle"/>
+	<property name="DescriptionKey" value="vehiclePlaceableGroupDesc"/>
+	<property name="HoldType" value="7"/>
+	<property name="CustomIcon" value="UVM_Car46Base"/>
+	<property name="HoldingItemHidden" value="true"/>
+	<property name="Meshfile" value="#@modfolder:Resources/UVM_Car46Base.unity3d?UVM_Car46Base"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="EconomicValue" value="6000"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="Action1">
+		<property name="Class" value="SpawnVehicle"/>
+		<property name="Vehicle" value="UVM_Car46Base"/>
+	</property>
+	<effect_group name="UVM_Car46BasePlaceable" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="1"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="16000"/>
+	</effect_group>
+</item>   
+
+
+<!-- New naming on next batch of vehicles 
+
+
+<item name="UVM_Car1MaxPlaceable">
+	<property name="Tags" value="vehicle"/>
+	<property name="DescriptionKey" value="vehiclePlaceableGroupDesc"/>
+	<property name="HoldType" value="7"/>
+  <property name="CustomIcon" value="carSedan1"/>
+	<property name="HoldingItemHidden" value="true"/>
+	<property name="Meshfile" value="#@modfolder:Resources/UVM_Car1Max.unity3d?UVM_Car1Max"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="EconomicValue" value="6000"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="Action1">
+		<property name="Class" value="SpawnVehicle"/>
+		<property name="Vehicle" value="UVM_Car1Max"/>
+	</property>
+	<effect_group name="UVM_Car1MaxPlaceable" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="4"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="3000"/>
+	</effect_group>
+</item>
+
+<item name="UVM_Car2MaxPlaceable">
+	<property name="Tags" value="vehicle"/>
+	<property name="DescriptionKey" value="vehiclePlaceableGroupDesc"/>
+	<property name="HoldType" value="7"/>
+  <property name="CustomIcon" value="carSedan1"/>
+	<property name="HoldingItemHidden" value="true"/>
+	<property name="Meshfile" value="#@modfolder:Resources/UVM_Car2Max.unity3d?UVM_Car2Max"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="EconomicValue" value="6000"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="Action1">
+		<property name="Class" value="SpawnVehicle"/>
+		<property name="Vehicle" value="UVM_Car2Max"/>
+	</property>
+	<effect_group name="UVM_Car2MaxPlaceable" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="4"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="3000"/>
+	</effect_group>
+</item>
+
+<item name="UVM_Car3MaxPlaceable">
+	<property name="Tags" value="vehicle"/>
+	<property name="DescriptionKey" value="vehiclePlaceableGroupDesc"/>
+	<property name="HoldType" value="7"/>
+  <property name="CustomIcon" value="carSedan1"/>
+	<property name="HoldingItemHidden" value="true"/>
+	<property name="Meshfile" value="#@modfolder:Resources/UVM_Car3Max.unity3d?UVM_Car3Max"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="EconomicValue" value="6000"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="Action1">
+		<property name="Class" value="SpawnVehicle"/>
+		<property name="Vehicle" value="UVM_Car3Max"/>
+	</property>
+	<effect_group name="UVM_Car3MaxPlaceable" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="4"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="3000"/>
+	</effect_group>
+</item>
+
+<item name="UVM_Car4MaxPlaceable">
+	<property name="Tags" value="vehicle"/>
+	<property name="DescriptionKey" value="vehiclePlaceableGroupDesc"/>
+	<property name="HoldType" value="7"/>
+  <property name="CustomIcon" value="carSedan1"/>
+	<property name="HoldingItemHidden" value="true"/>
+	<property name="Meshfile" value="#@modfolder:Resources/UVM_Car4Max.unity3d?UVM_Car4Max"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="EconomicValue" value="6000"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="Action1">
+		<property name="Class" value="SpawnVehicle"/>
+		<property name="Vehicle" value="UVM_Car4Max"/>
+	</property>
+	<effect_group name="UVM_Car4MaxPlaceable" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="4"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="3000"/>
+	</effect_group>
+</item>
+
+<item name="UVM_Car5MaxPlaceable">
+	<property name="Tags" value="vehicle"/>
+	<property name="DescriptionKey" value="vehiclePlaceableGroupDesc"/>
+	<property name="HoldType" value="7"/>
+  <property name="CustomIcon" value="carSedan1"/>
+	<property name="HoldingItemHidden" value="true"/>
+	<property name="Meshfile" value="#@modfolder:Resources/UVM_Car5Max.unity3d?UVM_Car5Max"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="EconomicValue" value="6000"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="Action1">
+		<property name="Class" value="SpawnVehicle"/>
+		<property name="Vehicle" value="UVM_Car5Max"/>
+	</property>
+	<effect_group name="UVM_Car5MaxPlaceable" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="4"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="3000"/>
+	</effect_group>
+</item>
+
+<item name="UVM_Car6MaxPlaceable">
+	<property name="Tags" value="vehicle"/>
+	<property name="DescriptionKey" value="vehiclePlaceableGroupDesc"/>
+	<property name="HoldType" value="7"/>
+  <property name="CustomIcon" value="carSedan1"/>
+	<property name="HoldingItemHidden" value="true"/>
+	<property name="Meshfile" value="#@modfolder:Resources/UVM_Car6Max.unity3d?UVM_Car6Max"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="EconomicValue" value="6000"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="Action1">
+		<property name="Class" value="SpawnVehicle"/>
+		<property name="Vehicle" value="UVM_Car6Max"/>
+	</property>
+	<effect_group name="UVM_Car6MaxPlaceable" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="4"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="6000"/>
+	</effect_group>
+</item>
+
+<item name="UVM_Car7MaxPlaceable">
+	<property name="Tags" value="vehicle"/>
+	<property name="DescriptionKey" value="vehiclePlaceableGroupDesc"/>
+	<property name="HoldType" value="7"/>
+  <property name="CustomIcon" value="carSedan1"/>
+	<property name="HoldingItemHidden" value="true"/>
+	<property name="Meshfile" value="#@modfolder:Resources/UVM_Car7Max.unity3d?UVM_Car7Max"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="EconomicValue" value="6000"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="Action1">
+		<property name="Class" value="SpawnVehicle"/>
+		<property name="Vehicle" value="UVM_Car7Max"/>
+	</property>
+	<effect_group name="UVM_Car7MaxPlaceable" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="4"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="6000"/>
+	</effect_group>
+</item>
+
+<item name="UVM_Car8MaxPlaceable">
+	<property name="Tags" value="vehicle"/>
+	<property name="DescriptionKey" value="vehiclePlaceableGroupDesc"/>
+	<property name="HoldType" value="7"/>
+  <property name="CustomIcon" value="carSedan1"/>
+	<property name="HoldingItemHidden" value="true"/>
+	<property name="Meshfile" value="#@modfolder:Resources/UVM_Car8Max.unity3d?UVM_Car8Max"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="EconomicValue" value="6000"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="Action1">
+		<property name="Class" value="SpawnVehicle"/>
+		<property name="Vehicle" value="UVM_Car8Max"/>
+	</property>
+	<effect_group name="UVM_Car8MaxPlaceable" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="4"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="6000"/>
+	</effect_group>
+</item>
+
+<item name="UVM_Car9MaxPlaceable">
+	<property name="Tags" value="vehicle"/>
+	<property name="DescriptionKey" value="vehiclePlaceableGroupDesc"/>
+	<property name="HoldType" value="7"/>
+  <property name="CustomIcon" value="carSedan1"/>
+	<property name="HoldingItemHidden" value="true"/>
+	<property name="Meshfile" value="#@modfolder:Resources/UVM_Car9Max.unity3d?UVM_Car9Max"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="EconomicValue" value="6000"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="Action1">
+		<property name="Class" value="SpawnVehicle"/>
+		<property name="Vehicle" value="UVM_Car9Max"/>
+	</property>
+	<effect_group name="UVM_Car9MaxPlaceable" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="4"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="6000"/>
+	</effect_group>
+</item>
+
+<item name="UVM_Car10MaxPlaceable">
+	<property name="Tags" value="vehicle"/>
+	<property name="DescriptionKey" value="vehiclePlaceableGroupDesc"/>
+	<property name="HoldType" value="7"/>
+  <property name="CustomIcon" value="carSedan1"/>
+	<property name="HoldingItemHidden" value="true"/>
+	<property name="Meshfile" value="#@modfolder:Resources/UVM_Car10Max.unity3d?UVM_Car10Max"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="EconomicValue" value="6000"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="Action1">
+		<property name="Class" value="SpawnVehicle"/>
+		<property name="Vehicle" value="UVM_Car10Max"/>
+	</property>
+	<effect_group name="UVM_Car10MaxPlaceable" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="4"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="6000"/>
+	</effect_group>
+</item>
+
+<item name="UVM_Car11MaxPlaceable">
+	<property name="Tags" value="vehicle"/>
+	<property name="DescriptionKey" value="vehiclePlaceableGroupDesc"/>
+	<property name="HoldType" value="7"/>
+  <property name="CustomIcon" value="carSedan1"/>
+	<property name="HoldingItemHidden" value="true"/>
+	<property name="Meshfile" value="#@modfolder:Resources/UVM_Car11Max.unity3d?UVM_Car11Max"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="EconomicValue" value="6000"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="Action1">
+		<property name="Class" value="SpawnVehicle"/>
+		<property name="Vehicle" value="UVM_Car11Max"/>
+	</property>
+	<effect_group name="UVM_Car11MaxPlaceable" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="4"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="5000"/>
+	</effect_group>
+</item>
+
+<item name="UVM_Car12MaxPlaceable">
+	<property name="Tags" value="vehicle"/>
+	<property name="DescriptionKey" value="vehiclePlaceableGroupDesc"/>
+	<property name="HoldType" value="7"/>
+  <property name="CustomIcon" value="carSedan1"/>
+	<property name="HoldingItemHidden" value="true"/>
+	<property name="Meshfile" value="#@modfolder:Resources/UVM_Car12Max.unity3d?UVM_Car12Max"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="EconomicValue" value="6000"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="Action1">
+		<property name="Class" value="SpawnVehicle"/>
+		<property name="Vehicle" value="UVM_Car12Max"/>
+	</property>
+	<effect_group name="UVM_Car12MaxPlaceable" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="4"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="5000"/>
+	</effect_group>
+</item>
+
+<item name="UVM_Car13MaxPlaceable">
+	<property name="Tags" value="vehicle"/>
+	<property name="DescriptionKey" value="vehiclePlaceableGroupDesc"/>
+	<property name="HoldType" value="7"/>
+  <property name="CustomIcon" value="carSedan1"/>
+	<property name="HoldingItemHidden" value="true"/>
+	<property name="Meshfile" value="#@modfolder:Resources/UVM_Car13Max.unity3d?UVM_Car13Max"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="EconomicValue" value="6000"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="Action1">
+		<property name="Class" value="SpawnVehicle"/>
+		<property name="Vehicle" value="UVM_Car13Max"/>
+	</property>
+	<effect_group name="UVM_Car13MaxPlaceable" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="4"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="5000"/>
+	</effect_group>
+</item>
+
+<item name="UVM_Car14MaxPlaceable">
+	<property name="Tags" value="vehicle"/>
+	<property name="DescriptionKey" value="vehiclePlaceableGroupDesc"/>
+	<property name="HoldType" value="7"/>
+  <property name="CustomIcon" value="carSedan1"/>
+	<property name="HoldingItemHidden" value="true"/>
+	<property name="Meshfile" value="#@modfolder:Resources/UVM_Car14Max.unity3d?UVM_Car14Max"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="EconomicValue" value="6000"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="Action1">
+		<property name="Class" value="SpawnVehicle"/>
+		<property name="Vehicle" value="UVM_Car14Max"/>
+	</property>
+	<effect_group name="UVM_Car14MaxPlaceable" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="4"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="5000"/>
+	</effect_group>
+</item>
+
+<item name="UVM_Car15MaxPlaceable">
+	<property name="Tags" value="vehicle"/>
+	<property name="DescriptionKey" value="vehiclePlaceableGroupDesc"/>
+	<property name="HoldType" value="7"/>
+  <property name="CustomIcon" value="carSedan1"/>
+	<property name="HoldingItemHidden" value="true"/>
+	<property name="Meshfile" value="#@modfolder:Resources/UVM_Car15Max.unity3d?UVM_Car15Max"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="EconomicValue" value="6000"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="Action1">
+		<property name="Class" value="SpawnVehicle"/>
+		<property name="Vehicle" value="UVM_Car15Max"/>
+	</property>
+	<effect_group name="UVM_Car15MaxPlaceable" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="4"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="5000"/>
+	</effect_group>
+</item>
+
+<item name="UVM_Car16MaxPlaceable">
+	<property name="Tags" value="vehicle"/>
+	<property name="DescriptionKey" value="vehiclePlaceableGroupDesc"/>
+	<property name="HoldType" value="7"/>
+  <property name="CustomIcon" value="carSedan1"/>
+	<property name="HoldingItemHidden" value="true"/>
+	<property name="Meshfile" value="#@modfolder:Resources/UVM_Car16Max.unity3d?UVM_Car16Max"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="EconomicValue" value="6000"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="Action1">
+		<property name="Class" value="SpawnVehicle"/>
+		<property name="Vehicle" value="UVM_Car16Max"/>
+	</property>
+	<effect_group name="UVM_Car16MaxPlaceable" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="4"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="15000"/>
+	</effect_group>
+</item>
+
+<item name="UVM_Car17MaxPlaceable">
+	<property name="Tags" value="vehicle"/>
+	<property name="DescriptionKey" value="vehiclePlaceableGroupDesc"/>
+	<property name="HoldType" value="7"/>
+  <property name="CustomIcon" value="carSedan1"/>
+	<property name="HoldingItemHidden" value="true"/>
+	<property name="Meshfile" value="#@modfolder:Resources/UVM_Car17Max.unity3d?UVM_Car17Max"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="EconomicValue" value="6000"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="Action1">
+		<property name="Class" value="SpawnVehicle"/>
+		<property name="Vehicle" value="UVM_Car17Max"/>
+	</property>
+	<effect_group name="UVM_Car17MaxPlaceable" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="4"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="15000"/>
+	</effect_group>
+</item>
+
+<item name="UVM_Car18MaxPlaceable">
+	<property name="Tags" value="vehicle"/>
+	<property name="DescriptionKey" value="vehiclePlaceableGroupDesc"/>
+	<property name="HoldType" value="7"/>
+  <property name="CustomIcon" value="carSedan1"/>
+	<property name="HoldingItemHidden" value="true"/>
+	<property name="Meshfile" value="#@modfolder:Resources/UVM_Car18Max.unity3d?UVM_Car18Max"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="EconomicValue" value="6000"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="Action1">
+		<property name="Class" value="SpawnVehicle"/>
+		<property name="Vehicle" value="UVM_Car18Max"/>
+	</property>
+	<effect_group name="UVM_Car18MaxPlaceable" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="4"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="15000"/>
+	</effect_group>
+</item>
+
+<item name="UVM_Car19MaxPlaceable">
+	<property name="Tags" value="vehicle"/>
+	<property name="DescriptionKey" value="vehiclePlaceableGroupDesc"/>
+	<property name="HoldType" value="7"/>
+  <property name="CustomIcon" value="carSedan1"/>
+	<property name="HoldingItemHidden" value="true"/>
+	<property name="Meshfile" value="#@modfolder:Resources/UVM_Car19Max.unity3d?UVM_Car19Max"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="EconomicValue" value="6000"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="Action1">
+		<property name="Class" value="SpawnVehicle"/>
+		<property name="Vehicle" value="UVM_Car19Max"/>
+	</property>
+	<effect_group name="UVM_Car19MaxPlaceable" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="4"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="15000"/>
+	</effect_group>
+</item>
+
+<item name="UVM_Car20MaxPlaceable">
+	<property name="Tags" value="vehicle"/>
+	<property name="DescriptionKey" value="vehiclePlaceableGroupDesc"/>
+	<property name="HoldType" value="7"/>
+  <property name="CustomIcon" value="carSedan1"/>
+	<property name="HoldingItemHidden" value="true"/>
+	<property name="Meshfile" value="#@modfolder:Resources/UVM_Car20Max.unity3d?UVM_Car20Max"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="EconomicValue" value="6000"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="Action1">
+		<property name="Class" value="SpawnVehicle"/>
+		<property name="Vehicle" value="UVM_Car20Max"/>
+	</property>
+	<effect_group name="UVM_Car20MaxPlaceable" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="4"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="15000"/>
+	</effect_group>
+</item>
+
+<item name="UVM_Car21MaxPlaceable">
+	<property name="Tags" value="vehicle"/>
+	<property name="DescriptionKey" value="vehiclePlaceableGroupDesc"/>
+	<property name="HoldType" value="7"/>
+  <property name="CustomIcon" value="carSedan1"/>
+	<property name="HoldingItemHidden" value="true"/>
+	<property name="Meshfile" value="#@modfolder:Resources/UVM_Car21Max.unity3d?UVM_Car21Max"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="EconomicValue" value="6000"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="Action1">
+		<property name="Class" value="SpawnVehicle"/>
+		<property name="Vehicle" value="UVM_Car21Max"/>
+	</property>
+	<effect_group name="UVM_Car21MaxPlaceable" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="4"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="9000"/>
+	</effect_group>
+</item>
+
+<item name="UVM_Car22MaxPlaceable">
+	<property name="Tags" value="vehicle"/>
+	<property name="DescriptionKey" value="vehiclePlaceableGroupDesc"/>
+	<property name="HoldType" value="7"/>
+  <property name="CustomIcon" value="carSedan1"/>
+	<property name="HoldingItemHidden" value="true"/>
+	<property name="Meshfile" value="#@modfolder:Resources/UVM_Car22Max.unity3d?UVM_Car22Max"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="EconomicValue" value="6000"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="Action1">
+		<property name="Class" value="SpawnVehicle"/>
+		<property name="Vehicle" value="UVM_Car22Max"/>
+	</property>
+	<effect_group name="UVM_Car22MaxPlaceable" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="4"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="9000"/>
+	</effect_group>
+</item>
+
+<item name="UVM_Car23MaxPlaceable">
+	<property name="Tags" value="vehicle"/>
+	<property name="DescriptionKey" value="vehiclePlaceableGroupDesc"/>
+	<property name="HoldType" value="7"/>
+  <property name="CustomIcon" value="carSedan1"/>
+	<property name="HoldingItemHidden" value="true"/>
+	<property name="Meshfile" value="#@modfolder:Resources/UVM_Car23Max.unity3d?UVM_Car23Max"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="EconomicValue" value="6000"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="Action1">
+		<property name="Class" value="SpawnVehicle"/>
+		<property name="Vehicle" value="UVM_Car23Max"/>
+	</property>
+	<effect_group name="UVM_Car23MaxPlaceable" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="4"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="9000"/>
+	</effect_group>
+</item>
+
+<item name="UVM_Car24MaxPlaceable">
+	<property name="Tags" value="vehicle"/>
+	<property name="DescriptionKey" value="vehiclePlaceableGroupDesc"/>
+	<property name="HoldType" value="7"/>
+  <property name="CustomIcon" value="carSedan1"/>
+	<property name="HoldingItemHidden" value="true"/>
+	<property name="Meshfile" value="#@modfolder:Resources/UVM_Car24Max.unity3d?UVM_Car24Max"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="EconomicValue" value="6000"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="Action1">
+		<property name="Class" value="SpawnVehicle"/>
+		<property name="Vehicle" value="UVM_Car24Max"/>
+	</property>
+	<effect_group name="UVM_Car24MaxPlaceable" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="4"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="9000"/>
+	</effect_group>
+</item>
+
+<item name="UVM_Car25MaxPlaceable">
+	<property name="Tags" value="vehicle"/>
+	<property name="DescriptionKey" value="vehiclePlaceableGroupDesc"/>
+	<property name="HoldType" value="7"/>
+  <property name="CustomIcon" value="carSedan1"/>
+	<property name="HoldingItemHidden" value="true"/>
+	<property name="Meshfile" value="#@modfolder:Resources/UVM_Car25Max.unity3d?UVM_Car25Max"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="EconomicValue" value="6000"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="Action1">
+		<property name="Class" value="SpawnVehicle"/>
+		<property name="Vehicle" value="UVM_Car25Max"/>
+	</property>
+	<effect_group name="UVM_Car25Max" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="4"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="9000"/>
+	</effect_group>
+</item>
+
+<item name="UVM_Car26MaxPlaceable">
+	<property name="Tags" value="vehicle"/>
+	<property name="DescriptionKey" value="vehiclePlaceableGroupDesc"/>
+	<property name="HoldType" value="7"/>
+  <property name="CustomIcon" value="carSedan1"/>
+	<property name="HoldingItemHidden" value="true"/>
+	<property name="Meshfile" value="#@modfolder:Resources/UVM_Car26Max.unity3d?UVM_Car26Max"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="EconomicValue" value="6000"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="Action1">
+		<property name="Class" value="SpawnVehicle"/>
+		<property name="Vehicle" value="UVM_Car26Max"/>
+	</property>
+	<effect_group name="UVM_Car26MaxPlaceable" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="4"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="11000"/>
+	</effect_group>
+</item>
+
+<item name="UVM_Car27MaxPlaceable">
+	<property name="Tags" value="vehicle"/>
+	<property name="DescriptionKey" value="vehiclePlaceableGroupDesc"/>
+	<property name="HoldType" value="7"/>
+  <property name="CustomIcon" value="carSedan1"/>
+	<property name="HoldingItemHidden" value="true"/>
+	<property name="Meshfile" value="#@modfolder:Resources/UVM_Car27Max.unity3d?UVM_Car27Max"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="EconomicValue" value="6000"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="Action1">
+		<property name="Class" value="SpawnVehicle"/>
+		<property name="Vehicle" value="UVM_Car27Max"/>
+	</property>
+	<effect_group name="UVM_Car27MaxPlaceable" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="4"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="5000"/>
+	</effect_group>
+</item>
+
+
+<item name="UVM_Car28MaxPlaceable">
+	<property name="Tags" value="vehicle"/>
+	<property name="DescriptionKey" value="vehiclePlaceableGroupDesc"/>
+	<property name="HoldType" value="7"/>
+  <property name="CustomIcon" value="carSedan1"/>
+	<property name="HoldingItemHidden" value="true"/>
+	<property name="Meshfile" value="#@modfolder:Resources/UVM_Car28Max.unity3d?UVM_Car28Max"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="EconomicValue" value="6000"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="Action1">
+		<property name="Class" value="SpawnVehicle"/>
+		<property name="Vehicle" value="UVM_Car28Max"/>
+	</property>
+	<effect_group name="UVM_Car28MaxPlaceable" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="4"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="5000"/>
+	</effect_group>
+</item>
+
+<item name="UVM_Car29MaxPlaceable">
+	<property name="Tags" value="vehicle"/>
+	<property name="DescriptionKey" value="vehiclePlaceableGroupDesc"/>
+	<property name="HoldType" value="7"/>
+  <property name="CustomIcon" value="carSedan1"/>
+	<property name="HoldingItemHidden" value="true"/>
+	<property name="Meshfile" value="#@modfolder:Resources/UVM_Car29Max.unity3d?UVM_Car29Max"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="EconomicValue" value="6000"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="Action1">
+		<property name="Class" value="SpawnVehicle"/>
+		<property name="Vehicle" value="UVM_Car29Max"/>
+	</property>
+	<effect_group name="UVM_Car29MaxPlaceable" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="4"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="7000"/>
+	</effect_group>
+</item>
+
+<item name="UVM_Car30MaxPlaceable">
+	<property name="Tags" value="vehicle"/>
+	<property name="DescriptionKey" value="vehiclePlaceableGroupDesc"/>
+	<property name="HoldType" value="7"/>
+  <property name="CustomIcon" value="carSedan1"/>
+	<property name="HoldingItemHidden" value="true"/>
+	<property name="Meshfile" value="#@modfolder:Resources/UVM_Car30Max.unity3d?UVM_Car30Max"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="EconomicValue" value="6000"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="Action1">
+		<property name="Class" value="SpawnVehicle"/>
+		<property name="Vehicle" value="UVM_Car30Max"/>
+	</property>
+	<effect_group name="UVM_Car30MaxPlaceable" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="4"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="15000"/>
+	</effect_group>
+</item>
+
+<item name="UVM_Car31MaxPlaceable">
+	<property name="Tags" value="vehicle"/>
+	<property name="DescriptionKey" value="vehiclePlaceableGroupDesc"/>
+	<property name="HoldType" value="7"/>
+  <property name="CustomIcon" value="carSedan1"/>
+	<property name="HoldingItemHidden" value="true"/>
+	<property name="Meshfile" value="#@modfolder:Resources/UVM_Car31Max.unity3d?UVM_Car31Max"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="EconomicValue" value="6000"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="Action1">
+		<property name="Class" value="SpawnVehicle"/>
+		<property name="Vehicle" value="UVM_Car31Max"/>
+	</property>
+	<effect_group name="UVM_Car31MaxPlaceable" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="4"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="18000"/>
+	</effect_group>
+</item>
+
+<item name="UVM_Car32MaxPlaceable">
+	<property name="Tags" value="vehicle"/>
+	<property name="DescriptionKey" value="vehiclePlaceableGroupDesc"/>
+	<property name="HoldType" value="7"/>
+  <property name="CustomIcon" value="carSedan1"/>
+	<property name="HoldingItemHidden" value="true"/>
+	<property name="Meshfile" value="#@modfolder:Resources/UVM_Car32Max.unity3d?UVM_Car32Max"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="EconomicValue" value="6000"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="Action1">
+		<property name="Class" value="SpawnVehicle"/>
+		<property name="Vehicle" value="UVM_Car32Max"/>
+	</property>
+	<effect_group name="UVM_Car32Max" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="4"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="25000"/>
+	</effect_group>
+</item>
+
+<item name="UVM_Car33MaxPlaceable">
+	<property name="Tags" value="vehicle"/>
+	<property name="DescriptionKey" value="vehiclePlaceableGroupDesc"/>
+	<property name="HoldType" value="7"/>
+  <property name="CustomIcon" value="carSedan1"/>
+	<property name="HoldingItemHidden" value="true"/>
+	<property name="Meshfile" value="#@modfolder:Resources/UVM_Car33Max.unity3d?UVM_Car33Max"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="EconomicValue" value="6000"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="Action1">
+		<property name="Class" value="SpawnVehicle"/>
+		<property name="Vehicle" value="UVM_Car33Max"/>
+	</property>
+	<effect_group name="UVM_Car33MaxPlaceable" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="4"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="25000"/>
+	</effect_group>
+</item>
+
+<item name="UVM_Car34MaxPlaceable">
+	<property name="Tags" value="vehicle"/>
+	<property name="DescriptionKey" value="vehiclePlaceableGroupDesc"/>
+	<property name="HoldType" value="7"/>
+  <property name="CustomIcon" value="carSedan1"/>
+	<property name="HoldingItemHidden" value="true"/>
+	<property name="Meshfile" value="#@modfolder:Resources/UVM_Car34Max.unity3d?UVM_Car34Max"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="EconomicValue" value="6000"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="Action1">
+		<property name="Class" value="SpawnVehicle"/>
+		<property name="Vehicle" value="UVM_Car34Max"/>
+	</property>
+	<effect_group name="UVM_Car34MaxPlaceable" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="4"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="27000"/>
+	</effect_group>
+</item>
+
+<item name="UVM_Car35MaxPlaceable">
+	<property name="Tags" value="vehicle"/>
+	<property name="DescriptionKey" value="vehiclePlaceableGroupDesc"/>
+	<property name="HoldType" value="7"/>
+  <property name="CustomIcon" value="carSedan1"/>
+	<property name="HoldingItemHidden" value="true"/>
+	<property name="Meshfile" value="#@modfolder:Resources/UVM_Car35Max.unity3d?UVM_Car35Max"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="EconomicValue" value="6000"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="Action1">
+		<property name="Class" value="SpawnVehicle"/>
+		<property name="Vehicle" value="UVM_Car35Max"/>
+	</property>
+	<effect_group name="UVM_Car35MaxPlaceable" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="4"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="27000"/>
+	</effect_group>
+</item>
+
+<item name="UVM_Car36MaxPlaceable">
+	<property name="Tags" value="vehicle"/>
+	<property name="DescriptionKey" value="vehiclePlaceableGroupDesc"/>
+	<property name="HoldType" value="7"/>
+  <property name="CustomIcon" value="carSedan1"/>
+	<property name="HoldingItemHidden" value="true"/>
+	<property name="Meshfile" value="#@modfolder:Resources/UVM_Car36Max.unity3d?UVM_Car36Max"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="EconomicValue" value="6000"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="Action1">
+		<property name="Class" value="SpawnVehicle"/>
+		<property name="Vehicle" value="UVM_Car36Max"/>
+	</property>
+	<effect_group name="UVM_Car36MaxPlaceable" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="4"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="10000"/>
+	</effect_group>
+</item>
+
+<item name="UVM_Car37MaxPlaceable">
+	<property name="Tags" value="vehicle"/>
+	<property name="DescriptionKey" value="vehiclePlaceableGroupDesc"/>
+	<property name="HoldType" value="7"/>
+  <property name="CustomIcon" value="carSedan1"/>
+	<property name="HoldingItemHidden" value="true"/>
+	<property name="Meshfile" value="#@modfolder:Resources/UVM_Car37.unity3d?UVM_Car37"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="EconomicValue" value="6000"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="Action1">
+		<property name="Class" value="SpawnVehicle"/>
+		<property name="Vehicle" value="UVM_Car37Max"/>
+	</property>
+	<effect_group name="UVM_Car37Placeable" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="4"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="10000"/>
+	</effect_group>
+</item>
+
+<item name="UVM_Car38MaxPlaceable">
+	<property name="Tags" value="vehicle"/>
+	<property name="DescriptionKey" value="vehiclePlaceableGroupDesc"/>
+	<property name="HoldType" value="7"/>
+  <property name="CustomIcon" value="carSedan1"/>
+	<property name="HoldingItemHidden" value="true"/>
+	<property name="Meshfile" value="#@modfolder:Resources/UVM_Car38Max.unity3d?UVM_Car38Max"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="EconomicValue" value="6000"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="Action1">
+		<property name="Class" value="SpawnVehicle"/>
+		<property name="Vehicle" value="UVM_Car38Max"/>
+	</property>
+	<effect_group name="UVM_Car38Max" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="4"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="14000"/>
+	</effect_group>
+</item>
+
+<item name="UVM_Car39MaxPlaceable">
+	<property name="Tags" value="vehicle"/>
+	<property name="DescriptionKey" value="vehiclePlaceableGroupDesc"/>
+	<property name="HoldType" value="7"/>
+  <property name="CustomIcon" value="carSedan1"/>
+	<property name="HoldingItemHidden" value="true"/>
+	<property name="Meshfile" value="#@modfolder:Resources/UVM_Car39Max.unity3d?UVM_Car39Max"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="EconomicValue" value="6000"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="Action1">
+		<property name="Class" value="SpawnVehicle"/>
+		<property name="Vehicle" value="UVM_Car39Max"/>
+	</property>
+	<effect_group name="UVM_Car39MaxPlaceable" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="4"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="10000"/>
+	</effect_group>
+</item>
+
+<item name="UVM_Car40MaxPlaceable">
+	<property name="Tags" value="vehicle"/>
+	<property name="DescriptionKey" value="vehiclePlaceableGroupDesc"/>
+	<property name="HoldType" value="7"/>
+  <property name="CustomIcon" value="carSedan1"/>
+	<property name="HoldingItemHidden" value="true"/>
+	<property name="Meshfile" value="#@modfolder:Resources/UVM_Car40Max.unity3d?UVM_Car40Max"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="EconomicValue" value="6000"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="Action1">
+		<property name="Class" value="SpawnVehicle"/>
+		<property name="Vehicle" value="UVM_Car40Max"/>
+	</property>
+	<effect_group name="UVM_Car40MaxPlaceable" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="4"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="10000"/>
+	</effect_group>
+</item> 
+
+<item name="UVM_Car41MaxPlaceable">
+	<property name="Tags" value="vehicle"/>
+	<property name="DescriptionKey" value="vehiclePlaceableGroupDesc"/>
+	<property name="HoldType" value="7"/>
+  <property name="CustomIcon" value="carSedan1"/>
+	<property name="HoldingItemHidden" value="true"/>
+	<property name="Meshfile" value="#@modfolder:Resources/UVM_Car41Max.unity3d?UVM_Car41Max"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="EconomicValue" value="6000"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="Action1">
+		<property name="Class" value="SpawnVehicle"/>
+		<property name="Vehicle" value="UVM_Car41Max"/>
+	</property>
+	<effect_group name="UVM_Car41MaxPlaceable" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="4"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="0"/>
+	</effect_group>
+</item>
+
+<item name="UVM_Car42MaxPlaceable">
+	<property name="Tags" value="vehicle"/>
+	<property name="DescriptionKey" value="vehiclePlaceableGroupDesc"/>
+	<property name="HoldType" value="7"/>
+  <property name="CustomIcon" value="carSedan1"/>
+	<property name="HoldingItemHidden" value="true"/>
+	<property name="Meshfile" value="#@modfolder:Resources/UVM_Car42Max.unity3d?UVM_Car42Max"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="EconomicValue" value="6000"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="Action1">
+		<property name="Class" value="SpawnVehicle"/>
+		<property name="Vehicle" value="UVM_Car42Max"/>
+	</property>
+	<effect_group name="UVM_Car42MaxPlaceable" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="4"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="0"/>
+	</effect_group>
+</item>
+
+<item name="UVM_Car43MaxPlaceable">
+	<property name="Tags" value="vehicle"/>
+	<property name="DescriptionKey" value="vehiclePlaceableGroupDesc"/>
+	<property name="HoldType" value="7"/>
+  <property name="CustomIcon" value="carSedan1"/>
+	<property name="HoldingItemHidden" value="true"/>
+	<property name="Meshfile" value="#@modfolder:Resources/UVM_Car43Max.unity3d?UVM_Car43Max"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="EconomicValue" value="6000"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="Action1">
+		<property name="Class" value="SpawnVehicle"/>
+		<property name="Vehicle" value="UVM_Car43Max"/>
+	</property>
+	<effect_group name="UVM_Car43MaxPlaceable" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="4"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="0"/>
+	</effect_group>
+</item>
+
+<item name="UVM_Car44MaxPlaceable">
+	<property name="Tags" value="vehicle"/>
+	<property name="DescriptionKey" value="vehiclePlaceableGroupDesc"/>
+	<property name="HoldType" value="7"/>
+  <property name="CustomIcon" value="carSedan1"/>
+	<property name="HoldingItemHidden" value="true"/>
+	<property name="Meshfile" value="#@modfolder:Resources/UVM_Car44Max.unity3d?UVM_Car44Max"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="EconomicValue" value="6000"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="Action1">
+		<property name="Class" value="SpawnVehicle"/>
+		<property name="Vehicle" value="UVM_Car44Max"/>
+	</property>
+	<effect_group name="UVM_Car44MaxPlaceable" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="4"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="0"/>
+	</effect_group>
+</item>
+
+<item name="UVM_Car45MaxPlaceable">
+	<property name="Tags" value="vehicle"/>
+	<property name="DescriptionKey" value="vehiclePlaceableGroupDesc"/>
+	<property name="HoldType" value="7"/>
+  <property name="CustomIcon" value="carSedan1"/>
+	<property name="HoldingItemHidden" value="true"/>
+	<property name="Meshfile" value="#@modfolder:Resources/UVM_Car45Max.unity3d?UVM_Car45Max"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="EconomicValue" value="6000"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="Action1">
+		<property name="Class" value="SpawnVehicle"/>
+		<property name="Vehicle" value="UVM_Car45Max"/>
+	</property>
+	<effect_group name="UVM_Car45Max" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="4"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="0"/>
+	</effect_group>
+</item>
+-->
+
+
+
+</append>
+</UVM_Configs>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
