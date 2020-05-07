@@ -13,6 +13,7 @@
 			<property name="Model" value="#@modfolder:Resources/NerdScurvy_Doors+Windows.unity3d?DoorDouble1" />
 			<property name="DisplayType" value="blockMulti" />
 			<property name="MultiBlockDim" value="2,2,1"/>
+			<property name="ModelOffset" value=".5,.5,0"/>
 			<property name="Tag" value="Door"/>
 			<property name="PlaceEverywhere" value="true"/>
 			<property name="Place" value="Door"/>
